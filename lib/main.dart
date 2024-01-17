@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:memorial/utils/app_colors.dart';
-
+import 'routes/app_routes.dart';
 import 'views/screens/home/home_screen.dart';
 
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      builder: (context, child) => MaterialApp(
+      builder: (context, child) => GetMaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           // primarySwatch: Colors.blue,
@@ -21,8 +22,11 @@ class MyApp extends StatelessWidget {
         ),
          // home: MyHomePage(),
         home: HomeScreen(),
+        getPages: AppRoutes.Routes(),
+
       ),
       designSize: Size(390, 844),
+
     );
   }
 }

@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:memorial/routes/app_routes.dart';
 import 'package:memorial/utils/app_colors.dart';
 import 'package:memorial/utils/app_constants.dart';
-import 'package:memorial/utils/app_image.dart';
-import 'package:memorial/utils/icons.dart';
+import 'package:memorial/utils/app_icons.dart';
+import 'package:memorial/utils/app_images.dart';
 import 'package:memorial/views/screens/home/controller/bottom_nav_controller.dart';
-import 'package:memorial/views/screens/notification/notification_screen.dart';
 import 'package:memorial/views/widgets/custom_text.dart';
+import '../../../utils/dimensions.dart';
 
-import '../../../utils/dimensions.dart';
-import '../../../utils/dimensions.dart';
 
 class HomeScreen extends StatelessWidget {
    HomeScreen({super.key});
@@ -22,22 +22,31 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     int _bottomNavIndex = 0;
     return Scaffold(
+      extendBody: true,
+
+
+      ///-----------------------this is app bar--------------------------->
       appBar: AppBar(
         backgroundColor: AppColors.bgColors,
-        title: CustomText(text: AppConstants.memorialMoments),
+        title: Text(
+          AppConstants.memorialMoments,
+          style: GoogleFonts.parisienne(
+            color: const Color(0xFF0071E3),
+            fontWeight: FontWeight.w400,
+            fontSize: Dimensions.fontSizeExtraLarge
+          ),
+        ),
         actions: [
           IconButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationScreen()));
+                Get.toNamed(AppRoutes.notificationScreen);
               }, icon: SvgPicture.asset(appIcons.notification))
         ],
       ),
 
 
 
-
-
-
+      ///-----------------------this is bottom nav bar------------------------>
       floatingActionButton: Container(
         height: 64.h,
         width: 64.w,
@@ -50,7 +59,6 @@ class HomeScreen extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
-        notchMargin: 10,
         color: AppColors.white,
         child: Container(
           height: 60,
@@ -68,10 +76,11 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(controller.iconList[index]['icon'],
-                          color: _bottomNavIndex == index
-                              ? Colors.blue
-                              : Colors.grey),
+                      SvgPicture.asset(controller.iconList[index]['icon'],
+                          // color: _bottomNavIndex == index
+                          //     ? Colors.blue
+                          //     : Colors.grey
+                      ),
                       Text(
                         controller.iconList[index]['label'],
                         style: TextStyle(
@@ -91,18 +100,7 @@ class HomeScreen extends StatelessWidget {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+      ///------------------this is body--------------------------------->
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -112,44 +110,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 18.h,
               ),
-              Container(
-                padding: EdgeInsets.only(right: 16, left: 16),
-                height: 40.h,
-                width: 342.w,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.sw),
-                  color: AppColors.white,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    CustomText(
-                      text: AppConstants.all,
-                      color: AppColors.blue500,
-                      fontsize: Dimensions.fontSizeDefault,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    CustomText(
-                      text: AppConstants.individual,
-                      color: AppColors.black500,
-                      fontsize: Dimensions.fontSizeDefault,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    CustomText(
-                      text: AppConstants.veteran,
-                      color: AppColors.black500,
-                      fontsize: Dimensions.fontSizeDefault,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    CustomText(
-                      text: AppConstants.pets,
-                      color: AppColors.black500,
-                      fontsize: Dimensions.fontSizeDefault,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ],
-                ),
-              ),
+              _headerSection(),
               SizedBox(
                 height: 21.h,
               ),
@@ -164,6 +125,50 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+
+
+  ///--------------------------this is header section---------------------->
+  Container _headerSection() {
+    return Container(
+              padding: EdgeInsets.only(right: 16, left: 16),
+              height: 40.h,
+              width: 342.w,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.sw),
+                color: AppColors.white,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CustomText(
+                    text: AppConstants.all,
+                    color: AppColors.blue500,
+                    fontsize: Dimensions.fontSizeDefault,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  CustomText(
+                    text: AppConstants.individual,
+                    color: AppColors.black500,
+                    fontsize: Dimensions.fontSizeDefault,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  CustomText(
+                    text: AppConstants.veteran,
+                    color: AppColors.black500,
+                    fontsize: Dimensions.fontSizeDefault,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  CustomText(
+                    text: AppConstants.pets,
+                    color: AppColors.black500,
+                    fontsize: Dimensions.fontSizeDefault,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ],
+              ),
+            );
+  }
+
 
 
   ///<----------------this is published post widget----------------->>

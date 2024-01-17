@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:memorial/utils/app_colors.dart';
 import 'package:memorial/utils/app_constants.dart';
+import 'package:memorial/utils/app_icons.dart';
 import 'package:memorial/utils/dimensions.dart';
-import 'package:memorial/utils/icons.dart';
 import 'package:memorial/views/widgets/custom_text.dart';
 
 class NotificationScreen extends StatelessWidget {
@@ -16,9 +17,19 @@ class NotificationScreen extends StatelessWidget {
       appBar: AppBar(
         /// ----------- i have to some change this code tommoro------------->
         backgroundColor: AppColors.bgColors,
-        leading: FittedBox(
-            fit: BoxFit.contain,
-            child: SvgPicture.asset(appIcons.back_arrow,width: 32.w,height: 31.h,)),
+        // leading: FittedBox(
+        //     fit: BoxFit.contain,
+        //     child: GestureDetector(
+        //       onTap: (){
+        //         Get.back;
+        //       },
+        //       child: SvgPicture.asset(
+        //         appIcons.back_arrow,
+        //         width: 25.w,
+        //         height: 28.h,
+        //       ),
+        //     )
+        // ),
         centerTitle: true,
         title: CustomText(
           text: AppConstants.notification,
@@ -27,8 +38,72 @@ class NotificationScreen extends StatelessWidget {
           color: AppColors.black500,
         ),
       ),
-      body: ListView(
-        children: [],
+      body: Padding(
+        padding:
+            EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtraLarge),
+        child: ListView(
+          children: [
+            SizedBox(height: 16.h,),
+            Notification(
+              notificationTitle: AppConstants.notificationTitle1,
+              notificationTime: AppConstants.notificationTime1,
+            ),
+            Notification(
+              notificationTitle: AppConstants.notificationTitle2,
+              notificationTime: AppConstants.notificationTime2,
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Notification extends StatelessWidget {
+  String? notificationTitle;
+  String? notificationTime;
+
+  Notification({this.notificationTime, this.notificationTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(bottom: 16),
+      padding: EdgeInsets.all(10),
+      height: 72.h,
+      width: 342.w,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8), color: AppColors.white),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SvgPicture.asset(appIcons.notification),
+          Container(
+            margin: EdgeInsets.only(left: 16.h),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                FittedBox(
+                  fit: BoxFit.cover,
+                  child: CustomText(
+                    text: notificationTitle,
+                    fontsize: Dimensions.fontSizeLarge.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                FittedBox(
+                  fit: BoxFit.cover,
+                  child: CustomText(
+                    text: notificationTime,
+                    fontsize: Dimensions.fontSizeSmall.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
