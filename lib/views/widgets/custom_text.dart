@@ -18,6 +18,6 @@ class CustomText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("$text",style: TextStyle(fontSize: fontsize,fontWeight: fontWeight,));
+    return Text("$text",style: TextStyle(color: color,fontSize: fontsize,fontWeight: fontWeight,));
   }
 }
