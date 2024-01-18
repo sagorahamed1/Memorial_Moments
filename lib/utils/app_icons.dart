@@ -5,6 +5,10 @@ class appIcons {
   static const String search = "$basePath/search.svg";
   static const String archive = "$basePath/archive.svg";
   static const String home = "$basePath/home.svg";
-  static const notification = "assets/icons/notification.svg";
-  static const back_arrow = "assets/icons/back_arrow.svg";
+  static const notification = "$basePath/notification.svg";
+  static const back_arrow = "$basePath/back_arrow.svg";
+
+
+  /// -----------------------stroy details-------------------------->
+  static const volume = "$basePath/volume_up.svg";
 }

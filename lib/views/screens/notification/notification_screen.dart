@@ -15,21 +15,25 @@ class NotificationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        /// ----------- i have to some change this code tommoro------------->
         backgroundColor: AppColors.bgColors,
-        // leading: FittedBox(
-        //     fit: BoxFit.contain,
-        //     child: GestureDetector(
-        //       onTap: (){
-        //         Get.back;
-        //       },
-        //       child: SvgPicture.asset(
-        //         appIcons.back_arrow,
-        //         width: 25.w,
-        //         height: 28.h,
-        //       ),
-        //     )
-        // ),
+        leading: Container(
+          margin: const EdgeInsets.only(left: Dimensions.paddingSizeDefault),
+          child: FittedBox(
+            fit: BoxFit.contain,
+            child: GestureDetector(
+              onTap: () {
+                Get.back(); // Corrected from Get.back
+              },
+              child: SizedBox(
+                height: 32.h,
+                width: 32.w,
+                child: SvgPicture.asset(
+                  appIcons.back_arrow,
+                ),
+              ),
+            ),
+          ),
+        ),
         centerTitle: true,
         title: CustomText(
           text: AppConstants.notification,
@@ -40,7 +44,7 @@ class NotificationScreen extends StatelessWidget {
       ),
       body: Padding(
         padding:
-            EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtraLarge),
+            const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtraLarge),
         child: ListView(
           children: [
             SizedBox(height: 16.h,),
@@ -68,8 +72,8 @@ class Notification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 16),
-      padding: EdgeInsets.all(10),
+      margin: const EdgeInsets.only(bottom: 16),
+      padding: const EdgeInsets.all(10),
       height: 72.h,
       width: 342.w,
       decoration: BoxDecoration(

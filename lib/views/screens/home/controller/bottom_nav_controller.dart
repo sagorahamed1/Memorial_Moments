@@ -11,4 +11,8 @@ class BottomNavController extends GetxController{
     {'icon': appIcons.search, 'label': AppConstants.search},
     {'icon': appIcons.circle, 'label': AppConstants.profile},
   ];
+
+  void changeBottomNavIndex(int index) {
+    // bottomNavIndex.value = index;
+  }
 }

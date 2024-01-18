@@ -10,13 +10,14 @@ import 'package:memorial/utils/app_icons.dart';
 import 'package:memorial/utils/app_images.dart';
 import 'package:memorial/views/screens/home/controller/bottom_nav_controller.dart';
 import 'package:memorial/views/widgets/custom_text.dart';
+import 'package:memorial/views/widgets/individual.dart';
 import '../../../utils/dimensions.dart';
 
 
 class HomeScreen extends StatelessWidget {
    HomeScreen({super.key});
 
-  BottomNavController controller = BottomNavController();
+  // BottomNavController controller = BottomNavController();
 
   @override
   Widget build(BuildContext context) {
@@ -37,66 +38,69 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         actions: [
-          IconButton(
-              onPressed: () {
-                Get.toNamed(AppRoutes.notificationScreen);
-              }, icon: SvgPicture.asset(appIcons.notification))
+          Container(
+            margin: EdgeInsets.only(right: Dimensions.fontSizeLarge),
+            child: IconButton(
+                onPressed: () {
+                  Get.toNamed(AppRoutes.notificationScreen);
+                }, icon: SvgPicture.asset(appIcons.notification)),
+          )
         ],
       ),
 
 
 
       ///-----------------------this is bottom nav bar------------------------>
-      floatingActionButton: Container(
-        height: 64.h,
-        width: 64.w,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50),
-          color: AppColors.blue500,
-        ),
-        child: Icon(Icons.add),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        color: AppColors.white,
-        child: Container(
-          height: 60,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: List.generate(
-             controller.iconList.length,
-                  (index) {
-                return GestureDetector(
-                  onTap: () {
-                    // setState(() {
-                      controller.bottomNavIndex = index;
-                    // });
-                  },
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      SvgPicture.asset(controller.iconList[index]['icon'],
-                          // color: _bottomNavIndex == index
-                          //     ? Colors.blue
-                          //     : Colors.grey
-                      ),
-                      Text(
-                        controller.iconList[index]['label'],
-                        style: TextStyle(
-                          color: _bottomNavIndex == index
-                              ? Colors.blue
-                              : Colors.grey,
-                        ),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ),
-        ),
-      ),
+      // floatingActionButton: Container(
+      //   height: 64.h,
+      //   width: 64.w,
+      //   decoration: BoxDecoration(
+      //     borderRadius: BorderRadius.circular(50),
+      //     color: AppColors.blue500,
+      //   ),
+      //   child: Icon(Icons.add),
+      // ),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // bottomNavigationBar: BottomAppBar(
+      //   shape: CircularNotchedRectangle(),
+      //   color: AppColors.white,
+      //   child: Container(
+      //     height: 60,
+      //     child: Row(
+      //       mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //       children: List.generate(
+      //        controller.iconList.length,
+      //             (index) {
+      //           return GestureDetector(
+      //             onTap: () {
+      //               // setState(() {
+      //               //   controller.bottomNavIndex = index;
+      //               // });
+      //             },
+      //             child: Column(
+      //               mainAxisSize: MainAxisSize.min,
+      //               children: [
+      //                 SvgPicture.asset(controller.iconList[index]['icon'],
+      //                     // color: _bottomNavIndex == index
+      //                     //     ? Colors.blue
+      //                     //     : Colors.grey
+      //                 ),
+      //                 Text(
+      //                   controller.iconList[index]['label'],
+      //                   style: TextStyle(
+      //                     color: _bottomNavIndex == index
+      //                         ? Colors.blue
+      //                         : Colors.grey,
+      //                   ),
+      //                 ),
+      //               ],
+      //             ),
+      //           );
+      //         },
+      //       ),
+      //     ),
+      //   ),
+      // ),
 
 
 
@@ -175,15 +179,20 @@ class HomeScreen extends StatelessWidget {
   Stack _publishPostSection() {
     return Stack(
       children: [
-        Container(
-            height: 497.h,
-            width: 342.w,
-            clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
-            child: Image.asset(
-              appImages.Rectangle374,
-              fit: BoxFit.cover,
-            )),
+        GestureDetector(
+          onTap: (){
+            Get.toNamed(AppRoutes.storydetailsScreen);
+          },
+          child: Container(
+              height: 497.h,
+              width: 342.w,
+              clipBehavior: Clip.antiAlias,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+              child: Image.asset(
+                appImages.Rectangle374,
+                fit: BoxFit.cover,
+              )),
+        ),
         Positioned(
           left: 12,
           top: 12,
@@ -216,24 +225,8 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
-          bottom: 108.h,
-          left: 12.w,
-          child: Container(
-            height: 23.h,
-            width: 73.w,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(4),
-                color: AppColors.blue500),
-            child: Center(
-              child: CustomText(
-                text: AppConstants.individual,
-                color: AppColors.white,
-                fontsize: Dimensions.fontSizeExtraSmall,
-              ),
-            ),
-          ),
-        ),
+        ///--------------individual widget------------------->
+        Individual(),
         Positioned(
           bottom: 24.h,
           left: 12.w,
@@ -248,3 +241,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
