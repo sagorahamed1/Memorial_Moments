@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:memorial/utils/app_colors.dart';
+import 'package:memorial/views/screens/splash/splash_screen.dart';
 
 import 'views/screens/home/home_screen.dart';
+import 'views/screens/signUp/sign_up_screen.dart';
+import 'views/screens/singIn/sign_in_screen.dart';
 
 
 void main() {
@@ -20,9 +23,9 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: AppColors.bgColors, // Set the scaffold background color here
         ),
          // home: MyHomePage(),
-        home: HomeScreen(),
+        home: const SignUpScreen(),
       ),
-      designSize: Size(390, 844),
+      designSize: const Size(390, 844),
     );
   }
 }
