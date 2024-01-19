@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:memorial/utils/app_constants.dart';
 import 'package:memorial/utils/app_icons.dart';
 import 'package:memorial/utils/app_images.dart';
-
+import 'package:memorial/views/screens/signUp/sign_up_screen.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_text_field.dart';
 
@@ -75,7 +76,7 @@ class SignInScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              const CustomButton(title: AppConstants.signIn),
+              CustomButton(onpress: () {}, title: AppConstants.signIn),
               const SizedBox(height: 20),
               Center(
                 child: Text(
@@ -89,8 +90,8 @@ class SignInScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Container(
-                width: 342,
-                height: 56,
+                width: 342.w,
+                height: 56.h,
                 padding: const EdgeInsets.all(10),
                 decoration: ShapeDecoration(
                   color: Colors.white,
@@ -103,8 +104,8 @@ class SignInScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      width: 24,
-                      height: 24,
+                      width: 24.w,
+                      height: 24.h,
                       clipBehavior: Clip.antiAlias,
                       decoration: const BoxDecoration(),
                       child: Stack(
@@ -128,10 +129,10 @@ class SignInScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     AppConstants.dontAccount,
                     style: TextStyle(
                       color: Color(0xFF2B2A2A),
@@ -140,14 +141,20 @@ class SignInScreen extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  SizedBox(width: 8),
-                  Text(
-                    AppConstants.signIn,
-                    style: TextStyle(
-                      color: Color(0xFF0071E3),
-                      fontSize: 18,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w600,
+                  const SizedBox(width: 5),
+                  TextButton(
+                    onPressed: (){
+                      Get.to(SignUpScreen());
+                      // MaterialPageRoute(builder: (context) =>  SignUpScreen());
+                      },
+                    child: const Text(
+                      AppConstants.signUp,
+                      style: TextStyle(
+                        color: Color(0xFF0071E3),
+                        fontSize: 18,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                 ],
