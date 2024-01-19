@@ -14,4 +14,5 @@ class AppColors{
 
 
    static const Color blue500 = Color(0xFF0071E3);
+   static const Color red500 = Color(0xFFD7263D);
 }

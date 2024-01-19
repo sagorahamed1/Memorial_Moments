@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomText extends StatelessWidget {
 
@@ -18,6 +19,16 @@ class CustomText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("$text",style: TextStyle(color: color,fontSize: fontsize,fontWeight: fontWeight,));
+    return
+
+      Text(
+        "$text",
+        style: GoogleFonts.poppins(
+          color: color,
+          fontWeight: fontWeight,
+          fontSize: fontsize,
+        ),
+      );
+      Text("$text",style: TextStyle(color: color,fontSize: fontsize,fontWeight: fontWeight,));
   }
 }

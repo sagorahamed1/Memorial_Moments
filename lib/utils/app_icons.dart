@@ -11,4 +11,13 @@ class appIcons {
 
   /// -----------------------stroy details-------------------------->
   static const volume = "$basePath/volume_up.svg";
+  static const dots_vertical = "$basePath/dots-vertical.svg";
+  static const delete = "$basePath/delete.svg";
+
+
+  ///-----------------add story screen----------------------->
+  static const chevron_down = "$basePath/chevron-down.svg";
+  static const music_of = "$basePath/music_of.svg";
+  static const music_on = "$basePath/music_on.svg";
+  static const photograph = "$basePath/photograph.svg";
 }

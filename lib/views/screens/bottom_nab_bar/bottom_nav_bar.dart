@@ -1,28 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:memorial/routes/app_routes.dart';
+import 'package:memorial/utils/app_constants.dart';
+import 'package:memorial/utils/app_icons.dart';
+import 'package:memorial/views/screens/My_Story_Archive/my_story_archiv_screen.dart';
+import 'package:memorial/views/screens/add_story/add_story_screen.dart';
 import 'package:memorial/views/screens/home/home_screen.dart';
 import '../../../utils/app_colors.dart';
 
-class MyHomePage extends StatefulWidget {
+class BottomNavBar extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _BottomNavBarState createState() => _BottomNavBarState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _BottomNavBarState extends State<BottomNavBar> {
   int _bottomNavIndex = 0;
 
   List<NavItem> navItems = [
-    NavItem(icon: Icons.home, label: 'Home'),
-    NavItem(icon: Icons.search, label: 'Search'),
-    NavItem(icon: Icons.person, label: 'Profile'),
-    NavItem(icon: Icons.person, label: 'Profile'), // Example with duplicate icon (you can adjust as needed)
+    NavItem(icon: Icons.home, label: AppConstants.home),
+    NavItem(icon: Icons.search, label: AppConstants.archive),
+    NavItem(icon: Icons.person, label: AppConstants.search),
+    NavItem(icon: Icons.person, label: AppConstants.profile),
   ];
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       extendBody: true,
-      body: _getPage(_bottomNavIndex),
+
+
+      body:_getPage(_bottomNavIndex),
+
       floatingActionButton: Container(
         height: 50.h,
         width: 50.w,
@@ -30,7 +41,13 @@ class _MyHomePageState extends State<MyHomePage> {
           borderRadius: BorderRadius.circular(50),
           color: AppColors.blue500,
         ),
-        child: Icon(Icons.add),
+        child: IconButton(
+          onPressed: () {
+            Get.toNamed(AppRoutes.addStoryScreen);
+             // _togglePage();
+          },
+          icon: SvgPicture.asset(appIcons.plus),
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
@@ -45,9 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   (index) {
                 return GestureDetector(
                   onTap: () {
-                    setState(() {
-                      _bottomNavIndex = index;
-                    });
+                    _updateIndex(index);
                   },
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -80,21 +95,33 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _getPage(int index) {
     switch (index) {
       case 0:
-        return Text("data");
+        return HomeScreen();
       case 1:
-        return Text("data1");
+        return MyStoryArchiveScreen();
       case 2:
+      case 3:
         return HomeScreen();
       default:
-        return Container();
+        return HomeScreen();
     }
   }
-}
 
+  void _togglePage() {
+    setState(() {
+      _bottomNavIndex = (_bottomNavIndex == 4) ? 0 : 4;
+
+    });
+  }
+
+  void _updateIndex(int index) {
+    setState(() {
+      _bottomNavIndex = index;
+    });
+  }
+}
 
 class NavItem {
   final IconData icon;
   final String label;
-
   NavItem({required this.icon, required this.label});
 }

@@ -30,5 +30,20 @@ class AppConstants {
   static const String storydescription = "Lorem ipsum dolor sit amet consectetur. Sed etiam nunc amet sit cum luctus aliquet dignissim phasellus. Pellentesque sed nulla dui dui nunc nunc magna. Sed enim sed massa pretium tincidunt vitae auctor. Consequat duis aliquam dolor egestas amet habitant facilisis. Justo risus feugiat ultricies arcu. Pretium purus eget a ridiculus duis pulvinar. Euismod nullam maecenas in id. Morbi diam et tortor a id. Aliquet tincidunt enim eget morbi est.";
   static const String publishedby = "Published by";
   static const String eleanorPena = "Eleanor Pena";
+  static const String delete = "Delete";
+  static const String dialogTitle = "Do you want to delete your story?";
+  static const String no = "No";
+  static const String yes = "Yes";
+
+
+
+  ///-----------------------add story screen------------------------------>
+  static const String addStory = "Add Story";
+  static const String myStory = "My Story";
+  static const String selectCategory = "Select Category";
+  static const String backgroundMusic = "Background Music";
+  static const String uploadPhoto = " Upload Photo (Only 3)";
+  static const String youStory = " Your Story";
+  static const String submit = "Submit";
 
 }
