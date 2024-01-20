@@ -8,6 +8,7 @@ class AppIcons {
   static const notification = "$basePath/notification.svg";
   static const back_arrow = "$basePath/back_arrow.svg";
   static const google = "$basePath/google.svg";
+  static const crown = "$basePath/crown.svg";
 
 
   /// -----------------------stroy details-------------------------->

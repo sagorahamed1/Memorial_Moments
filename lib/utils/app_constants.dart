@@ -54,6 +54,23 @@ class AppConstants {
   static const String aboutUs = "About Us";
   static const String deleteAccount = "Delete Account";
 
+  ///=================> Settings screen <=====================
+  static const String selectPlan = "Select a plan";
+  static const String quarterPage = "Quarter Page";
+  static const String quarterPageMoney = "\$99/ month";
+  static const String peopleStories  = "All People Stories";
+  static const String veteranStories    = "Veteran Stories";
+  static const String petsStories    = "Pets Stories";
+  static const String uploadPhotos    = "Upload 3 photos on one story";
+  static const String postStory    = "Post story in between 1500 words";
+  static const String postStory1    = "Post 1 stories at a time";
+  static const String byTapping    = "By tapping Continue, you will be charged, your subscription will auto- renew for the same price and package length until you cancel via app settings, and you agree to our ";
+  static const String terms    = "Terms";
+  static const String continu   = "Continue";
+
+
+
+
   ///<--------------- home screen------------------>>
   static const String memorialMoments = "  Memorial Moments Magazine";
   static const String all = "All";
