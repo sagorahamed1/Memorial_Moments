@@ -28,7 +28,7 @@ class NotificationScreen extends StatelessWidget {
                 height: 32.h,
                 width: 32.w,
                 child: SvgPicture.asset(
-                  appIcons.back_arrow,
+                  AppIcons.back_arrow,
                 ),
               ),
             ),
@@ -82,7 +82,7 @@ class Notification extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SvgPicture.asset(appIcons.notification),
+          SvgPicture.asset(AppIcons.notification),
           Container(
             margin: EdgeInsets.only(left: 16.h),
             child: Column(

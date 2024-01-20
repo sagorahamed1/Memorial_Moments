@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
             child: IconButton(
                 onPressed: () {
                   Get.toNamed(AppRoutes.notificationScreen);
-                }, icon: SvgPicture.asset(appIcons.notification)),
+                }, icon: SvgPicture.asset(AppIcons.notification)),
           )
         ],
       ),

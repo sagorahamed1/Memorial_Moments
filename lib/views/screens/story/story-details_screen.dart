@@ -31,7 +31,7 @@ class StoryDetailsScreen extends StatelessWidget {
                 height: 32.h,
                 width: 32.w,
                 child: SvgPicture.asset(
-                  appIcons.back_arrow,
+                  AppIcons.back_arrow,
                 ),
               ),
             ),
@@ -46,16 +46,26 @@ class StoryDetailsScreen extends StatelessWidget {
         ),
       ),
 
-
       ///-----------------------body section-------------------------->
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtraLarge),
+          padding: const EdgeInsets.symmetric(
+              horizontal: Dimensions.paddingSizeExtraLarge),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CustomText(text: AppConstants.storyTitle, fontsize: Dimensions.fontSizeOverLarge,fontWeight: FontWeight.w600,color: AppColors.blue500,),
-              CustomText(text: AppConstants.storyTime, fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w400,color: AppColors.black500,),
+              CustomText(
+                text: AppConstants.storyTitle,
+                fontsize: Dimensions.fontSizeOverLarge,
+                fontWeight: FontWeight.w600,
+                color: AppColors.blue500,
+              ),
+              CustomText(
+                text: AppConstants.storyTime,
+                fontsize: Dimensions.fontSizeDefault,
+                fontWeight: FontWeight.w400,
+                color: AppColors.black500,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -65,49 +75,70 @@ class StoryDetailsScreen extends StatelessWidget {
                       width: 40.w,
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: AppColors.blue500
-                      ),
-                      child: SvgPicture.asset(appIcons.volume))
+                          borderRadius: BorderRadius.circular(8),
+                          color: AppColors.blue500),
+                      child: SvgPicture.asset(AppIcons.volume))
                 ],
               ),
-              const SizedBox(height: 32,),
-        
-        
+              const SizedBox(
+                height: 32,
+              ),
               Container(
                 height: 352.h,
                 width: 342.w,
                 clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.r)
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(8.r)),
+                child: Image.asset(
+                  appImages.Rectangle374,
+                  fit: BoxFit.cover,
                 ),
-                child: Image.asset(appImages.Rectangle374,fit: BoxFit.cover,),
               ),
-              
-              SizedBox(height: 16.h,),
-              CustomText(text: AppConstants.storydescription, fontsize: Dimensions.fontSizeLarge,fontWeight: FontWeight.w400,color: AppColors.black500,),
-              SizedBox(height: 35.h,),
-              CustomText(text: AppConstants.publishedby,fontsize: Dimensions.fontSizeExtraLarge,fontWeight: FontWeight.w400,color: AppColors.blue500,),
-              SizedBox(height: 16.h,),
+              SizedBox(
+                height: 16.h,
+              ),
+              CustomText(
+                text: AppConstants.storydescription,
+                fontsize: Dimensions.fontSizeLarge,
+                fontWeight: FontWeight.w400,
+                color: AppColors.black500,
+              ),
+              SizedBox(
+                height: 35.h,
+              ),
+              CustomText(
+                text: AppConstants.publishedby,
+                fontsize: Dimensions.fontSizeExtraLarge,
+                fontWeight: FontWeight.w400,
+                color: AppColors.blue500,
+              ),
+              SizedBox(
+                height: 16.h,
+              ),
               Container(
                 height: 51.h,
                 width: 342.w,
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: AppColors.white
-                ),
+                    borderRadius: BorderRadius.circular(8),
+                    color: AppColors.white),
                 child: Row(
                   children: [
                     Container(
                         margin: const EdgeInsets.only(right: 20),
                         child: Image.asset(appImages.ellipse)),
-                    CustomText(text: AppConstants.eleanorPena,fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w400,color: AppColors.black500,),
+                    CustomText(
+                      text: AppConstants.eleanorPena,
+                      fontsize: Dimensions.fontSizeDefault,
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.black500,
+                    ),
                   ],
                 ),
               ),
-
-              const SizedBox(height: 10,)
+              const SizedBox(
+                height: 10,
+              )
             ],
           ),
         ),

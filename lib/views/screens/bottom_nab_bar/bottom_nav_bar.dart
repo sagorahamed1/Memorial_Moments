@@ -27,13 +27,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       extendBody: true,
-
-
-      body:_getPage(_bottomNavIndex),
-
+      body: _getPage(_bottomNavIndex),
       floatingActionButton: Container(
         height: 50.h,
         width: 50.w,
@@ -44,9 +40,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
         child: IconButton(
           onPressed: () {
             Get.toNamed(AppRoutes.addStoryScreen);
-             // _togglePage();
+            // _togglePage();
           },
-          icon: SvgPicture.asset(appIcons.plus),
+          icon: SvgPicture.asset(AppIcons.plus),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -59,7 +55,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: List.generate(
               navItems.length,
-                  (index) {
+              (index) {
                 return GestureDetector(
                   onTap: () {
                     _updateIndex(index);
@@ -109,7 +105,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
   void _togglePage() {
     setState(() {
       _bottomNavIndex = (_bottomNavIndex == 4) ? 0 : 4;
-
     });
   }
 
