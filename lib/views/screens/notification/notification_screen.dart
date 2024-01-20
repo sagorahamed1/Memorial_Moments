@@ -35,7 +35,7 @@ class NotificationScreen extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        title: CustomText(
+        title: const CustomText(
           text: AppConstants.notification,
           fontWeight: FontWeight.w500,
           fontsize: Dimensions.fontSizeExtraLarge,
@@ -91,7 +91,7 @@ class Notification extends StatelessWidget {
                 FittedBox(
                   fit: BoxFit.cover,
                   child: CustomText(
-                    text: notificationTitle??"",
+                    text: AppConstants.notificationTime1,
                     fontsize: Dimensions.fontSizeLarge.sp,
                     fontWeight: FontWeight.w500,
                   ),
@@ -99,7 +99,7 @@ class Notification extends StatelessWidget {
                 FittedBox(
                   fit: BoxFit.cover,
                   child: CustomText(
-                    text: notificationTime??"",
+                    text: AppConstants.notificationTime2,
                     fontsize: Dimensions.fontSizeSmall.sp,
                     fontWeight: FontWeight.w400,
                   ),
