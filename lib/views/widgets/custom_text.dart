@@ -9,7 +9,7 @@ class CustomText extends StatelessWidget {
   final Color? color;
   final double? wordSpacing;
 
-  CustomText(String selectPlan, {
+  CustomText({
     @required this.text,
     this.fontsize,
     this.fontWeight,
