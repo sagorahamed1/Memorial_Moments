@@ -8,7 +8,7 @@ import '../../../utils/app_images.dart';
 import '../../widgets/custom_app_bar.dart';
 
 class SignUpScreen extends StatefulWidget {
-   const SignUpScreen({super.key});
+  const SignUpScreen({super.key});
 
   @override
   State<SignUpScreen> createState() => _SignUpScreenState();
@@ -19,17 +19,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: CustomAppBar(
         title: "",
-        onprass: (){
+        onprass: () {
           Get.back();
         },
         leading: const Icon(Icons.arrow_back_ios),
       ),
-
-
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
@@ -39,7 +37,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             SizedBox(
               width: 69.w,
               height: 92.h,
-              child: Image.asset(AppImages.appLogo),
+              child: Image.asset(appImages.appLogo),
             ),
             const SizedBox(height: 24),
             const Text(
@@ -152,5 +150,3 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 }
-
-

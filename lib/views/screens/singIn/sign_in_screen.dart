@@ -27,7 +27,7 @@ class SignInScreen extends StatelessWidget {
               Container(
                 width: 69.w,
                 height: 92.h,
-                child: Image.asset(AppImages.appLogo),
+                child: Image.asset(appImages.appLogo),
               ),
               const SizedBox(height: 16),
               Text(
@@ -109,7 +109,7 @@ class SignInScreen extends StatelessWidget {
                       clipBehavior: Clip.antiAlias,
                       decoration: const BoxDecoration(),
                       child: Stack(
-                          children: [SvgPicture.asset(AppIcons.googleIcon)]),
+                          children: [SvgPicture.asset(AppIcons.google)]),
                     ),
                     const SizedBox(width: 10),
                     const SizedBox(

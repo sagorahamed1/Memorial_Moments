@@ -64,7 +64,7 @@ class AddStoryScreen extends StatelessWidget {
                           child: Container(
                               margin: EdgeInsets.only(right: 10.w),
                               child: SvgPicture.asset(
-                                appIcons.chevron_down,
+                                AppIcons.chevron_down,
                               ))),
                       hintText: AppConstants.selectCategory,
                       hintStyle: const TextStyle(
@@ -83,7 +83,7 @@ class AddStoryScreen extends StatelessWidget {
               ),
               const CustomTextField(
                 hinText: AppConstants.backgroundMusic,
-                suffixIcon: appIcons.music_of,
+                suffixIcon: AppIcons.music_of,
               ),
               SizedBox(
                 height: 16.h,
@@ -104,7 +104,7 @@ class AddStoryScreen extends StatelessWidget {
                   child: Container(
                     height: 44.h,
                     width: 44.w,
-                    child: SvgPicture.asset(appIcons.photograph),
+                    child: SvgPicture.asset(AppIcons.photograph),
                   ),
                 ),
               ),

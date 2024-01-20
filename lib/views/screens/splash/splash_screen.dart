@@ -17,7 +17,7 @@ class SplashScreen extends StatelessWidget {
             Container(
               width: 45.w,
               height: 60.h,
-              child: Image.asset(AppImages.appLogo),
+              child: Image.asset(appImages.appLogo),
             ),
             Text(
               AppConstants.memorialMoments,
