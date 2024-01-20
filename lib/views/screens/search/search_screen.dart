@@ -23,11 +23,12 @@ class SearchScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.bgColors,
         centerTitle: true,
-        title: CustomText(
-          text: AppConstants.searchs,
-          fontsize: Dimensions.fontSizeExtraLarge,
-          fontWeight: FontWeight.w500,
-          color: AppColors.black500,
+        title: CustomText
+          (text: '',
+       //   text: AppConstants.searchs,
+       //    fontsize: Dimensions.fontSizeExtraLarge,
+       //    fontWeight: FontWeight.w500,
+       //    color: AppColors.black500, text: '',
         ),
       ),
 
@@ -56,7 +57,7 @@ class SearchScreen extends StatelessWidget {
                           child: Container(
                               margin: EdgeInsets.only(right: 10.w),
                               child: SvgPicture.asset(
-                                appIcons.search,
+                                AppIcons.search,
                               ))),
                       hintText: AppConstants.searchs,
                       hintStyle: const TextStyle(

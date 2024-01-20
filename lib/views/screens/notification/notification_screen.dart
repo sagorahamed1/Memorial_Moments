@@ -91,7 +91,7 @@ class Notification extends StatelessWidget {
                 FittedBox(
                   fit: BoxFit.cover,
                   child: CustomText(
-                    text: notificationTitle,
+                    text: notificationTitle??"",
                     fontsize: Dimensions.fontSizeLarge.sp,
                     fontWeight: FontWeight.w500,
                   ),
@@ -99,7 +99,7 @@ class Notification extends StatelessWidget {
                 FittedBox(
                   fit: BoxFit.cover,
                   child: CustomText(
-                    text: notificationTime,
+                    text: notificationTime??"",
                     fontsize: Dimensions.fontSizeSmall.sp,
                     fontWeight: FontWeight.w400,
                   ),
