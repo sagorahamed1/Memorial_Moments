@@ -18,7 +18,6 @@ class SubscriptionScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 24),
-            // const CustomText(AppConstants.selectPlan),
             const SizedBox(height: 24),
             Container(
               width: 282,
