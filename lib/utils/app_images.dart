@@ -6,4 +6,8 @@ class appImages{
 
   ///-----------story details----------------->
   static const String ellipse = "$basePath/Ellipse.png";
+
+
+
+  static const String profileImage = "$basePath/profileImage.png";
 }

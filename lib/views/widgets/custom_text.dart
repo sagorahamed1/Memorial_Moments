@@ -15,14 +15,14 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return
 
-      Text(
-        "$text",
-        style: GoogleFonts.poppins(
-          color: color,
-          fontWeight: fontWeight,
-          fontSize: fontsize,
-        ),
-      );
+      // Text(
+      //   "$text",
+      //   style: GoogleFonts.poppins(
+      //     color: color,
+      //     fontWeight: fontWeight,
+      //     fontSize: fontsize,
+      //   ),
+      // );
       Text("$text",style: TextStyle(color: color,fontSize: fontsize,fontWeight: fontWeight,));
   }
 }

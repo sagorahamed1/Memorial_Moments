@@ -121,4 +121,26 @@ class AppConstants {
   /// ------------------------search Screen-------------------------------->
   static const String searchs = "Search";
 
+
+
+  /// --------------------profile screen-------------------------->
+  static const String profiles = "Profile";
+  static const String jennyWilson = "Jenny Wilson";
+  static const String quarterPageMember = "Quarter Page Member";
+  static const String poersonalInformation = "Personal Information";
+  static const String mySubscription = "My Subscription";
+  static const String myCurrentStory = "My Current Story";
+
+  ///------------------personal infomaition edid-----------
+  static const String setting = "Settings";
+  static const String profileEmail = "jenny@gmail.com";
+  static const String edit = "Edit";
+  static const String update = "Update";
+  static const String quarterPages = "Quarter Page";
+  static const String manage = "Manage";
+  static const String billedMonthly = "Billed Monthly";
+  static const String amonout = r"$99";
+  static const String nextBillingDate = "Next Billing Date";
+  static const String date = "1/11/24";
+
 }
