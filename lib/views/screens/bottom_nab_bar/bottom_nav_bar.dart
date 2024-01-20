@@ -8,6 +8,7 @@ import 'package:memorial/utils/app_icons.dart';
 import 'package:memorial/views/screens/My_Story_Archive/my_story_archiv_screen.dart';
 import 'package:memorial/views/screens/add_story/add_story_screen.dart';
 import 'package:memorial/views/screens/home/home_screen.dart';
+import 'package:memorial/views/screens/search/search_screen.dart';
 import '../../../utils/app_colors.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -100,7 +101,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         return MyStoryArchiveScreen();
       case 2:
       case 3:
-        return HomeScreen();
+        return SearchScreen();
       default:
         return HomeScreen();
     }
