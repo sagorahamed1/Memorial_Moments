@@ -117,4 +117,8 @@ class AppConstants {
   static const String youStory = " Your Story";
   static const String submit = "Submit";
 
+
+  /// ------------------------search Screen-------------------------------->
+  static const String searchs = "Search";
+
 }

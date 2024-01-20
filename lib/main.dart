@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
           // primarySwatch: Colors.blue,
           scaffoldBackgroundColor: AppColors.bgColors, // Set the scaffold background color here
         ),
-        home: SubscriptionScreen(),
-        // home: HomeScreen(),
+        // home: SubscriptionScreen(),
+         home: BottomNavBar(),
         getPages: AppRoutes.Routes(),
 
       ),

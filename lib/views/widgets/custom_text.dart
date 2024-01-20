@@ -9,13 +9,7 @@ class CustomText extends StatelessWidget {
   final Color? color;
   final double? wordSpacing;
 
-  CustomText(String selectPlan, {
-    @required this.text,
-    this.fontsize,
-    this.fontWeight,
-    this.color,
-    this.wordSpacing,
-  });
+  const CustomText({super.key, required this.text, this.fontsize, this.fontWeight, this.color, this.wordSpacing});
 
   @override
   Widget build(BuildContext context) {
