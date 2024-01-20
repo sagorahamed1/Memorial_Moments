@@ -1,4 +1,4 @@
-class appIcons {
+class AppIcons {
   static const String basePath = "assets/icons";
   static const String plus = "$basePath/plus.svg";
   static const String circle = "$basePath/user-circle.svg";
@@ -7,6 +7,8 @@ class appIcons {
   static const String home = "$basePath/home.svg";
   static const notification = "$basePath/notification.svg";
   static const back_arrow = "$basePath/back_arrow.svg";
+  static const google = "$basePath/google.svg";
+  static const crown = "$basePath/crown.svg";
 
 
   /// -----------------------stroy details-------------------------->

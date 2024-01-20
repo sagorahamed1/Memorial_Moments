@@ -33,7 +33,7 @@ class MyStoryDetailsScreen extends StatelessWidget {
                 height: 32.h,
                 width: 32.w,
                 child: SvgPicture.asset(
-                  appIcons.back_arrow,
+                  AppIcons.back_arrow,
                 ),
               ),
             ),
@@ -91,7 +91,7 @@ class MyStoryDetailsScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           color: AppColors.blue500),
-                      child: SvgPicture.asset(appIcons.volume))
+                      child: SvgPicture.asset(AppIcons.volume))
                 ],
               ),
               const SizedBox(
@@ -189,7 +189,7 @@ class MyStoryDetailsScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             SvgPicture.asset(
-              appIcons.delete,
+              AppIcons.delete,
               color: AppColors.red500,
             ),
             CustomText(

@@ -5,6 +5,7 @@ import 'package:memorial/utils/app_colors.dart';
 import 'routes/app_routes.dart';
 import 'views/screens/bottom_nab_bar/bottom_nav_bar.dart';
 import 'views/screens/home/home_screen.dart';
+import 'views/screens/subscription/subscription_screen.dart';
 
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
           // primarySwatch: Colors.blue,
           scaffoldBackgroundColor: AppColors.bgColors, // Set the scaffold background color here
         ),
-        home: BottomNavBar(),
+        home: SubscriptionScreen(),
         // home: HomeScreen(),
         getPages: AppRoutes.Routes(),
 
