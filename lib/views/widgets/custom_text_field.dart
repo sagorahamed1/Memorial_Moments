@@ -2,21 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextField extends StatelessWidget {
+  final Icon prifixicon;
   final String title;
   final Icon? sufixicons;
-  final Icon prifixicon;
-  const CustomTextField({
+   const CustomTextField({
     super.key,
     required this.title,
-    this.sufixicons,
-    required this.prifixicon,
+     required this.prifixicon,
+      this.sufixicons,
+
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 450.w,
-      height: 52.h,
+      width: 452.w,
+      height: 60.h,
       child: TextField(
 
         decoration: InputDecoration(

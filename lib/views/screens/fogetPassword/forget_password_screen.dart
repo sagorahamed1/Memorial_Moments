@@ -43,7 +43,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                   color: const Color(0xFF2B2A2A)),
             ),
             const SizedBox(height: 26),
-            const CustomTextField(
+             CustomTextField(
                 title: AppConstants.email,
                 prifixicon: Icon(Icons.email_outlined)),
             const SizedBox(height: 30),

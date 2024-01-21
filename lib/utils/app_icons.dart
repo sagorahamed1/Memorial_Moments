@@ -5,10 +5,13 @@ class AppIcons {
   static const String search = "$basePath/search.svg";
   static const String archive = "$basePath/archive.svg";
   static const String home = "$basePath/home.svg";
-  static const notification = "$basePath/notification.svg";
-  static const back_arrow = "$basePath/back_arrow.svg";
-  static const google = "$basePath/google.svg";
-  static const crown = "$basePath/crown.svg";
+  static const String notification = "$basePath/notification.svg";
+  static const String back_arrow = "$basePath/back_arrow.svg";
+  static const String google = "$basePath/google.svg";
+  static const String crown = "$basePath/crown.svg";
+  static const String scroll = "$basePath/scroll.svg";
+  static const String checkcircle = "$basePath/checkcircle.svg";
+  static const String checkbox = "$basePath/checkbox.svg";
 
 
   /// -----------------------stroy details-------------------------->
