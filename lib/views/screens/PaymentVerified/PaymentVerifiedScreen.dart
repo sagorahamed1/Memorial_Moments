@@ -5,7 +5,6 @@ import 'package:memorial/utils/app_images.dart';
 import 'package:memorial/views/widgets/custom_button.dart';
 import 'package:memorial/views/widgets/custom_text.dart';
 
-
 class PaymentVerifiedScreen extends StatelessWidget {
   const PaymentVerifiedScreen({super.key});
 
