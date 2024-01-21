@@ -83,6 +83,7 @@ class AppConstants {
   static const String proceedPayment   = "Proceed to Payment";
   static const String paymentSuccess   = "Your order has been placed successfully";
   static const String gotoProfile   = "Go to Profile";
+  static const String enterYour   = "Enter your current password to delete your account.";
 
   ///=================> Privacy Policy screen <=====================
   static const String loremIpsum   = "1. Lorem ipsum dolor sit amet consecrate. Imper-diet oculist collision biennium mass id elementum consecrate deque Lauris.";
