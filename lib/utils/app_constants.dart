@@ -81,6 +81,8 @@ class AppConstants {
   static const String cVC   = "CVV/CVC";
   static const String mmYy   = "MM/YY";
   static const String proceedPayment   = "Proceed to Payment";
+  static const String paymentSuccess   = "Your order has been placed successfully";
+  static const String gotoProfile   = "Go to Profile";
 
 
 

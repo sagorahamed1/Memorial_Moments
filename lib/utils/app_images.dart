@@ -6,6 +6,7 @@ class appImages{
   static const String visa = "$basePath/visacard.png";
   static const String master = "$basePath/mastercard.png";
   static const String paypal = "$basePath/paypal.png";
+  static const String complete = "$basePath/complete.png";
 
   ///-----------story details----------------->
   static const String ellipse = "$basePath/Ellipse.png";
