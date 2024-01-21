@@ -44,14 +44,17 @@ class ForgetPasswordScreen extends StatelessWidget {
                   color: const Color(0xFF2B2A2A)),
             ),
             const SizedBox(height: 26),
-             const CustomTextField(
+            const CustomTextField(
                 title: AppConstants.email,
                 prifixicon: Icon(Icons.email_outlined)),
-            const SizedBox(height: 356),
-            CustomButton(title: AppConstants.getOTP, onpress: () {
-              Get.toNamed(AppRoutes.getOtp);
-            },
+            const Spacer(),
+            CustomButton(
+              title: AppConstants.getOTP,
+              onpress: () {
+                Get.toNamed(AppRoutes.getOtp);
+              },
             ),
+            const SizedBox(height: 54),
           ],
         ),
       ),

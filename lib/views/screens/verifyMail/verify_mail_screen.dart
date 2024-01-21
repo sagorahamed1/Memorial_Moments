@@ -55,10 +55,11 @@ class VerifyMailScreen extends StatelessWidget {
                 color: const Color(0xFF0071E3),
               ),
             ),
-            const SizedBox(height: 250),
+            const Spacer(),
             CustomButton(title: AppConstants.getStarted, onpress: () {
               Get.toNamed(AppRoutes.forgetPassword);
-            })
+            }),
+      const SizedBox(height: 54),
           ],
         ),
       ),

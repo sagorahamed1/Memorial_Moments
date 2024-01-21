@@ -44,16 +44,19 @@ class ChangePasswordScreen extends StatelessWidget {
               sufixicons: Icon(Icons.remove_red_eye_outlined),
             ),
             const SizedBox(height: 24),
-            CustomText(text: AppConstants.forgetPass,
+            CustomText(
+              text: AppConstants.forgetPass,
               fontsize: 18,
               fontWeight: FontWeight.w600,
               color: const Color(0xFF0071E3),
             ),
-            const SizedBox(height: 270),
-            CustomButton(title: AppConstants.changePassword, onpress: () {
-              // Get.toNamed(AppRoutes.forgetPassword);
-            }),
-            const SizedBox(height: 48),
+            const Spacer(),
+            CustomButton(
+                title: AppConstants.changePassword,
+                onpress: () {
+                   Get.toNamed(AppRoutes.forgetPassword);
+                }),
+            const SizedBox(height: 54),
           ],
         ),
       ),

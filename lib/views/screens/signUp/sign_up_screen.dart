@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:memorial/routes/app_routes.dart';
 import 'package:memorial/utils/app_constants.dart';
 import 'package:memorial/utils/app_icons.dart';
-import 'package:memorial/views/screens/verifyMail/verify_mail_screen.dart';
 import 'package:memorial/views/widgets/custom_buttom.dart';
 import 'package:memorial/views/widgets/custom_text_field.dart';
 import '../../../utils/app_images.dart';
@@ -77,14 +76,14 @@ class SignUpScreen extends StatelessWidget {
               children: [
                 SvgPicture.asset(AppIcons.checkbox),
                 const SizedBox(width: 10),
-                const Text.rich(
+                Text.rich(
                   TextSpan(
                     children: [
                       TextSpan(
                         text: 'By creating an account, I accept the ',
                         style: TextStyle(
-                          color: Color(0xFF2B2A2A),
-                          fontSize: 14,
+                          color: const Color(0xFF2B2A2A),
+                          fontSize: 14.sp,
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.w400,
                           height: 0,
@@ -93,8 +92,8 @@ class SignUpScreen extends StatelessWidget {
                       TextSpan(
                         text: 'Terms\nof Services',
                         style: TextStyle(
-                          color: Color(0xFF0071E3),
-                          fontSize: 14,
+                          color: const Color(0xFF0071E3),
+                          fontSize: 14.sp,
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.w500,
                           height: 0,
@@ -103,8 +102,8 @@ class SignUpScreen extends StatelessWidget {
                       TextSpan(
                         text: ', and ',
                         style: TextStyle(
-                          color: Color(0xFF2B2A2A),
-                          fontSize: 14,
+                          color: const Color(0xFF2B2A2A),
+                          fontSize: 14.sp,
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.w400,
                           height: 0,
@@ -113,8 +112,8 @@ class SignUpScreen extends StatelessWidget {
                       TextSpan(
                         text: 'Privacy Policy',
                         style: TextStyle(
-                          color: Color(0xFF0071E3),
-                          fontSize: 14,
+                          color: const Color(0xFF0071E3),
+                          fontSize: 14.sp,
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.w500,
                           height: 0,
