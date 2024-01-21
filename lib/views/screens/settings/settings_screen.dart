@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:memorial/routes/app_routes.dart';
+import 'package:memorial/views/widgets/custom_text.dart';
 import '../../../utils/app_constants.dart';
 import '../../widgets/custom_app_bar.dart';
 import '../../widgets/custom_container.dart';
-import '../../widgets/custom_text_field.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -22,52 +24,56 @@ class SettingsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 24),
-            Text(
-              AppConstants.generalSettings,
-              style: GoogleFonts.poppins(
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
-                color: const Color(0xFF0071E3),
-              ),
+            CustomText(text: AppConstants.generalSettings,
+              fontsize: 16,
+              fontWeight: FontWeight.w400,
+              color: const Color(0xFF0071E3),
             ),
             const SizedBox(height: 13),
             CustomContainer(
-              onprass: () {},
+              onprass: () {
+                Get.toNamed(AppRoutes.changePassword);
+              },
               title: AppConstants.changePassword,
-              prifixicon: Icon(Icons.lock_outline),
+              prifixicon: const Icon(Icons.lock_outline),
             ),
             const SizedBox(height: 8),
             CustomContainer(
-              onprass: () {},
+              onprass: () {
+                Get.toNamed(AppRoutes.subscriptionScreen);
+              },
               title: AppConstants.subPackages,
-              prifixicon: Icon(Icons.backpack_outlined),
+              prifixicon: const Icon(Icons.backpack_outlined),
             ),
             const SizedBox(height: 24),
-            Text(
-              AppConstants.security,
-              style: GoogleFonts.poppins(
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
-                color: const Color(0xFF0071E3),
-              ),
+            CustomText(text: AppConstants.security,
+              fontsize: 16,
+              fontWeight: FontWeight.w400,
+              color: const Color(0xFF0071E3),
             ),
             const SizedBox(height: 13),
             CustomContainer(
-              onprass: () {},
+              onprass: () {
+                Get.toNamed(AppRoutes.privacyPolicyScreen);
+              },
               title: AppConstants.privacyPolicy,
-              prifixicon: Icon(Icons.privacy_tip_outlined),
+              prifixicon: const Icon(Icons.privacy_tip_outlined),
             ),
             const SizedBox(height: 8),
             CustomContainer(
-              onprass: () {},
+              onprass: () {
+                Get.toNamed(AppRoutes.termsofServicesScrren);
+              },
               title: AppConstants.termsServices,
-              prifixicon: Icon(Icons.error_outline),
+              prifixicon: const Icon(Icons.error_outline),
             ),
             const SizedBox(height: 8),
             CustomContainer(
-              onprass: () {},
+              onprass: () {
+                Get.toNamed(AppRoutes.aboutUsScreen);
+              },
               title: AppConstants.aboutUs,
-              prifixicon: Icon(Icons.error),
+              prifixicon: const Icon(Icons.error),
             ),
             const SizedBox(height: 8),
             CustomContainer(

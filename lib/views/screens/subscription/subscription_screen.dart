@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:get/get.dart';
 import 'package:memorial/utils/app_constants.dart';
 import 'package:memorial/views/screens/subscription/InnerWidget/custom_eliment.dart';
 import 'package:memorial/views/widgets/custom_app_bar.dart';
+import 'package:memorial/views/widgets/custom_text.dart';
 import '../../../utils/app_icons.dart';
 import 'InnerWidget/buttom_section.dart';
 import 'InnerWidget/custom_card.dart';
@@ -19,18 +20,19 @@ class SubscriptionScreen extends StatelessWidget {
       appBar: CustomAppBar(
           title: AppConstants.subPackages,
           leading: const Icon(Icons.arrow_back_ios),
-          onprass: () {}),
+          onprass: () {
+            Get.back();
+          }),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                AppConstants.selectPlan,
-                style: GoogleFonts.poppins(
-                    fontSize: 18, fontWeight: FontWeight.w400),
-              ),
+              CustomText(
+                  text: AppConstants.selectPlan,
+                  fontsize: 18,
+                  fontWeight: FontWeight.w400),
               const SizedBox(height: 24),
               const SingleChildScrollView(
                 scrollDirection: Axis.horizontal,

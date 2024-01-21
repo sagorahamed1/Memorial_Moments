@@ -20,7 +20,7 @@ class ButtomSection extends StatelessWidget {
         bottom: 54,
       ),
       clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(color: Colors.white),
+      decoration: const BoxDecoration(color: Colors.white),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -32,8 +32,7 @@ class ButtomSection extends StatelessWidget {
               TextSpan(
                 children: [
                   TextSpan(
-                    text:
-                        'By tapping Continue, you will be charged, your subscription will auto- renew for the same price and package length until you cancel via app settings, and you agree to our',
+                    text: AppConstants.byTapping,
                     style: TextStyle(
                       color: Color(0xFF2B2A2A),
                       fontSize: 14,
@@ -43,17 +42,7 @@ class ButtomSection extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: ' ',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 12,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w400,
-                      height: 0,
-                    ),
-                  ),
-                  TextSpan(
-                    text: 'Terms.',
+                    text: AppConstants.terms,
                     style: TextStyle(
                       color: Color(0xFF0071E3),
                       fontSize: 14,
@@ -67,7 +56,7 @@ class ButtomSection extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 24,
+            height: 22,
           ),
           CustomButton(title: AppConstants.continu, onpress: () {})
         ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:get/get.dart';
 import 'package:memorial/utils/app_constants.dart';
+import 'package:memorial/views/widgets/custom_text.dart';
 import '../../widgets/custom_app_bar.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_text_field.dart';
@@ -15,7 +16,9 @@ class ChangePasswordScreen extends StatelessWidget {
       appBar: CustomAppBar(
           title: AppConstants.changePassword,
           leading: const Icon(Icons.arrow_back_ios),
-          onprass: () {}),
+          onprass: () {
+            Get.back();
+          }),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
@@ -40,17 +43,14 @@ class ChangePasswordScreen extends StatelessWidget {
               sufixicons: Icon(Icons.remove_red_eye_outlined),
             ),
             const SizedBox(height: 24),
-            Text(
-              AppConstants.forgetPass,
-              style: GoogleFonts.poppins(
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
-                color: const Color(0xFF0071E3),
-              ),
+            CustomText(text: AppConstants.forgetPass,
+              fontsize: 18,
+              fontWeight: FontWeight.w600,
+              color: const Color(0xFF0071E3),
             ),
             const SizedBox(height: 270),
             CustomButton(title: AppConstants.changePassword, onpress: () {}),
-            const SizedBox(height: 54),
+            const SizedBox(height: 48),
           ],
         ),
       ),

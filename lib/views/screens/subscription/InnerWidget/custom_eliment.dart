@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../utils/app_icons.dart';
 
@@ -17,16 +18,16 @@ class CustomEliment extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          width: 24,
-          height: 24,
+          width: 24.w,
+          height: 24.h,
           clipBehavior: Clip.antiAlias,
           decoration: const BoxDecoration(),
           child: Stack(children: [SvgPicture.asset(AppIcons.checkcircle)]),
         ),
         const SizedBox(width: 8),
         SizedBox(
-          width: 221,
-          height: 20,
+          width: 221.w,
+          height: 20.h,
           child: Text(
             title,
             style: const TextStyle(
