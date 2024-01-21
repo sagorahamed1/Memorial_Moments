@@ -31,15 +31,14 @@ class SettingsScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 13),
-             CustomContainer(
-               onprass: (){},
-
+            CustomContainer(
+              onprass: () {},
               title: AppConstants.changePassword,
               prifixicon: Icon(Icons.lock_outline),
             ),
             const SizedBox(height: 8),
-             CustomContainer(
-              onprass: (){},
+            CustomContainer(
+              onprass: () {},
               title: AppConstants.subPackages,
               prifixicon: Icon(Icons.backpack_outlined),
             ),
@@ -53,26 +52,26 @@ class SettingsScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 13),
-             CustomContainer(
-              onprass: (){},
+            CustomContainer(
+              onprass: () {},
               title: AppConstants.privacyPolicy,
               prifixicon: Icon(Icons.privacy_tip_outlined),
             ),
             const SizedBox(height: 8),
-             CustomContainer(
-              onprass: (){},
+            CustomContainer(
+              onprass: () {},
               title: AppConstants.termsServices,
               prifixicon: Icon(Icons.error_outline),
             ),
             const SizedBox(height: 8),
-             CustomContainer(
-              onprass: (){},
+            CustomContainer(
+              onprass: () {},
               title: AppConstants.aboutUs,
               prifixicon: Icon(Icons.error),
             ),
             const SizedBox(height: 8),
-             CustomContainer(
-              onprass: (){},
+            CustomContainer(
+              onprass: () {},
               title: AppConstants.deleteAccount,
               prifixicon: const Icon(
                 Icons.restore_from_trash_outlined,
