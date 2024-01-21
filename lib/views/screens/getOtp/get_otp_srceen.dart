@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:memorial/routes/app_routes.dart';
 import 'package:memorial/utils/app_constants.dart';
 import 'package:memorial/views/widgets/custom_app_bar.dart';
 import 'package:memorial/views/widgets/custom_button.dart';
@@ -13,7 +15,9 @@ class GetOtpScreen extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: CustomAppBar(
-          title: "", leading: const Icon(Icons.arrow_back_ios), onprass: () {}),
+          title: "", leading: const Icon(Icons.arrow_back_ios), onprass: () {
+        Get.back();
+      }),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
@@ -49,7 +53,9 @@ class GetOtpScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 246),
-            CustomButton(title: AppConstants.verify, onpress: () {}),
+            CustomButton(title: AppConstants.verify, onpress: () {
+              Get.toNamed(AppRoutes.resetPassword);
+            }),
             const SizedBox(height: 54),
           ],
         ),

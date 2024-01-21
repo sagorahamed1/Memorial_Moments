@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:memorial/routes/app_routes.dart';
 import 'package:memorial/utils/app_constants.dart';
 import 'package:memorial/views/widgets/custom_text.dart';
 import '../../widgets/custom_app_bar.dart';
@@ -49,7 +50,9 @@ class ChangePasswordScreen extends StatelessWidget {
               color: const Color(0xFF0071E3),
             ),
             const SizedBox(height: 270),
-            CustomButton(title: AppConstants.changePassword, onpress: () {}),
+            CustomButton(title: AppConstants.changePassword, onpress: () {
+              // Get.toNamed(AppRoutes.forgetPassword);
+            }),
             const SizedBox(height: 48),
           ],
         ),

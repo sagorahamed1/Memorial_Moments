@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
-  final Function onpress;
+  final VoidCallback onpress;
   final String title;
   const CustomButton({
     super.key,
@@ -13,7 +13,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onpress(),
+      onTap: onpress,
       child: Container(
         width: 452.w,
         height: 60.h,

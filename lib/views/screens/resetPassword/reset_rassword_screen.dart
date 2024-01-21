@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:memorial/routes/app_routes.dart';
 import 'package:memorial/views/widgets/custom_text_field.dart';
 
 import '../../../utils/app_constants.dart';
@@ -13,7 +15,9 @@ class ResetPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-          title: "", leading: const Icon(Icons.arrow_back_ios), onprass: () {}),
+          title: "", leading: const Icon(Icons.arrow_back_ios), onprass: () {
+        Get.back();
+      }),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
@@ -50,7 +54,9 @@ class ResetPasswordScreen extends StatelessWidget {
               sufixicons: Icon(Icons.remove_red_eye_outlined),
             ),
             const SizedBox(height: 246),
-            CustomButton(title: AppConstants.resetPassword, onpress: () {}),
+            CustomButton(title: AppConstants.resetPassword, onpress: () {
+              Get.toNamed(AppRoutes.homeScreen);
+            }),
             const SizedBox(height: 54),
           ],
         ),

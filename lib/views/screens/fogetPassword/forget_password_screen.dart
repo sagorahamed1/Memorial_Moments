@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:memorial/routes/app_routes.dart';
 import 'package:memorial/utils/app_constants.dart';
 import 'package:memorial/views/widgets/custom_app_bar.dart';
 import 'package:memorial/views/widgets/custom_button.dart';
@@ -46,8 +47,10 @@ class ForgetPasswordScreen extends StatelessWidget {
              const CustomTextField(
                 title: AppConstants.email,
                 prifixicon: Icon(Icons.email_outlined)),
-            const SizedBox(height: 30),
-            CustomButton(title: AppConstants.getOTP, onpress: () {},
+            const SizedBox(height: 356),
+            CustomButton(title: AppConstants.getOTP, onpress: () {
+              Get.toNamed(AppRoutes.getOtp);
+            },
             ),
           ],
         ),
