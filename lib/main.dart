@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
           // primarySwatch: Colors.blue,
           scaffoldBackgroundColor: AppColors.bgColors, // Set the scaffold background color here
         ),
+
         initialRoute:AppRoutes.signInScreen,
         navigatorKey: Get.key,
         home: SignInScreen(),

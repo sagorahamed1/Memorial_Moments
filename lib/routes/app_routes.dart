@@ -41,6 +41,7 @@ class AppRoutes{
   static const String storydetailsScreen = "/storydetailsScreen";
   static const String myStoryDetailsScreen = "/MyStoryDetailsScreen";
   static const String addStoryScreen = "/AddStoryScreen";
+  static const String searchScreen = "/SearchScreen";
 
 
   static List <GetPage> Routes ()=>[
@@ -63,6 +64,6 @@ class AppRoutes{
     GetPage(name: AppRoutes.notificationScreen, page: ()=>NotificationScreen()),
     GetPage(name: AppRoutes.myStoryDetailsScreen, page: ()=>MyStoryDetailsScreen()),
     GetPage(name: AppRoutes.storydetailsScreen, page: ()=>StoryDetailsScreen()),
-    GetPage(name: AppRoutes.addStoryScreen, page: ()=>AddStoryScreen())
+    GetPage(name: AppRoutes.searchScreen, page: ()=>SearchScreen())
   ];
 }
