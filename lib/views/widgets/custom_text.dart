@@ -16,14 +16,15 @@ class CustomText extends StatelessWidget {
       this.wordSpacing});
   @override
   Widget build(BuildContext context) {
-    return Text(
-      "$text",
-      style: GoogleFonts.poppins(
-        color: color,
-        fontWeight: fontWeight,
-        fontSize: fontsize,
-      ),
-    );
+    return
+    //   Text(
+    //   "$text",
+    //   style: GoogleFonts.poppins(
+    //     color: color,
+    //     fontWeight: fontWeight,
+    //     fontSize: fontsize,
+    //   ),
+    // );
     Text("$text",
         style: TextStyle(
           color: color,

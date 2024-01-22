@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:memorial/routes/app_routes.dart';
 import 'package:memorial/utils/app_colors.dart';
 import 'package:memorial/utils/dimensions.dart';
+import 'package:memorial/views/screens/story/story-details_screen.dart';
 import 'package:memorial/views/widgets/custom_text.dart';
 
 import 'controller/my_story_archive_controller.dart';
@@ -15,6 +16,8 @@ class MyStoryArchiveScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     MyStoryArchiveController controller = Get.put(MyStoryArchiveController());
     return Scaffold(
+
+      ///----------------------------this is app bar section--------------------->
         appBar: AppBar(
             elevation: 0.0,
             backgroundColor: AppColors.bgColors,
@@ -25,8 +28,11 @@ class MyStoryArchiveScreen extends StatelessWidget {
               fontsize: Dimensions.fontSizeExtraLarge,
               fontWeight: FontWeight.w500,
             )),
+
+
+        ///---------------------------this is body section------------------------>
         body: Padding(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
               horizontal: Dimensions.paddingSizeExtraLarge),
           child: Obx(() => ListView.builder(
             itemCount: controller.archiveList.length,
@@ -36,7 +42,9 @@ class MyStoryArchiveScreen extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: (){
-                      Get.toNamed(AppRoutes.myStoryDetailsScreen);
+                      /// --------------------go to my story details secreen-------------->
+                      // Get.toNamed(AppRoutes.myStoryDetailsScreen);
+                      Get.to(StoryDetailsScreen());
                     },
                     child: Container(
                       height: 116.h,

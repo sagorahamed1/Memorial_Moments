@@ -22,9 +22,13 @@ class AppIcons {
 
   ///-----------------add story screen----------------------->
   static const chevron_down = "$basePath/chevron-down.svg";
+  static const chevron_up = "$basePath/chevron-up.svg";
   static const music_of = "$basePath/music_of.svg";
   static const music_on = "$basePath/music_on.svg";
   static const photograph = "$basePath/photograph.svg";
+  static const radio_button_check = "$basePath/Radio_button_check.svg";
+  static const radio_button_uncheck = "$basePath/radio_button_uncheck.svg";
+  static const add_Icon = "$basePath/add_Icon.svg";
 
 
   /// --------------search screen------------>

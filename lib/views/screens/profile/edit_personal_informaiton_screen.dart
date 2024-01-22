@@ -9,7 +9,7 @@ import '../../../utils/app_colors.dart';
 import '../../../utils/app_constants.dart';
 import '../../../utils/app_icons.dart';
 import '../../../utils/dimensions.dart';
-import '../../widgets/custom_buttom.dart';
+import '../../widgets/custom_button.dart';
 import '../../widgets/custom_text.dart';
 
 class EditPersonalInformaitonScreen extends StatelessWidget {
@@ -81,7 +81,7 @@ class EditPersonalInformaitonScreen extends StatelessWidget {
             ),
 
 
-            ///-------------------------------------
+            ///----------------profile data like name, email---------------------
             SizedBox(height: 40.h,),
             Container(
               height: 52.h,

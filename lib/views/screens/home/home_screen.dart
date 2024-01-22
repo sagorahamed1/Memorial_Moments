@@ -8,16 +8,15 @@ import 'package:memorial/utils/app_colors.dart';
 import 'package:memorial/utils/app_constants.dart';
 import 'package:memorial/utils/app_icons.dart';
 import 'package:memorial/utils/app_images.dart';
-import 'package:memorial/views/screens/home/controller/bottom_nav_controller.dart';
 import 'package:memorial/views/widgets/custom_text.dart';
 import 'package:memorial/views/widgets/individual.dart';
 import '../../../utils/dimensions.dart';
+import 'inner_widgets/header_section.dart';
 
 
 class HomeScreen extends StatelessWidget {
    HomeScreen({super.key});
 
-  // BottomNavController controller = BottomNavController();
 
   @override
   Widget build(BuildContext context) {
@@ -50,60 +49,6 @@ class HomeScreen extends StatelessWidget {
 
 
 
-      ///-----------------------this is bottom nav bar------------------------>
-      // floatingActionButton: Container(
-      //   height: 64.h,
-      //   width: 64.w,
-      //   decoration: BoxDecoration(
-      //     borderRadius: BorderRadius.circular(50),
-      //     color: AppColors.blue500,
-      //   ),
-      //   child: Icon(Icons.add),
-      // ),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      // bottomNavigationBar: BottomAppBar(
-      //   shape: CircularNotchedRectangle(),
-      //   color: AppColors.white,
-      //   child: Container(
-      //     height: 60,
-      //     child: Row(
-      //       mainAxisAlignment: MainAxisAlignment.spaceAround,
-      //       children: List.generate(
-      //        controller.iconList.length,
-      //             (index) {
-      //           return GestureDetector(
-      //             onTap: () {
-      //               // setState(() {
-      //               //   controller.bottomNavIndex = index;
-      //               // });
-      //             },
-      //             child: Column(
-      //               mainAxisSize: MainAxisSize.min,
-      //               children: [
-      //                 SvgPicture.asset(controller.iconList[index]['icon'],
-      //                     // color: _bottomNavIndex == index
-      //                     //     ? Colors.blue
-      //                     //     : Colors.grey
-      //                 ),
-      //                 Text(
-      //                   controller.iconList[index]['label'],
-      //                   style: TextStyle(
-      //                     color: _bottomNavIndex == index
-      //                         ? Colors.blue
-      //                         : Colors.grey,
-      //                   ),
-      //                 ),
-      //               ],
-      //             ),
-      //           );
-      //         },
-      //       ),
-      //     ),
-      //   ),
-      // ),
-
-
-
       ///------------------this is body--------------------------------->
       body: SingleChildScrollView(
         child: Padding(
@@ -114,7 +59,8 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 18.h,
               ),
-              _headerSection(),
+              ///-------------header section inner widgets----------->
+              headerSection(),
               SizedBox(
                 height: 21.h,
               ),
@@ -123,6 +69,8 @@ class HomeScreen extends StatelessWidget {
                 height: 12.h,
               ),
               _publishPostSection(),
+
+              SizedBox(height: 80.h,)
             ],
           ),
         ),
@@ -131,47 +79,6 @@ class HomeScreen extends StatelessWidget {
   }
 
 
-  ///--------------------------this is header section---------------------->
-  Container _headerSection() {
-    return Container(
-              padding: EdgeInsets.only(right: 16, left: 16),
-              height: 40.h,
-              width: 342.w,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.sw),
-                color: AppColors.white,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  CustomText(
-                    text: AppConstants.all,
-                    color: AppColors.blue500,
-                    fontsize: Dimensions.fontSizeDefault,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  CustomText(
-                    text: AppConstants.individual,
-                    color: AppColors.black500,
-                    fontsize: Dimensions.fontSizeDefault,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  CustomText(
-                    text: AppConstants.veteran,
-                    color: AppColors.black500,
-                    fontsize: Dimensions.fontSizeDefault,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  CustomText(
-                    text: AppConstants.pets,
-                    color: AppColors.black500,
-                    fontsize: Dimensions.fontSizeDefault,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ],
-              ),
-            );
-  }
 
 
 
@@ -225,6 +132,8 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
+
+
         ///--------------individual widget------------------->
         Individual(),
         Positioned(
@@ -236,7 +145,7 @@ class HomeScreen extends StatelessWidget {
             fontsize: Dimensions.fontSizeOverLarge,
             color: AppColors.white,
           ),
-        )
+        ),
       ],
     );
   }

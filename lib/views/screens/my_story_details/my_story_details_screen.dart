@@ -10,6 +10,7 @@ import 'package:memorial/utils/dimensions.dart';
 
 import '../../widgets/custom_text.dart';
 import '../../widgets/individual.dart';
+import 'inner_widgets/pop_up_menu.dart';
 
 class MyStoryDetailsScreen extends StatelessWidget {
   const MyStoryDetailsScreen({super.key});
@@ -22,6 +23,7 @@ class MyStoryDetailsScreen extends StatelessWidget {
         elevation: 0.0,
         backgroundColor: AppColors.bgColors,
         leading: Container(
+          padding: EdgeInsets.all(6),
           margin: const EdgeInsets.only(left: Dimensions.paddingSizeDefault),
           child: FittedBox(
             fit: BoxFit.contain,
@@ -48,14 +50,14 @@ class MyStoryDetailsScreen extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding: EdgeInsets.only(right: 20),
+            padding: EdgeInsets.only(right: 4),
             child: PopupMenuButton(
                 surfaceTintColor: Colors.green,
                 clipBehavior: Clip.none,
                 elevation: 0.0,
                 color: AppColors.white,
                 offset: Offset(0.0, 40),
-                itemBuilder: (context) => [_PopUpMenu()]),
+                itemBuilder: (context) => [PopUpMenu()]),
           )
         ],
       ),
@@ -119,84 +121,6 @@ class MyStoryDetailsScreen extends StatelessWidget {
               ),
             ],
           ),
-        ),
-      ),
-    );
-  }
-
-  /// ----------------this is popup menu widget---------------------------->
-  PopupMenuItem _PopUpMenu() {
-    return PopupMenuItem(
-      padding: EdgeInsets.all(0),
-      // mouseCursor: MouseCursor.defer,
-      enabled: true,
-      onTap: () {
-        Get.dialog(Dialog(
-          child: Container(
-            padding: EdgeInsets.only(left: 24,right: 24),
-            height: 135.h,
-            width: 342.w,
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  CustomText(
-                    text: AppConstants.dialogTitle,
-                    color: AppColors.black500,
-                    fontWeight: FontWeight.w400,
-                    fontsize: Dimensions.fontSizeDefault,
-                  ),
-
-                  SizedBox(height: 24.h,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Container(
-                        height: 36.h,
-                        width: 120.w,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          border: Border.all(color: AppColors.blue500)
-                        ),
-                        child: Center(
-                          child: CustomText(text: AppConstants.no,color: AppColors.blue500,fontWeight: FontWeight.w600,),
-                        ),
-                      ),
-
-                      Container(
-                        height: 36.h,
-                        width: 120.w,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: AppColors.red500,
-                            border: Border.all(color: AppColors.red500)
-                        ),
-                        child: Center(
-                          child: CustomText(text: AppConstants.no,color: AppColors.white,fontWeight: FontWeight.w600,),
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
-          ),
-        ));
-      },
-      child: Container(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            SvgPicture.asset(
-              AppIcons.delete,
-              color: AppColors.red500,
-            ),
-            CustomText(
-              text: AppConstants.delete,
-              color: AppColors.red500,
-            )
-          ],
         ),
       ),
     );

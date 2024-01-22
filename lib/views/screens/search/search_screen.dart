@@ -13,7 +13,6 @@ import 'package:memorial/views/widgets/custom_text.dart';
 
 class SearchScreen extends StatelessWidget {
    SearchScreen({super.key});
-
   SearchControllerG controller = Get.put(SearchControllerG());
   TextEditingController searchTextCotroller = TextEditingController();
 
@@ -72,8 +71,6 @@ class SearchScreen extends StatelessWidget {
                 ),
               ),
 
-
-
               ///-------------------search suggestion------------------->
               Container(
                 height: 500,
@@ -81,7 +78,6 @@ class SearchScreen extends StatelessWidget {
                   itemCount: controller.suggestionTextList.value.length,
                   itemBuilder: (context, index) {
                     var suggestions = controller.suggestionTextList[index];
-                    print("${suggestions}----------${suggestions.runtimeType}");
                     return Container(
                       height: 27.h,
                       width: 342.w,

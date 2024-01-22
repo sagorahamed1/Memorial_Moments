@@ -135,6 +135,13 @@ class AppConstants {
   static const String uploadPhoto = " Upload Photo (Only 3)";
   static const String youStory = " Your Story";
   static const String submit = "Submit";
+  static const String individual_Memorial_Moments = "Individual Memorial Moments";
+  static const String veterans_Memorial_Moments = "Veterans Memorial Moments";
+  static const String vPet_Memorial_Moments = "Pet Memorial Moments";
+  static const String cheering_birds = "cheering birds.mp3";
+  static const String musicType = "Music Type";
+  static const String repeatMusic = "Repeat Music";
+  static const String onetime_playMusic = "One time play Music";
 
 
   /// ------------------------search Screen-------------------------------->
@@ -158,8 +165,11 @@ class AppConstants {
   static const String quarterPages = "Quarter Page";
   static const String manage = "Manage";
   static const String billedMonthly = "Billed Monthly";
-  static const String amonout = r"$99";
+  static const String amount = r"$99";
   static const String nextBillingDate = "Next Billing Date";
   static const String date = "1/11/24";
+  static const String renew = "Renew";
+  static const String upgrade = "Upgrade";
+  static const String doYouWantToDelete = "Do you want to cancel your \n subscription?";
 
 }
