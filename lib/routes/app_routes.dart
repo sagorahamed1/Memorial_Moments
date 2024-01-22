@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:memorial/views/screens/My_Story_Archive/my_story_archiv_screen.dart';
 import 'package:memorial/views/screens/PaymentVerified/payment_verified_screen.dart';
 import 'package:memorial/views/screens/aboutUs/about_us_screen.dart';
 import 'package:memorial/views/screens/add_story/add_story_screen.dart';
@@ -10,6 +11,9 @@ import 'package:memorial/views/screens/my_story_details/my_story_details_screen.
 import 'package:memorial/views/screens/notification/notification_screen.dart';
 import 'package:memorial/views/screens/paymentScreen/payment_screen.dart';
 import 'package:memorial/views/screens/privacyPolicy/privacy_policy_screen.dart';
+import 'package:memorial/views/screens/profile/edit_personal_informaiton_screen.dart';
+import 'package:memorial/views/screens/profile/my_subscription_screen.dart';
+import 'package:memorial/views/screens/profile/personal_Info_screen.dart';
 import 'package:memorial/views/screens/resetPassword/reset_rassword_screen.dart';
 import 'package:memorial/views/screens/search/search_screen.dart';
 import 'package:memorial/views/screens/settings/settings_screen.dart';
@@ -43,6 +47,10 @@ class AppRoutes{
   static const String myStoryDetailsScreen = "/MyStoryDetailsScreen";
   static const String addStoryScreen = "/AddStoryScreen";
   static const String searchScreen = "/SearchScreen";
+  static const String personalInfoScreen = "/PersonalInfoScreen";
+  static const String editPersonalInformaitonScreen = "/EditPersonalInformaitonScreen";
+  static const String mySubscriptionScreen = "/MySubscriptionScreen";
+  static const String myStoryArchiveScreen = "/MyStoryArchiveScreen";
 
   static List <GetPage> Routes ()=>[
     GetPage(name: AppRoutes.splashScreen, page: ()=>SplashScreen()),
@@ -64,6 +72,11 @@ class AppRoutes{
     GetPage(name: AppRoutes.notificationScreen, page: ()=>NotificationScreen()),
     GetPage(name: AppRoutes.myStoryDetailsScreen, page: ()=>MyStoryDetailsScreen()),
     GetPage(name: AppRoutes.storydetailsScreen, page: ()=>StoryDetailsScreen()),
+    GetPage(name: AppRoutes.addStoryScreen, page: ()=>AddStoryScreen()),
     GetPage(name: AppRoutes.searchScreen, page: ()=>SearchScreen()),
+    GetPage(name: AppRoutes.personalInfoScreen, page: ()=>PersonalInfoScreen()),
+    GetPage(name: AppRoutes.editPersonalInformaitonScreen, page: ()=>EditPersonalInformaitonScreen()),
+    GetPage(name: AppRoutes.mySubscriptionScreen, page: ()=>MySubscriptionScreen()),
+    GetPage(name: AppRoutes.myStoryArchiveScreen, page: ()=>MyStoryArchiveScreen())
   ];
 }

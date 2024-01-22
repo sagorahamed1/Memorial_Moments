@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomButton extends StatelessWidget {
   final VoidCallback onpress;
   final String title;
-  const CustomButton({
+   CustomButton({
     super.key, required this.title,required this.onpress,
   });
 
@@ -31,6 +31,7 @@ class CustomButton extends StatelessWidget {
                 fontSize: 18,
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.w600,
+                height: 0,
               ),
             ),
           ],

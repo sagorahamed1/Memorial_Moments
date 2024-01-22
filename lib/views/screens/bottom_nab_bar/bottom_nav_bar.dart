@@ -10,6 +10,7 @@ import 'package:memorial/views/screens/add_story/add_story_screen.dart';
 import 'package:memorial/views/screens/home/home_screen.dart';
 import 'package:memorial/views/screens/search/search_screen.dart';
 import '../../../utils/app_colors.dart';
+import '../profile/profile_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   @override
@@ -96,10 +97,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
       case 1:
         return MyStoryArchiveScreen();
       case 2:
-      case 3:
         return SearchScreen();
+      case 3:
+        return ProfileScreen();
       default:
-        return HomeScreen();
+        return ProfileScreen();
     }
   }
 

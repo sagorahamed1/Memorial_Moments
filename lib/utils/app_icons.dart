@@ -25,4 +25,18 @@ class AppIcons {
   static const music_of = "$basePath/music_of.svg";
   static const music_on = "$basePath/music_on.svg";
   static const photograph = "$basePath/photograph.svg";
+
+
+  /// --------------search screen------------>
+  static const clock = "$basePath/clock.svg";
+  static const circle_close = "$basePath/circle_close.svg";
+
+
+  ///-----------------profile-------------------->
+  static const crownIcon = "$basePath/crown.svg";
+  static const userIcon = "$basePath/userIcon.svg";
+  static const crownWhite = "$basePath/crown_white.svg";
+  static const bookPpen = "$basePath/book-open.svg";
+  static const setting = "$basePath/cog.svg";
+  static const mailIcon = "$basePath/mail.svg";
 }
