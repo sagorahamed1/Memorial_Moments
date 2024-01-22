@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:memorial/routes/app_routes.dart';
 import 'package:memorial/utils/app_colors.dart';
 import 'package:memorial/utils/app_constants.dart';
 import 'package:memorial/utils/app_icons.dart';
@@ -23,12 +24,11 @@ class SearchScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.bgColors,
         centerTitle: true,
-        title: CustomText
-          (text: '',
-       //   text: AppConstants.searchs,
-       //    fontsize: Dimensions.fontSizeExtraLarge,
-       //    fontWeight: FontWeight.w500,
-       //    color: AppColors.black500, text: '',
+        title: const CustomText(
+          text: AppConstants.searchs,
+          fontsize: Dimensions.fontSizeExtraLarge,
+          fontWeight: FontWeight.w500,
+          color: AppColors.black500,
         ),
       ),
 
@@ -52,13 +52,17 @@ class SearchScreen extends StatelessWidget {
                       filled: true,
                       prefixIcon: TextButton(
                           onPressed: () {
-                            controller.AddSuggestionToSuggestionList(searchTextCotroller.text);
+                            controller.addSuggestionToSuggestionList(searchTextCotroller.text);
                           },
                           child: Container(
                               margin: EdgeInsets.only(right: 10.w),
                               child: SvgPicture.asset(
                                 AppIcons.search,
                               ))),
+                      suffixIcon: IconButton(onPressed: (){
+                        /// -----------routes my story archive screen-------------->
+                        Get.toNamed(AppRoutes.myStoryArchiveScreen);
+                      }, icon: Icon(Icons.close, color: AppColors.black100,)),
                       hintText: AppConstants.searchs,
                       hintStyle: const TextStyle(
                           color: AppColors.black100,
@@ -72,7 +76,7 @@ class SearchScreen extends StatelessWidget {
 
               ///-------------------search suggestion------------------->
               Container(
-                height: 300,
+                height: 500,
                 child: Obx(() => ListView.builder(
                   itemCount: controller.suggestionTextList.value.length,
                   itemBuilder: (context, index) {
@@ -82,10 +86,13 @@ class SearchScreen extends StatelessWidget {
                       height: 27.h,
                       width: 342.w,
                       child: ListTile(
-                      //   leading: SvgPicture.asset(
-                      //
-                      //   ),
-                        title: Text("${suggestions[1]}"),
+                        leading: SvgPicture.asset(
+                          AppIcons.clock
+                        ),
+                        trailing: SvgPicture.asset(
+                            AppIcons.circle_close
+                        ),
+                        title: Text("${suggestions}"),
                       ),
                     );
                   },
