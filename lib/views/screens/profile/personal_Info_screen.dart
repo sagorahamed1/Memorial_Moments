@@ -41,7 +41,7 @@ class PersonalInfoScreen extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        title: CustomText(
+        title:  CustomText(
           text: AppConstants.poersonalInformation,
           fontWeight: FontWeight.w500,
           fontsize: Dimensions.fontSizeExtraLarge,

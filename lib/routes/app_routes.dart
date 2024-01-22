@@ -25,6 +25,13 @@ import 'package:memorial/views/screens/subscription/subscription_screen.dart';
 import 'package:memorial/views/screens/termsOfServices/termsof_services_screen.dart';
 import 'package:memorial/views/screens/verifyMail/verify_mail_screen.dart';
 
+import '../views/screens/paymentScreen/payment_screen.dart';
+import '../views/screens/privacyPolicy/privacy_policy_screen.dart';
+import '../views/screens/resetPassword/reset_rassword_screen.dart';
+import '../views/screens/settings/settings_screen.dart';
+import '../views/screens/signUp/sign_up_screen.dart';
+import '../views/screens/singIn/sign_in_screen.dart';
+
 class AppRoutes{
   static const String splashScreen = "/splashScreen";
   static const String signInScreen = "/sign_in_screen";
