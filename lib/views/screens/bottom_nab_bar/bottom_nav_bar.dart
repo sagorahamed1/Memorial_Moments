@@ -18,6 +18,7 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+  bool isPage = false;
   int _bottomNavIndex = 0;
 
   List<NavItem> navItems = [
@@ -31,7 +32,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      body: _getPage(_bottomNavIndex),
+
+
+      body:isPage? _getPage(_bottomNavIndex) : AddStoryScreen(),
+
+
+
       floatingActionButton: Container(
         height: 50.h,
         width: 50.w,
@@ -43,6 +49,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
           onPressed: () {
             Get.toNamed(AppRoutes.addStoryScreen);
             // _togglePage();
+            setState(() {
+              isPage = !isPage;
+            });
           },
           icon: SvgPicture.asset(AppIcons.plus),
         ),
