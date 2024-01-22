@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class CustomButton extends StatelessWidget {
-  final Function onpress;
+  final VoidCallback onpress;
   final String title;
   const CustomButton({
-    super.key, required this.title,required this.onpress,
+    super.key,
+    required this.title,
+    required this.onpress,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onpress(),
+      onTap: onpress,
       child: Container(
-        width: 342.w,
-        height: 56.h,
+        width: 452.w,
+        height: 60.h,
         padding: const EdgeInsets.all(10),
         decoration: ShapeDecoration(
           color: const Color(0xFF0071E3),

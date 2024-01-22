@@ -1,128 +1,126 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:memorial/utils/app_constants.dart';
+import 'package:memorial/views/screens/subscription/InnerWidget/custom_eliment.dart';
 import 'package:memorial/views/widgets/custom_app_bar.dart';
+import 'package:memorial/views/widgets/custom_text.dart';
+import '../../../utils/app_icons.dart';
+import 'InnerWidget/buttom_section.dart';
+import 'InnerWidget/custom_card.dart';
 
-import '../../widgets/custom_text.dart';
-
-class SubscriptionScreen extends StatelessWidget {
+class SubscriptionScreen extends StatefulWidget {
   const SubscriptionScreen({super.key});
 
   @override
+  State<SubscriptionScreen> createState() => _SubscriptionScreenState();
+}
+
+class _SubscriptionScreenState extends State<SubscriptionScreen> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: AppConstants.subPackages, 
-          leading: Icon(Icons.arrow_back_ios), onprass: (){}),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 24),
-            // const CustomText(AppConstants.selectPlan),
-            const SizedBox(height: 24),
-            Container(
-              width: 282,
-              height: 163,
-              clipBehavior: Clip.antiAlias,
-              decoration: ShapeDecoration(
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
-                  side: BorderSide(width: 1, color: Color(0xFF8ABEF2)),
-                  borderRadius: BorderRadius.circular(8),
+      resizeToAvoidBottomInset: false,
+      appBar: CustomAppBar(
+          title: AppConstants.subPackages,
+          leading: const Icon(Icons.arrow_back_ios),
+          onprass: () {
+            Get.back();
+          }),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomText(
+                  text: AppConstants.selectPlan,
+                  fontsize: 18,
+                  fontWeight: FontWeight.w400),
+              const SizedBox(height: 24),
+              const SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: CustomCard(
+                          title: AppConstants.quarterPage,
+                          price: AppConstants.quarterPageMoney),
+                    ),
+                    SizedBox(
+                      width: 16,
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: CustomCard(
+                          title: AppConstants.halfPage,
+                          price: AppConstants.halPageMoney),
+                    ),
+                    SizedBox(
+                      width: 16,
+                    ),
+                    SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: CustomCard(
+                          title: AppConstants.fullPage,
+                          price: AppConstants.fullPageMoney,
+                        )),
+                    SizedBox(
+                      width: 16,
+                    ),
+                  ],
                 ),
-                shadows: [
-                  BoxShadow(
-                    color: Color(0x19000000),
-                    blurRadius: 8,
-                    offset: Offset(0, 1),
-                    spreadRadius: 0,
-                  )
-                ],
               ),
-              child: Stack(
+              const SizedBox(
+                height: 24,
+              ),
+              Center(child: SvgPicture.asset(AppIcons.scroll)),
+              const SizedBox(
+                height: 24,
+              ),
+              Column(
                 children: [
-                  Positioned(
-                    left: 0,
-                    top: 0,
-                    child: Container(
-                      width: 282,
-                      height: 64,
-                      decoration: BoxDecoration(color: Color(0xFFB0D3F6)),
+                  Container(
+                    width: 342.w,
+                    height: 322.h,
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 24),
+                    decoration: ShapeDecoration(
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)),
                     ),
-                  ),
-                  Positioned(
-                    left: 16,
-                    top: 16,
-                    child: Container(
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            width: 32,
-                            height: 32,
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  width: 32,
-                                  height: 32,
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        width: 32,
-                                        height: 32,
-                                        child: Stack(children: [
-                                            ]),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                          Text(
-                            'Quarter Page',
-                            style: TextStyle(
-                              color: Color(0xFF2B2A2A),
-                              fontSize: 18,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w600,
-                              height: 0,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 16,
-                    top: 120,
-                    child: Text(
-                      '\$99/ month',
-                      style: TextStyle(
-                        color: Color(0xFF0071E3),
-                        fontSize: 18,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
-                        height: 0,
-                      ),
+                    child: const Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CustomEliment(title: AppConstants.peopleStories),
+                        SizedBox(height: 16),
+                        CustomEliment(title: AppConstants.veteranStories),
+                        SizedBox(height: 16),
+                        CustomEliment(title: AppConstants.petsStories),
+                        SizedBox(height: 16),
+                        CustomEliment(title: AppConstants.uploadPhotos),
+                        SizedBox(height: 16),
+                        CustomEliment(title: AppConstants.postStory),
+                        SizedBox(height: 16),
+                        CustomEliment(title: AppConstants.postStory1),
+                      ],
                     ),
                   ),
                 ],
               ),
-            ),
-          ],
+              const SizedBox(
+                height: 24,
+              ),
+              const ButtomSection(),
+            ],
+          ),
         ),
       ),
-
     );
   }
 }

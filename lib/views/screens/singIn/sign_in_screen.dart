@@ -3,10 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:memorial/routes/app_routes.dart';
 import 'package:memorial/utils/app_constants.dart';
 import 'package:memorial/utils/app_icons.dart';
 import 'package:memorial/utils/app_images.dart';
-import 'package:memorial/views/screens/signUp/sign_up_screen.dart';
+import 'package:memorial/views/widgets/custom_text.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_text_field.dart';
 
@@ -35,26 +36,21 @@ class SignInScreen extends StatelessWidget {
                 style: GoogleFonts.parisienne(
                   color: const Color(0xFF0071E3),
                   fontWeight: FontWeight.w900,
-                  fontSize: 24,
+                  fontSize: 24.sp,
                 ),
               ),
-              Text(
-                AppConstants.memorialMoments,
-                style: GoogleFonts.poppins(
-                  color: const Color(0xFF2B2A2A),
-                  fontWeight: FontWeight.w400,
-                  fontSize: 18,
-                ),
+              CustomText(
+                text: AppConstants.connectMemories,
+                color: const Color(0xFF2B2A2A),
+                fontWeight: FontWeight.w400,
+                fontsize: 18.sp,
               ),
               const SizedBox(height: 30),
-              Text(
-                AppConstants.unlockMemories,
-                style: GoogleFonts.poppins(
+              CustomText(
+                  text: AppConstants.unlockMemories,
                   color: const Color(0xFF2B2A2A),
                   fontWeight: FontWeight.w400,
-                  fontSize: 14,
-                ),
-              ),
+                  fontsize: 14.sp),
               const SizedBox(height: 20),
               const CustomTextField(
                 title: AppConstants.email,
@@ -67,25 +63,25 @@ class SignInScreen extends StatelessWidget {
                 sufixicons: Icon(Icons.remove_red_eye_outlined),
               ),
               const SizedBox(height: 20),
-              Text(
-                AppConstants.forgetPass,
-                style: GoogleFonts.poppins(
-                  color: const Color(0xFF0071E3),
-                  fontWeight: FontWeight.w600,
-                  fontSize: 18,
-                ),
+              CustomText(
+                text: AppConstants.forgetPass,
+                color: const Color(0xFF0071E3),
+                fontWeight: FontWeight.w600,
+                fontsize: 18.sp,
               ),
               const SizedBox(height: 20),
-              CustomButton(onpress: () {}, title: AppConstants.signIn),
+              CustomButton(
+                  onpress: () {
+                    Get.toNamed(AppRoutes.homeScreen);
+                  },
+                  title: AppConstants.signIn),
               const SizedBox(height: 20),
               Center(
-                child: Text(
-                  AppConstants.or,
-                  style: GoogleFonts.poppins(
-                    color: const Color(0xFF2B2A2A),
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14,
-                  ),
+                child: CustomText(
+                  text: AppConstants.or,
+                  color: const Color(0xFF2B2A2A),
+                  fontWeight: FontWeight.w600,
+                  fontsize: 14.sp,
                 ),
               ),
               const SizedBox(height: 20),
@@ -104,25 +100,26 @@ class SignInScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      width: 24.w,
-                      height: 24.h,
-                      clipBehavior: Clip.antiAlias,
-                      decoration: const BoxDecoration(),
-                      child: Stack(
-                          children: [SvgPicture.asset(AppIcons.google)]),
-                    ),
-                    const SizedBox(width: 10),
-                    const SizedBox(
-                      width: 160,
-                      height: 18,
-                      child: Text(
-                        AppConstants.continueGoogle,
-                        style: TextStyle(
-                          color: Color(0xFF2B2A2A),
-                          fontSize: 18,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w500,
-                        ),
+                      width: 300.w,
+                      height: 65.h,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            clipBehavior: Clip.none,
+                            decoration: const BoxDecoration(),
+                            child: SvgPicture.asset(AppIcons.google),
+                          ),
+                          const SizedBox(width: 10),
+                          CustomText(
+                            text: AppConstants.continueGoogle,
+                            color: const Color(0xFF2B2A2A),
+                            fontWeight: FontWeight.w500,
+                            fontsize: 18.sp,
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -132,29 +129,22 @@ class SignInScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
-                    AppConstants.dontAccount,
-                    style: TextStyle(
-                      color: Color(0xFF2B2A2A),
-                      fontSize: 18,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w400,
-                    ),
+                  CustomText(
+                    text: AppConstants.dontAccount,
+                    color: const Color(0xFF2B2A2A),
+                    fontWeight: FontWeight.w400,
+                    fontsize: 18.sp,
                   ),
                   const SizedBox(width: 5),
                   TextButton(
-                    onPressed: (){
-                      Get.to(SignUpScreen());
-                      // MaterialPageRoute(builder: (context) =>  SignUpScreen());
-                      },
-                    child: const Text(
-                      AppConstants.signUp,
-                      style: TextStyle(
-                        color: Color(0xFF0071E3),
-                        fontSize: 18,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w600,
-                      ),
+                    onPressed: () {
+                      Get.toNamed(AppRoutes.signUpScreen);
+                    },
+                    child: CustomText(
+                      text: AppConstants.signUp,
+                      color: const Color(0xFF0071E3),
+                      fontWeight: FontWeight.w600,
+                      fontsize: 18.sp,
                     ),
                   ),
                 ],

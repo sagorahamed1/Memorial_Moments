@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:memorial/routes/app_routes.dart';
 import 'package:memorial/views/widgets/custom_app_bar.dart';
 import 'package:memorial/views/widgets/custom_button.dart';
 import '../../../utils/app_constants.dart';
@@ -54,8 +55,11 @@ class VerifyMailScreen extends StatelessWidget {
                 color: const Color(0xFF0071E3),
               ),
             ),
-            const SizedBox(height: 330),
-            CustomButton(title: AppConstants.getStarted, onpress: () {})
+            const Spacer(),
+            CustomButton(title: AppConstants.getStarted, onpress: () {
+              Get.toNamed(AppRoutes.forgetPassword);
+            }),
+      const SizedBox(height: 54),
           ],
         ),
       ),
