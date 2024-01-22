@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:memorial/routes/app_routes.dart';
 import 'package:memorial/utils/app_constants.dart';
 import 'package:memorial/utils/app_images.dart';
 import 'package:memorial/views/widgets/custom_button.dart';
@@ -33,7 +35,9 @@ class PaymentVerifiedScreen extends StatelessWidget {
                 height: 50.h,
                 child: CustomButton(
                   title: AppConstants.gotoProfile,
-                  onpress: () {},
+                  onpress: () {
+                    Get.toNamed(AppRoutes.homeScreen);
+                  },
                 ),
               ),
             ],

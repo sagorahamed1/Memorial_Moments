@@ -31,9 +31,9 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: AppColors.bgColors, // Set the scaffold background color here
         ),
 
-        initialRoute:AppRoutes.signInScreen,
+        initialRoute:AppRoutes.subscriptionScreen,
         navigatorKey: Get.key,
-        home: SignInScreen(),
+        home: SubscriptionScreen(),
         // home: HomeScreen(),
         getPages: AppRoutes.Routes(),
 
