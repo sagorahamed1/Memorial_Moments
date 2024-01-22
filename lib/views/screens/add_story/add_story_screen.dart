@@ -99,7 +99,7 @@ class AddStoryScreen extends StatelessWidget {
                 controller.dropDownShowCategory == true
                     ? Container(
                         margin: EdgeInsets.only(left: 16),
-                        height: 168.h,
+                        height: 200.h,
                         width: 326,
                         decoration: const BoxDecoration(
                             borderRadius: BorderRadius.only(
@@ -112,6 +112,7 @@ class AddStoryScreen extends StatelessWidget {
                               left: BorderSide(color: AppColors.blue500),
                             )),
                         child: ListView.builder(
+                          physics: NeverScrollableScrollPhysics(),
                           itemCount: controller.categoryList.length,
                           itemBuilder: (context, index) {
                             var category = controller.categoryList[index];
@@ -131,7 +132,7 @@ class AddStoryScreen extends StatelessWidget {
                           },
                         ),
                       )
-                    : SizedBox(
+                    : const SizedBox(
                         height: 0,
                       ),
 
@@ -184,7 +185,7 @@ class AddStoryScreen extends StatelessWidget {
                 controller.dropDownShowBackGroundMusic == false
                     ? Container(
                         margin: EdgeInsets.only(left: 16),
-                        height: 200.h,
+                        height: 220.h,
                         width: 326,
                         decoration: const BoxDecoration(
                             borderRadius: BorderRadius.only(
@@ -235,6 +236,7 @@ class AddStoryScreen extends StatelessWidget {
                             Container(
                               height: 100,
                               child: ListView.builder(
+                                physics: NeverScrollableScrollPhysics(),
                                 itemCount: controller.BackGrounMusicList.length,
                                 itemBuilder: (context, index) {
                                   var backGrounMusic =
