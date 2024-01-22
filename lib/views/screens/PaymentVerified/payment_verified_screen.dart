@@ -19,12 +19,11 @@ class PaymentVerifiedScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Center(
-                child: Container(
-                    child: Image.asset(
+                child: Image.asset(
                   appImages.complete,
                   width: 96.w,
                   height: 96.h,
-                )),
+                ),
               ),
               const SizedBox(height: 24),
               CustomText(text: AppConstants.paymentSuccess),

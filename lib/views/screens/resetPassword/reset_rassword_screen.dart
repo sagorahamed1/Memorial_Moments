@@ -55,7 +55,7 @@ class ResetPasswordScreen extends StatelessWidget {
             CustomButton(
                 title: AppConstants.resetPassword,
                 onpress: () {
-                  Get.toNamed(AppRoutes.settingsScreen);
+                  // Get.toNamed(AppRoutes.settingsScreen);
                 }),
             const SizedBox(height: 54),
           ],

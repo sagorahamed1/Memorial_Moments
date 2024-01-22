@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:memorial/routes/app_routes.dart';
 import '../../../../utils/app_constants.dart';
 import '../../../widgets/custom_buttom.dart';
 
@@ -58,7 +60,9 @@ class ButtomSection extends StatelessWidget {
           const SizedBox(
             height: 22,
           ),
-          CustomButton(title: AppConstants.continu, onpress: () {})
+          CustomButton(title: AppConstants.continu, onpress: () {
+            Get.toNamed(AppRoutes.paymentVerifiedScreen);
+          })
         ],
       ),
     );
