@@ -39,7 +39,7 @@ class AddStoryScreen extends StatelessWidget {
               SizedBox(
                 height: 16.h,
               ),
-              const CustomTextField(
+              const TextFieldCustom(
                 hinText: AppConstants.myStory,
               ),
               SizedBox(
@@ -81,7 +81,7 @@ class AddStoryScreen extends StatelessWidget {
               SizedBox(
                 height: 16.h,
               ),
-              const CustomTextField(
+              const TextFieldCustom(
                 hinText: AppConstants.backgroundMusic,
                 suffixIcon: AppIcons.music_of,
               ),
@@ -151,11 +151,11 @@ class AddStoryScreen extends StatelessWidget {
   }
 }
 
-class CustomTextField extends StatelessWidget {
+class TextFieldCustom extends StatelessWidget {
   final String? hinText;
   final dynamic? suffixIcon;
 
-  const CustomTextField({this.hinText, this.suffixIcon});
+  const TextFieldCustom({this.hinText, this.suffixIcon});
 
   @override
   Widget build(BuildContext context) {

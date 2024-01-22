@@ -35,7 +35,7 @@ class NotificationScreen extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        title: const CustomText(
+        title:  CustomText(
           text: AppConstants.notification,
           fontWeight: FontWeight.w500,
           fontsize: Dimensions.fontSizeExtraLarge,

@@ -22,7 +22,7 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: AppColors.bgColors,
-        title: const CustomText(
+        title:  CustomText(
           text: AppConstants.profiles,
           fontWeight: FontWeight.w500,
           fontsize: Dimensions.fontSizeExtraLarge,
@@ -59,7 +59,7 @@ class ProfileScreen extends StatelessWidget {
                           ),
                           Container(
                             margin: EdgeInsets.only(left: 16),
-                            child: const CustomText(
+                            child:  CustomText(
                               text: AppConstants.jennyWilson,
                               fontsize: Dimensions.fontSizeOverLarge,
                               fontWeight: FontWeight.w500,
@@ -78,7 +78,7 @@ class ProfileScreen extends StatelessWidget {
                         child: Row(
                           children: [
                             SvgPicture.asset(AppIcons.crown),
-                            const Padding(
+                             Padding(
                               padding: EdgeInsets.only(left: 16),
                               child: CustomText(
                                 text: AppConstants.quarterPageMember,
@@ -115,7 +115,7 @@ class ProfileScreen extends StatelessWidget {
                     Get.toNamed(AppRoutes.personalInfoScreen);
                   },
                   leading: SvgPicture.asset(AppIcons.userIcon),
-                  title: const CustomText(text: AppConstants.poersonalInformation,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
+                  title:  CustomText(text: AppConstants.poersonalInformation,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
                 ),
 
 
@@ -127,15 +127,15 @@ class ProfileScreen extends StatelessWidget {
                     Get.to(MySubscriptionScreen());
                   },
                   leading: SvgPicture.asset(AppIcons.crownWhite),
-                  title: const CustomText(text: AppConstants.mySubscription,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
+                  title:  CustomText(text: AppConstants.mySubscription,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
                 ),
                 ListTile(
                   leading: SvgPicture.asset(AppIcons.bookPpen),
-                  title: const CustomText(text: AppConstants.myCurrentStory,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
+                  title:  CustomText(text: AppConstants.myCurrentStory,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
                 ),
                 ListTile(
                   leading: SvgPicture.asset(AppIcons.setting),
-                  title: const CustomText(text: AppConstants.setting,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
+                  title:  CustomText(text: AppConstants.setting,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
                 ),
               ],
               ),

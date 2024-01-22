@@ -38,7 +38,7 @@ class MySubscriptionScreen extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        title: const CustomText(
+        title:  CustomText(
           text: AppConstants.mySubscription,
           fontWeight: FontWeight.w500,
           fontsize: Dimensions.fontSizeExtraLarge,

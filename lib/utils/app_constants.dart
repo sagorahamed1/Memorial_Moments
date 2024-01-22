@@ -57,7 +57,11 @@ class AppConstants {
   ///=================> Settings screen <=====================
   static const String selectPlan = "Select a plan";
   static const String quarterPage = "Quarter Page";
+  static const String halfPage = "Half a Page";
+  static const String fullPage = "Full Page";
   static const String quarterPageMoney = "\$99/ month";
+  static const String halPageMoney = "\$250/ 6 months";
+  static const String fullPageMoney = "\$500/ year";
   static const String peopleStories  = "All People Stories";
   static const String veteranStories    = "Veteran Stories";
   static const String petsStories    = "Pets Stories";
@@ -68,6 +72,21 @@ class AppConstants {
   static const String terms    = "Terms";
   static const String continu   = "Continue";
 
+  ///=================> Payment screen <=====================
+  static const String purchaseQuarter   = "Purchase Quarter Page";
+  static const String addPayment   = "Add Payment Method";
+  static const String addPaymentMethod   = "Add payment method for upgrade and better experience.";
+  static const String cardHolder   = "Card holder name";
+  static const String cardNumber   = "Card number";
+  static const String cVC   = "CVV/CVC";
+  static const String mmYy   = "MM/YY";
+  static const String proceedPayment   = "Proceed to Payment";
+  static const String paymentSuccess   = "Your order has been placed successfully";
+  static const String gotoProfile   = "Go to Profile";
+  static const String enterYour   = "Enter your current password to delete your account.";
+
+  ///=================> Privacy Policy screen <=====================
+  static const String loremIpsum   = "1. Lorem ipsum dolor sit amet consecrate. Imper-diet oculist collision biennium mass id elementum consecrate deque Lauris.";
 
 
 

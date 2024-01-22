@@ -41,7 +41,7 @@ class PersonalInfoScreen extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        title: const CustomText(
+        title:  CustomText(
           text: AppConstants.poersonalInformation,
           fontWeight: FontWeight.w500,
           fontsize: Dimensions.fontSizeExtraLarge,
@@ -85,12 +85,12 @@ class PersonalInfoScreen extends StatelessWidget {
             SizedBox(height: 25.h,),
             ListTile(
               leading: SvgPicture.asset(AppIcons.userIcon),
-              title: const CustomText(text: AppConstants.jennyWilson,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
+              title:  CustomText(text: AppConstants.jennyWilson,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
             ),
 
             ListTile(
               leading: SvgPicture.asset(AppIcons.mailIcon),
-              title: const CustomText(text: AppConstants.profileEmail,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
+              title:  CustomText(text: AppConstants.profileEmail,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
             ),
 
             ///---------------edit botton------------------
