@@ -22,7 +22,7 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: AppColors.bgColors,
-        title: CustomText(r
+        title: CustomText(
           text: AppConstants.profiles,
           fontWeight: FontWeight.w500,
           fontsize: Dimensions.fontSizeExtraLarge,

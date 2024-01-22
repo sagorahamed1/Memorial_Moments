@@ -63,6 +63,7 @@ class AppRoutes{
   static const String myStoryArchiveScreen = "/MyStoryArchiveScreen";
   static const String profileScreen = "/ProfileScreen";
   static const String profileContentScreen = "/ProfileContentScreen";
+  static const String bottomNavBar = "/BottomNavBar";
 
 
   static List <GetPage> Routes ()=>[
@@ -92,7 +93,8 @@ class AppRoutes{
     GetPage(name: AppRoutes.mySubscriptionScreen, page: ()=>MySubscriptionScreen()),
     GetPage(name: AppRoutes.myStoryArchiveScreen, page: ()=>MyStoryArchiveScreen()),
     GetPage(name: AppRoutes.profileScreen, page: ()=>ProfileScreen()),
-    GetPage(name: AppRoutes.profileContentScreen, page: ()=>ProfileContentScreen())
+    GetPage(name: AppRoutes.profileContentScreen, page: ()=>ProfileContentScreen()),
+    GetPage(name: AppRoutes.bottomNavBar, page: ()=>BottomNavBar())
 
   ];
 }
