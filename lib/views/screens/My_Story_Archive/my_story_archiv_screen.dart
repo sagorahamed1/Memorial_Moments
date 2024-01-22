@@ -19,6 +19,7 @@ class MyStoryArchiveScreen extends StatelessWidget {
 
       ///----------------------------this is app bar section--------------------->
         appBar: AppBar(
+
             elevation: 0.0,
             backgroundColor: AppColors.bgColors,
             centerTitle: true,

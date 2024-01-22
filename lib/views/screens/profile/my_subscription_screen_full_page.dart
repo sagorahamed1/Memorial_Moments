@@ -21,6 +21,7 @@ class MySubscriptionScreenFullPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.bgColors,
         leading: Container(
+          padding: EdgeInsets.only(top: 6,right: 6,bottom: 7),
           margin: const EdgeInsets.only(left: Dimensions.paddingSizeDefault),
           child: FittedBox(
             fit: BoxFit.contain,
@@ -144,12 +145,11 @@ class MySubscriptionScreenFullPage extends StatelessWidget {
             ///<-------------------bottom section botton----------------------------->
             GestureDetector(
               onTap: (){
-
                 ///-------------------alear Dialog----------------------->
                 Get.dialog(Dialog(
                   child: Container(
                     padding: EdgeInsets.only(left: 24,right: 24),
-                    height: 135.h,
+                    height: 180.h,
                     width: 342.w,
                     child: Center(
                       child: Column(
@@ -163,15 +163,15 @@ class MySubscriptionScreenFullPage extends StatelessWidget {
                             fontsize: Dimensions.fontSizeExtraLarge,
                           ),
 
-                          SizedBox(height: 16.h,),
+                          SizedBox(height: 30.h,),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
 
                               ///-------------no botton---------
                               Container(
                                 height: 36.h,
-                                width: 120.w,
+                                width: 110.w,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8),
                                     border: Border.all(color: AppColors.blue500)
@@ -184,7 +184,7 @@ class MySubscriptionScreenFullPage extends StatelessWidget {
                               ///-----------------yes botton----------------
                               Container(
                                 height: 36.h,
-                                width: 120.w,
+                                width: 110.w,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8),
                                     color: AppColors.blue500,

@@ -12,7 +12,7 @@ import '../../../widgets/custom_text.dart';
 /// ----------------this is popup menu widget---------------------------->
 PopupMenuItem PopUpMenu() {
   return PopupMenuItem(
-    padding: EdgeInsets.all(0),
+    padding: EdgeInsets.only(right: 20),
     // mouseCursor: MouseCursor.defer,
     enabled: true,
     onTap: () {
@@ -35,11 +35,11 @@ PopupMenuItem PopUpMenu() {
 
                 SizedBox(height: 24.h,),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       height: 36.h,
-                      width: 120.w,
+                      width: 110.w,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(color: AppColors.blue500)
@@ -51,7 +51,7 @@ PopupMenuItem PopUpMenu() {
 
                     Container(
                       height: 36.h,
-                      width: 120.w,
+                      width: 110.w,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           color: AppColors.red500,

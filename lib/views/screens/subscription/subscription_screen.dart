@@ -1,12 +1,11 @@
+import 'package:carousel_indicator/carousel_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:memorial/utils/app_constants.dart';
 import 'package:memorial/views/screens/subscription/InnerWidget/custom_eliment.dart';
 import 'package:memorial/views/widgets/custom_app_bar.dart';
 import 'package:memorial/views/widgets/custom_text.dart';
-import '../../../utils/app_icons.dart';
 import 'InnerWidget/buttom_section.dart';
 import 'InnerWidget/custom_card.dart';
 
@@ -18,6 +17,34 @@ class SubscriptionScreen extends StatefulWidget {
 }
 
 class _SubscriptionScreenState extends State<SubscriptionScreen> {
+  //========================================> Slider Faction <===================================
+
+  int pageIndex = 0;
+  late final PageController pageController;
+
+  final List<Widget> _demo = [
+    const CustomCard(
+        title: AppConstants.quarterPage, price: AppConstants.quarterPageMoney),
+    const CustomCard(
+        title: AppConstants.halfPage, price: AppConstants.halPageMoney),
+    const CustomCard(
+      title: AppConstants.fullPage,
+      price: AppConstants.fullPageMoney,
+    ),
+  ];
+  @override
+  void initState() {
+    pageController = PageController(initialPage: 0, viewportFraction: 0.85);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    pageController.dispose();
+    super.dispose();
+  }
+  //========================================> Slider Faction <===================================
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,47 +63,41 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
             children: [
               CustomText(
                   text: AppConstants.selectPlan,
-                  fontsize: 18,
+                  fontsize: 18.sp,
                   fontWeight: FontWeight.w400),
               const SizedBox(height: 24),
-              const SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: CustomCard(
-                          title: AppConstants.quarterPage,
-                          price: AppConstants.quarterPageMoney),
+
+              //========================================> Slider Section <===================================
+
+              Column(
+                children: [
+                  Center(
+                    child: Container(
+                      width: 360.w,
+                      height: 180.h,
+                      child: PageView(
+                        controller: pageController,
+                        children: _demo,
+                        onPageChanged: (index) {
+                          setState(() {
+                            pageIndex = index;
+                          });
+                        },
+                      ),
                     ),
-                    SizedBox(
-                      width: 16,
-                    ),
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: CustomCard(
-                          title: AppConstants.halfPage,
-                          price: AppConstants.halPageMoney),
-                    ),
-                    SizedBox(
-                      width: 16,
-                    ),
-                    SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: CustomCard(
-                          title: AppConstants.fullPage,
-                          price: AppConstants.fullPageMoney,
-                        )),
-                    SizedBox(
-                      width: 16,
-                    ),
-                  ],
-                ),
+                  ),
+                  const SizedBox(height: 24),
+                  CarouselIndicator(
+                    count: _demo.length,
+                    index: pageIndex,
+                    color: Colors.grey,
+                    activeColor: Colors.blue,
+                  ),
+                ],
               ),
-              const SizedBox(
-                height: 24,
-              ),
-              Center(child: SvgPicture.asset(AppIcons.scroll)),
+
+              //========================================> Slider Section <===================================
+
               const SizedBox(
                 height: 24,
               ),
@@ -92,6 +113,9 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8)),
                     ),
+
+                    //========================================> Elements Section <===================================
+
                     child: const Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,

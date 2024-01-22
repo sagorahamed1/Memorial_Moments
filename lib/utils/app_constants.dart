@@ -71,6 +71,9 @@ class AppConstants {
   static const String byTapping    = "By tapping Continue, you will be charged, your subscription will auto- renew for the same price and package length until you cancel via app settings, and you agree to our ";
   static const String terms    = "Terms";
   static const String continu   = "Continue";
+  static const String goTo   = "Go to Subscription";
+  static const String skipNow   = "Skip for Now";
+  static const String upGrade   = "Upgrade to Preimium for better experience";
 
   ///=================> Payment screen <=====================
   static const String purchaseQuarter   = "Purchase Quarter Page";

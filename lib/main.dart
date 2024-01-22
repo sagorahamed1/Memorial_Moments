@@ -10,6 +10,8 @@ import 'views/screens/bottom_nab_bar/bottom_nav_bar.dart';
 import 'views/screens/home/home_screen.dart';
 import 'views/screens/paymentScreen/payment_screen.dart';
 import 'views/screens/privacyPolicy/privacy_policy_screen.dart';
+import 'views/screens/profile/profile_content_screen.dart';
+import 'views/screens/profile/profile_screen.dart';
 import 'views/screens/settings/settings_screen.dart';
 import 'views/screens/signUp/sign_up_screen.dart';
 import 'views/screens/subscription/subscription_screen.dart';
@@ -17,10 +19,12 @@ import 'views/screens/termsOfServices/termsof_services_screen.dart';
 
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -35,11 +39,12 @@ class MyApp extends StatelessWidget {
         navigatorKey: Get.key,
         home: BottomNavBar(),
         // home: SignInScreen(),
+
         // home: HomeScreen(),
         getPages: AppRoutes.Routes(),
 
       ),
-      designSize: Size(390, 844),
+      designSize: const Size(390, 844),
 
     );
   }

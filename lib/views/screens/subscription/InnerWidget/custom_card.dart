@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import '../../../../utils/app_icons.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:memorial/utils/app_icons.dart';
 
 class CustomCard extends StatelessWidget {
   final String title;
@@ -15,6 +15,7 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(right: 16),
       width: 282.w,
       height: 163.h,
       clipBehavior: Clip.antiAlias,
@@ -59,9 +60,9 @@ class CustomCard extends StatelessWidget {
                     const SizedBox(width: 8),
                     Text(
                       title,
-                      style: const TextStyle(
-                        color: Color(0xFF2B2A2A),
-                        fontSize: 18,
+                      style: TextStyle(
+                        color: const Color(0xFF2B2A2A),
+                        fontSize: 18.sp,
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w600,
                         height: 0,
@@ -77,9 +78,9 @@ class CustomCard extends StatelessWidget {
             top: 120,
             child: Text(
               price,
-              style: const TextStyle(
-                color: Color(0xFF0071E3),
-                fontSize: 18,
+              style: TextStyle(
+                color: const Color(0xFF0071E3),
+                fontSize: 18.sp,
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.w500,
                 height: 0,

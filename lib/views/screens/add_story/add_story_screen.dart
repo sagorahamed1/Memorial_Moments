@@ -68,7 +68,7 @@ class AddStoryScreen extends StatelessWidget {
                   child: TextField(
                     controller: selectedCategory,
                     decoration: InputDecoration(
-                        contentPadding: EdgeInsets.only(left: 15, top: 3),
+                        contentPadding: EdgeInsets.only(left: 15, top: 1),
                         fillColor: AppColors.white,
                         filled: true,
                         suffixIcon: TextButton(
@@ -152,7 +152,7 @@ class AddStoryScreen extends StatelessWidget {
                   child: TextFormField(
                     controller: selectedBackgroundMusic,
                     decoration: InputDecoration(
-                        contentPadding: EdgeInsets.only(top: 4, left: 15),
+                        contentPadding: EdgeInsets.only(top: 1, left: 15),
                         fillColor: AppColors.white,
                         filled: true,
                         suffixIcon: Container(

@@ -21,6 +21,7 @@ class MySubscriptionScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.bgColors,
         leading: Container(
+          padding: EdgeInsets.only(top: 6,right: 6,bottom: 7),
           margin: const EdgeInsets.only(left: Dimensions.paddingSizeDefault),
           child: FittedBox(
             fit: BoxFit.contain,
@@ -58,6 +59,7 @@ class MySubscriptionScreen extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
+
             Align(
               child: Container(
                 height: 64.h,
@@ -68,7 +70,10 @@ class MySubscriptionScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                        margin: EdgeInsets.only(left: 16, right: 16),
+
+ 
+
+                      margin: const EdgeInsets.only(left: 16,right: 16),
                         child: SvgPicture.asset(AppIcons.crown)),
                     CustomText(
                       text: AppConstants.quarterPages,
@@ -151,7 +156,7 @@ class MySubscriptionScreen extends StatelessWidget {
                   child: Container(
                     padding: EdgeInsets.all(10),
                     height: 56.h,
-                    width: 167.w,
+                    width: 160.w,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: AppColors.white),
@@ -175,7 +180,7 @@ class MySubscriptionScreen extends StatelessWidget {
                   child: Container(
                     padding: EdgeInsets.all(10),
                     height: 56.h,
-                    width: 167.w,
+                    width: 160.w,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: AppColors.blue500),

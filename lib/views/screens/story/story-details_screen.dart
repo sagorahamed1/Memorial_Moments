@@ -9,6 +9,7 @@ import 'package:memorial/views/widgets/custom_text.dart';
 import 'package:memorial/views/widgets/individual.dart';
 import '../../../utils/app_constants.dart';
 import '../../../utils/dimensions.dart';
+import '../my_story_details/inner_widgets/pop_up_menu.dart';
 
 class StoryDetailsScreen extends StatelessWidget {
   const StoryDetailsScreen({super.key});
@@ -45,6 +46,18 @@ class StoryDetailsScreen extends StatelessWidget {
           fontsize: Dimensions.fontSizeExtraLarge,
           color: AppColors.black500,
         ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 4),
+            child: PopupMenuButton(
+                surfaceTintColor: Colors.green,
+                clipBehavior: Clip.none,
+                elevation: 0.0,
+                color: AppColors.white,
+                offset: Offset(0.0, 40),
+                itemBuilder: (context) => [PopUpMenu()]),
+          )
+        ],
       ),
 
       ///-----------------------body section-------------------------->

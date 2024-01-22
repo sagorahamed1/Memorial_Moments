@@ -23,7 +23,7 @@ class SearchScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.bgColors,
         centerTitle: true,
-        title:  CustomText(
+        title: CustomText(
           text: AppConstants.searchs,
           fontsize: Dimensions.fontSizeExtraLarge,
           fontWeight: FontWeight.w500,
@@ -38,7 +38,7 @@ class SearchScreen extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 43.h,
+                height: 50.h,
                 width: 342.w,
                 clipBehavior: Clip.antiAlias,
                 decoration:
@@ -60,12 +60,12 @@ class SearchScreen extends StatelessWidget {
                               ))),
                       suffixIcon: IconButton(onPressed: (){
                         /// -----------routes my story archive screen-------------->
-                        Get.toNamed(AppRoutes.myStoryArchiveScreen);
-                      }, icon: Icon(Icons.close, color: AppColors.black100,)),
+                        Get.toNamed(AppRoutes.myStoryArchiveScreen);},
+                          icon: const Icon(Icons.close, color: AppColors.black100,)),
                       hintText: AppConstants.searchs,
                       hintStyle: const TextStyle(
                           color: AppColors.black100,
-                          fontSize: Dimensions.fontSizeSmall,
+                          fontSize: Dimensions.fontSizeExtraLarge,
                           fontWeight: FontWeight.w500),
                       border: InputBorder.none),
                 ),
