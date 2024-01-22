@@ -51,7 +51,7 @@ class EditPersonalInformaitonScreen extends StatelessWidget {
 
       /// --------------------------body section------------------------->
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtraLarge),
+        padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtraLarge),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -74,7 +74,7 @@ class EditPersonalInformaitonScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50),
                         color: AppColors.white
                     ),
-                    child: Icon(Icons.edit),
+                    child: const Icon(Icons.edit),
                   ),
                 )
               ],
@@ -98,7 +98,7 @@ class EditPersonalInformaitonScreen extends StatelessWidget {
 
 
             ///---------------edit botton------------------
-            Spacer(),
+            const Spacer(),
             CustomButton(title: AppConstants.update, onpress: (){
 
             }),

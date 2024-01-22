@@ -58,6 +58,7 @@ class MySubscriptionScreen extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
+
             Align(
               child: Container(
                 height: 64.h,
@@ -68,7 +69,10 @@ class MySubscriptionScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                        margin: EdgeInsets.only(left: 16, right: 16),
+
+ 
+
+                      margin: const EdgeInsets.only(left: 16,right: 16),
                         child: SvgPicture.asset(AppIcons.crown)),
                     CustomText(
                       text: AppConstants.quarterPages,

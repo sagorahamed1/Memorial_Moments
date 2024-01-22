@@ -22,7 +22,7 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: AppColors.bgColors,
-        title:  CustomText(
+        title: CustomText(r
           text: AppConstants.profiles,
           fontWeight: FontWeight.w500,
           fontsize: Dimensions.fontSizeExtraLarge,
@@ -35,7 +35,6 @@ class ProfileScreen extends StatelessWidget {
             EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtraLarge),
         child: Column(
           children: [
-
             /// ------------------------profile box -------------------
             Container(
               height: 135.h,
@@ -59,7 +58,7 @@ class ProfileScreen extends StatelessWidget {
                           ),
                           Container(
                             margin: EdgeInsets.only(left: 16),
-                            child:  CustomText(
+                            child: CustomText(
                               text: AppConstants.jennyWilson,
                               fontsize: Dimensions.fontSizeOverLarge,
                               fontWeight: FontWeight.w500,
@@ -74,12 +73,12 @@ class ProfileScreen extends StatelessWidget {
                   Expanded(
                       flex: 1,
                       child: Container(
-                        margin: EdgeInsets.only(left: 50,right: 16),
+                        margin: EdgeInsets.only(left: 50, right: 16),
                         child: Row(
                           children: [
                             SvgPicture.asset(AppIcons.crown),
-                             Padding(
-                              padding: EdgeInsets.only(left: 16),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 16),
                               child: CustomText(
                                 text: AppConstants.quarterPageMember,
                                 fontWeight: FontWeight.w500,
@@ -94,50 +93,62 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
 
+            SizedBox(
+              height: 22.h,
+            ),
 
-            SizedBox(height: 22.h,),
             ///----------------------------2nd stage other infomaition------------------------>
             Container(
-              height: 235.h,
+              height: 270.h,
               width: 342.w,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: AppColors.white
-              ),
-
+                  borderRadius: BorderRadius.circular(8),
+                  color: AppColors.white),
               child: Column(
-              children: [
+                children: [
+                  ///----------------navigete personal informaition-----------------
+                  ListTile(
+                    onTap: () {
+                      Get.toNamed(AppRoutes.personalInfoScreen);
+                    },
+                    leading: SvgPicture.asset(AppIcons.userIcon),
+                    title: CustomText(
+                      text: AppConstants.poersonalInformation,
+                      fontWeight: FontWeight.w500,
+                      fontsize: Dimensions.fontSizeExtraLarge,
+                    ),
+                  ),
 
-
-                ///----------------navigete personal informaition-----------------
-                ListTile(
-                  onTap: (){
-                    Get.toNamed(AppRoutes.personalInfoScreen);
-                  },
-                  leading: SvgPicture.asset(AppIcons.userIcon),
-                  title:  CustomText(text: AppConstants.poersonalInformation,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
-                ),
-
-
-
-                ///----------------navigete my scbscription-----------------
-                ListTile(
-                  onTap: (){
-                    // Get.toNamed(AppRoutes.mySubscriptionScreen);
-                    Get.to(MySubscriptionScreen());
-                  },
-                  leading: SvgPicture.asset(AppIcons.crownWhite),
-                  title:  CustomText(text: AppConstants.mySubscription,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
-                ),
-                ListTile(
-                  leading: SvgPicture.asset(AppIcons.bookPpen),
-                  title:  CustomText(text: AppConstants.myCurrentStory,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
-                ),
-                ListTile(
-                  leading: SvgPicture.asset(AppIcons.setting),
-                  title:  CustomText(text: AppConstants.setting,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
-                ),
-              ],
+                  ///----------------navigete my scbscription-----------------
+                  ListTile(
+                    onTap: () {
+                      // Get.toNamed(AppRoutes.mySubscriptionScreen);
+                      Get.to(MySubscriptionScreen());
+                    },
+                    leading: SvgPicture.asset(AppIcons.crownWhite),
+                    title: CustomText(
+                      text: AppConstants.mySubscription,
+                      fontWeight: FontWeight.w500,
+                      fontsize: Dimensions.fontSizeExtraLarge,
+                    ),
+                  ),
+                  ListTile(
+                    leading: SvgPicture.asset(AppIcons.bookPpen),
+                    title: CustomText(
+                      text: AppConstants.myCurrentStory,
+                      fontWeight: FontWeight.w500,
+                      fontsize: Dimensions.fontSizeExtraLarge,
+                    ),
+                  ),
+                  ListTile(
+                    leading: SvgPicture.asset(AppIcons.setting),
+                    title: CustomText(
+                      text: AppConstants.setting,
+                      fontWeight: FontWeight.w500,
+                      fontsize: Dimensions.fontSizeExtraLarge,
+                    ),
+                  ),
+                ],
               ),
             )
           ],
