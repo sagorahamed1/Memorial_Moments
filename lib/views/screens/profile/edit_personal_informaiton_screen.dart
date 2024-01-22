@@ -40,7 +40,7 @@ class EditPersonalInformaitonScreen extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        title: const CustomText(
+        title:  CustomText(
           text: AppConstants.poersonalInformation,
           fontWeight: FontWeight.w500,
           fontsize: Dimensions.fontSizeExtraLarge,
@@ -92,7 +92,7 @@ class EditPersonalInformaitonScreen extends StatelessWidget {
               ),
               child: ListTile(
                 leading: SvgPicture.asset(AppIcons.userIcon),
-                title: const CustomText(text: AppConstants.jennyWilson,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
+                title:  CustomText(text: AppConstants.jennyWilson,fontWeight: FontWeight.w500,fontsize: Dimensions.fontSizeExtraLarge,),
               ),
             ),
 

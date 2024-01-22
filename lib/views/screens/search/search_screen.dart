@@ -24,7 +24,7 @@ class SearchScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.bgColors,
         centerTitle: true,
-        title: const CustomText(
+        title:  CustomText(
           text: AppConstants.searchs,
           fontsize: Dimensions.fontSizeExtraLarge,
           fontWeight: FontWeight.w500,

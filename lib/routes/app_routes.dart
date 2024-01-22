@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:memorial/views/screens/My_Story_Archive/my_story_archiv_screen.dart';
 import 'package:memorial/views/screens/PaymentVerified/payment_verified_screen.dart';
 import 'package:memorial/views/screens/aboutUs/about_us_screen.dart';
 import 'package:memorial/views/screens/add_story/add_story_screen.dart';
@@ -17,6 +18,13 @@ import 'package:memorial/views/screens/story/story-details_screen.dart';
 import 'package:memorial/views/screens/subscription/subscription_screen.dart';
 import 'package:memorial/views/screens/termsOfServices/termsof_services_screen.dart';
 import 'package:memorial/views/screens/verifyMail/verify_mail_screen.dart';
+
+import '../views/screens/paymentScreen/payment_screen.dart';
+import '../views/screens/privacyPolicy/privacy_policy_screen.dart';
+import '../views/screens/resetPassword/reset_rassword_screen.dart';
+import '../views/screens/settings/settings_screen.dart';
+import '../views/screens/signUp/sign_up_screen.dart';
+import '../views/screens/singIn/sign_in_screen.dart';
 
 class AppRoutes{
   static const String splashScreen = "/splashScreen";
@@ -40,6 +48,10 @@ class AppRoutes{
   static const String myStoryDetailsScreen = "/MyStoryDetailsScreen";
   static const String addStoryScreen = "/AddStoryScreen";
   static const String searchScreen = "/SearchScreen";
+  static const String personalInfoScreen = "/PersonalInfoScreen";
+  static const String editPersonalInformaitonScreen = "/EditPersonalInformaitonScreen";
+  static const String mySubscriptionScreen = "/MySubscriptionScreen";
+  static const String myStoryArchiveScreen = "/MyStoryArchiveScreen";
 
   static List <GetPage> Routes ()=>[
     GetPage(name: AppRoutes.splashScreen, page: ()=>SplashScreen()),
@@ -65,6 +77,7 @@ class AppRoutes{
     GetPage(name: AppRoutes.searchScreen, page: ()=>SearchScreen()),
     GetPage(name: AppRoutes.personalInfoScreen, page: ()=>PersonalInfoScreen()),
     GetPage(name: AppRoutes.editPersonalInformaitonScreen, page: ()=>EditPersonalInformaitonScreen()),
-    GetPage(name: AppRoutes.mySubscriptionScreen, page: ()=>MySubscriptionScreen())
+    GetPage(name: AppRoutes.mySubscriptionScreen, page: ()=>MySubscriptionScreen()),
+    GetPage(name: AppRoutes.myStoryArchiveScreen, page: ()=>MyStoryArchiveScreen())
   ];
 }
