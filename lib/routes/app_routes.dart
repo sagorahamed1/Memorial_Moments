@@ -14,6 +14,8 @@ import 'package:memorial/views/screens/privacyPolicy/privacy_policy_screen.dart'
 import 'package:memorial/views/screens/profile/edit_personal_informaiton_screen.dart';
 import 'package:memorial/views/screens/profile/my_subscription_screen.dart';
 import 'package:memorial/views/screens/profile/personal_Info_screen.dart';
+import 'package:memorial/views/screens/profile/profile_content_screen.dart';
+import 'package:memorial/views/screens/profile/profile_screen.dart';
 import 'package:memorial/views/screens/resetPassword/reset_rassword_screen.dart';
 import 'package:memorial/views/screens/search/search_screen.dart';
 import 'package:memorial/views/screens/settings/settings_screen.dart';
@@ -51,6 +53,8 @@ class AppRoutes{
   static const String editPersonalInformaitonScreen = "/EditPersonalInformaitonScreen";
   static const String mySubscriptionScreen = "/MySubscriptionScreen";
   static const String myStoryArchiveScreen = "/MyStoryArchiveScreen";
+  static const String profileScreen = "/ProfileScreen";
+  static const String profileContentScreen = "/ProfileContentScreen";
 
   static List <GetPage> Routes ()=>[
     GetPage(name: AppRoutes.splashScreen, page: ()=>SplashScreen()),
@@ -77,6 +81,8 @@ class AppRoutes{
     GetPage(name: AppRoutes.personalInfoScreen, page: ()=>PersonalInfoScreen()),
     GetPage(name: AppRoutes.editPersonalInformaitonScreen, page: ()=>EditPersonalInformaitonScreen()),
     GetPage(name: AppRoutes.mySubscriptionScreen, page: ()=>MySubscriptionScreen()),
-    GetPage(name: AppRoutes.myStoryArchiveScreen, page: ()=>MyStoryArchiveScreen())
+    GetPage(name: AppRoutes.myStoryArchiveScreen, page: ()=>MyStoryArchiveScreen()),
+    GetPage(name: AppRoutes.profileScreen, page: ()=>ProfileScreen()),
+    GetPage(name: AppRoutes.profileContentScreen, page: ()=>ProfileContentScreen())
   ];
 }

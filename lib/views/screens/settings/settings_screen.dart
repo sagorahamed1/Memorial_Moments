@@ -24,7 +24,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
       appBar: CustomAppBar(
           title: AppConstants.settings,
           leading: const Icon(Icons.arrow_back_ios),
-          onprass: () {}),
+          onprass: () {
+            Get.back();
+          }),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(

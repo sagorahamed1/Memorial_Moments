@@ -99,7 +99,7 @@ class ProfileScreen extends StatelessWidget {
 
             ///----------------------------2nd stage other infomaition------------------------>
             Container(
-              height: 235.h,
+              height: 270.h,
               width: 342.w,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
