@@ -9,14 +9,13 @@ import '../../widgets/custom_app_bar.dart';
 import '../../widgets/custom_button.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
-   ResetPasswordScreen({super.key});
+  ResetPasswordScreen({super.key});
   final _formKey = GlobalKey<FormState>();
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: false,
       appBar: CustomAppBar(
           title: "",
           leading: const Icon(Icons.arrow_back_ios),
@@ -26,7 +25,6 @@ resizeToAvoidBottomInset: false,
 
       //=============================================> Body Section <======================================
 
-
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Form(
@@ -34,22 +32,22 @@ resizeToAvoidBottomInset: false,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
               CustomText(
                 text: AppConstants.resetPassword,
                 fontsize: 24.sp,
                 fontWeight: FontWeight.w500,
                 color: const Color(0xFF0071E3),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
               CustomText(
                 text: AppConstants.mustHave,
                 fontsize: 16.sp,
                 fontWeight: FontWeight.w400,
                 color: const Color(0xFF2B2A2A),
               ),
-              const SizedBox(height: 61),
-               CustomTextField(
+              SizedBox(height: 61.h),
+              CustomTextField(
                 validator: (value) {
                   if (value!.isEmpty) {
                     return "Please enter your password";
@@ -59,8 +57,8 @@ resizeToAvoidBottomInset: false,
                 prifixicon: const Icon(Icons.lock_outline),
                 sufixicons: const Icon(Icons.remove_red_eye_outlined),
               ),
-              const SizedBox(height: 16),
-               CustomTextField(
+              SizedBox(height: 16.h),
+              CustomTextField(
                 validator: (value) {
                   if (value!.isEmpty) {
                     return "Please enter your Re-password";
@@ -78,7 +76,7 @@ resizeToAvoidBottomInset: false,
                       Get.toNamed(AppRoutes.settingsScreen);
                     }
                   }),
-              const SizedBox(height: 54),
+              SizedBox(height: 54.h),
             ],
           ),
         ),

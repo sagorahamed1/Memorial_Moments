@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:memorial/routes/app_routes.dart';
 import 'package:memorial/utils/app_colors.dart';
@@ -32,14 +33,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 24),
+            SizedBox(height: 24.h),
             CustomText(
               text: AppConstants.generalSettings,
-              fontsize: 16,
+              fontsize: 16.sp,
               fontWeight: FontWeight.w400,
               color: const Color(0xFF0071E3),
             ),
-            const SizedBox(height: 13),
+            SizedBox(height: 13.h),
             CustomContainer(
               onprass: () {
                 Get.toNamed(AppRoutes.changePassword);
@@ -47,7 +48,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               title: AppConstants.changePassword,
               prifixicon: const Icon(Icons.lock_outline, color: Colors.blue),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8.h),
             CustomContainer(
               onprass: () {
                 Get.toNamed(AppRoutes.subscriptionScreen);
@@ -56,14 +57,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
               prifixicon:
                   const Icon(Icons.backpack_outlined, color: Colors.blue),
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: 24.h),
             CustomText(
               text: AppConstants.security,
-              fontsize: 16,
+              fontsize: 16.sp,
               fontWeight: FontWeight.w400,
               color: const Color(0xFF0071E3),
             ),
-            const SizedBox(height: 13),
+            SizedBox(height: 13.h),
             CustomContainer(
               onprass: () {
                 Get.toNamed(AppRoutes.privacyPolicyScreen);
@@ -72,7 +73,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               prifixicon:
                   const Icon(Icons.privacy_tip_outlined, color: Colors.blue),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8.h),
             CustomContainer(
               onprass: () {
                 Get.toNamed(AppRoutes.termsofServicesScrren);
@@ -80,7 +81,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               title: AppConstants.termsServices,
               prifixicon: const Icon(Icons.error_outline, color: Colors.blue),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8.h),
             CustomContainer(
               onprass: () {
                 Get.toNamed(AppRoutes.aboutUsScreen);
@@ -88,7 +89,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               title: AppConstants.aboutUs,
               prifixicon: const Icon(Icons.error, color: Colors.blue),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8.h),
             CustomContainer(
               onprass: () {
                 dialogPupUp();
@@ -130,24 +131,24 @@ class _SettingsScreenState extends State<SettingsScreen> {
               content: Column(
                 children: [
                   CustomText(text: AppConstants.enterYour),
-                  const SizedBox(
-                    height: 16,
+                  SizedBox(
+                    height: 16.h,
                   ),
                   const CustomTextField(
                     title: AppConstants.password,
                     prifixicon: Icon(Icons.lock_outline_rounded),
                     sufixicons: Icon(Icons.remove_red_eye_outlined),
                   ),
-                  const SizedBox(
-                    height: 44,
+                  SizedBox(
+                    height: 44.h,
                   ),
                   CustomButton(
                       title: AppConstants.deleteAccount,
                       onpress: () {
                         // Get.back();
                       }),
-                  const SizedBox(
-                    height: 16,
+                  SizedBox(
+                    height: 16.h,
                   ),
                 ],
               ),

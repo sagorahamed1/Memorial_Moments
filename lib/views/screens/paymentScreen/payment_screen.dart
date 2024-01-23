@@ -24,48 +24,44 @@ class PaymentScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: 24,
+            SizedBox(
+              height: 24.h,
             ),
             CustomText(
               text: AppConstants.addPayment,
-              fontsize: 18,
+              fontsize: 18.sp,
               fontWeight: FontWeight.w500,
               color: const Color(0xFF0071E3),
             ),
-            const SizedBox(
-              height: 24,
+            SizedBox(
+              height: 24.h,
             ),
             CustomText(
               text: AppConstants.addPaymentMethod,
-              fontsize: 14,
+              fontsize: 14.sp,
               fontWeight: FontWeight.w400,
               color: const Color(0xFF2B2A2A),
             ),
-            const SizedBox(
-              height: 16,
+            SizedBox(
+              height: 16.h,
             ),
             Row(
               children: [
-                Container(
-                  child: Image.asset(
-                    appImages.visa,
-                    width: 72.w,
-                    height: 72.h,
-                  ),
+                Image.asset(
+                  appImages.visa,
+                  width: 72.w,
+                  height: 72.h,
                 ),
-                const SizedBox(
-                  width: 16,
+                 SizedBox(
+                  width: 16.w,
                 ),
-                Container(
-                  child: Image.asset(
-                    appImages.master,
-                    width: 72.w,
-                    height: 72.h,
-                  ),
+                Image.asset(
+                  appImages.master,
+                  width: 72.w,
+                  height: 72.h,
                 ),
-                const SizedBox(
-                  width: 16,
+                SizedBox(
+                  width: 16.w,
                 ),
                 Stack(
                   children: [
@@ -82,37 +78,37 @@ class PaymentScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 16,
+            SizedBox(
+              height: 16.h,
             ),
             const CustomTextField(
                 title: AppConstants.cardHolder,
                 prifixicon: Icon(Icons.person_outline_rounded)),
-            const SizedBox(
-              height: 16,
+            SizedBox(
+              height: 16.h,
             ),
             const CustomTextField(
                 title: AppConstants.cardNumber,
                 prifixicon: Icon(Icons.credit_card_outlined)),
-            const SizedBox(
-              height: 16,
+            SizedBox(
+              height: 16.h,
             ),
             const CustomTextField(
                 title: AppConstants.cVC,
                 prifixicon: Icon(Icons.lock_outline_rounded)),
-            const SizedBox(
-              height: 16,
+            SizedBox(
+              height: 16.h,
             ),
             const CustomTextField(
                 title: AppConstants.mmYy,
                 prifixicon: Icon(Icons.date_range_outlined)),
-            const SizedBox(height: 60),
+            SizedBox(height: 60.h),
             CustomButton(
               title: AppConstants.proceedPayment,
               onpress: () {},
             ),
-            const SizedBox(
-              height: 5,
+            SizedBox(
+              height: 5.h,
             ),
           ],
         ),

@@ -14,7 +14,7 @@ class SplashScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: 45.w,
               height: 60.h,
               child: Image.asset(appImages.appLogo),
@@ -24,7 +24,7 @@ class SplashScreen extends StatelessWidget {
               style: GoogleFonts.parisienne(
                 color: const Color(0xFF0071E3),
                 fontWeight: FontWeight.w900,
-                fontSize: 15,
+                fontSize: 15.sp,
               ),
             )
           ],

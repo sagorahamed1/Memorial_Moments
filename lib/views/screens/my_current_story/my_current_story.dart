@@ -1,10 +1,8 @@
-
-import 'package:flutter/material(1).dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:memorial/views/screens/my_current_story/controller/my_current_story_controller.dart';
-
 import '../../../utils/app_colors.dart';
 import '../../../utils/app_constants.dart';
 import '../../../utils/app_icons.dart';
@@ -23,7 +21,7 @@ class MyCurrentStory extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: AppColors.bgColors,
           leading: Container(
-            padding: EdgeInsets.all(5),
+            padding: const EdgeInsets.all(5),
             margin: const EdgeInsets.only(left: Dimensions.paddingSizeDefault),
             child: FittedBox(
               fit: BoxFit.contain,
@@ -51,13 +49,14 @@ class MyCurrentStory extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(
-              horizontal: Dimensions.paddingSizeExtraLarge,vertical: Dimensions.paddingSizeLarge),
+              horizontal: Dimensions.paddingSizeExtraLarge,
+              vertical: Dimensions.paddingSizeLarge),
           child: Obx(() => Column(
                 children: [
                   Container(
                     height: 260.h,
                     child: ListView.builder(
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: controller.archiveList.length,
                       itemBuilder: (context, index) {
                         var storyInfo = controller.archiveList[index];
@@ -93,8 +92,10 @@ class MyCurrentStory extends StatelessWidget {
                                     Expanded(
                                       flex: 2,
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             "${storyInfo["storyTitle"]}",
@@ -126,7 +127,9 @@ class MyCurrentStory extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10.h,)
+                            SizedBox(
+                              height: 10.h,
+                            )
                           ],
                         );
                       },
@@ -145,27 +148,30 @@ class MyCurrentStory extends StatelessWidget {
                     child: Row(
                       children: [
                         SvgPicture.asset(
-                          AppIcons.information_circle,height: 30.h,
+                          AppIcons.information_circle,
+                          height: 30.h,
                         ),
-
                         FittedBox(
                           fit: BoxFit.cover,
                           child: Container(
-                            padding: EdgeInsets.only(left: 7),
+                            padding: const EdgeInsets.only(left: 7),
                             height: 90.h,
                             width: 300.w,
                             child: const Center(
                               child: FittedBox(
                                 fit: BoxFit.cover,
-                                child: Text(AppConstants.yourCurrentStorywill,overflow: TextOverflow.ellipsis, style: TextStyle(
-                                  fontSize: Dimensions.fontSizeDefault,
-                                  fontWeight: FontWeight.w400,
-                                ),),
+                                child: Text(
+                                  AppConstants.yourCurrentStorywill,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontSize: Dimensions.fontSizeDefault,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
                         ),
-
                       ],
                     ),
                   )
