@@ -21,7 +21,7 @@ class TextFieldCustom extends StatelessWidget {
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
       child: TextFormField(
         decoration: InputDecoration(
-            contentPadding: EdgeInsets.only(top: 4, left: 15),
+            contentPadding: EdgeInsets.only(top: 1, left: 15),
             fillColor: AppColors.white,
             filled: true,
             suffixIcon: Container(

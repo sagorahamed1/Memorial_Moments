@@ -5,12 +5,12 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:memorial/utils/app_images.dart';
 
-import '../../../utils/app_colors.dart';
-import '../../../utils/app_constants.dart';
-import '../../../utils/app_icons.dart';
-import '../../../utils/dimensions.dart';
-import '../../widgets/custom_button.dart';
-import '../../widgets/custom_text.dart';
+import '../../../../utils/app_colors.dart';
+import '../../../../utils/app_constants.dart';
+import '../../../../utils/app_icons.dart';
+import '../../../../utils/dimensions.dart';
+import '../../../widgets/custom_button.dart';
+import '../../../widgets/custom_text.dart';
 
 class EditPersonalInformaitonScreen extends StatelessWidget {
   const EditPersonalInformaitonScreen({super.key});
@@ -22,6 +22,7 @@ class EditPersonalInformaitonScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.bgColors,
         leading: Container(
+          padding: EdgeInsets.only(top: 7,bottom: 7,right: 6),
           margin: const EdgeInsets.only(left: Dimensions.paddingSizeDefault),
           child: FittedBox(
             fit: BoxFit.contain,
@@ -84,7 +85,7 @@ class EditPersonalInformaitonScreen extends StatelessWidget {
             ///----------------profile data like name, email---------------------
             SizedBox(height: 40.h,),
             Container(
-              height: 52.h,
+              height: 67.h,
               width: 342.w,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),

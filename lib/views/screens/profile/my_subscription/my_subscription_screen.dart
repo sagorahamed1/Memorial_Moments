@@ -3,13 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:memorial/views/screens/profile/my_subscription_screen_full_page.dart';
+import 'package:memorial/views/screens/profile/my_subscription_screen_full_page/my_subscription_screen_full_page.dart';
 
-import '../../../utils/app_colors.dart';
-import '../../../utils/app_constants.dart';
-import '../../../utils/app_icons.dart';
-import '../../../utils/dimensions.dart';
-import '../../widgets/custom_text.dart';
+import '../../../../utils/app_colors.dart';
+import '../../../../utils/app_constants.dart';
+import '../../../../utils/app_icons.dart';
+import '../../../../utils/dimensions.dart';
+import '../../../widgets/custom_text.dart';
 
 class MySubscriptionScreen extends StatelessWidget {
   const MySubscriptionScreen({super.key});
@@ -21,6 +21,7 @@ class MySubscriptionScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.bgColors,
         leading: Container(
+          padding: EdgeInsets.only(top: 6,right: 6,bottom: 7),
           margin: const EdgeInsets.only(left: Dimensions.paddingSizeDefault),
           child: FittedBox(
             fit: BoxFit.contain,
@@ -69,9 +70,6 @@ class MySubscriptionScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-
- 
-
                       margin: const EdgeInsets.only(left: 16,right: 16),
                         child: SvgPicture.asset(AppIcons.crown)),
                     CustomText(
@@ -155,7 +153,7 @@ class MySubscriptionScreen extends StatelessWidget {
                   child: Container(
                     padding: EdgeInsets.all(10),
                     height: 56.h,
-                    width: 167.w,
+                    width: 160.w,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: AppColors.white),
@@ -179,7 +177,7 @@ class MySubscriptionScreen extends StatelessWidget {
                   child: Container(
                     padding: EdgeInsets.all(10),
                     height: 56.h,
-                    width: 167.w,
+                    width: 160.w,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: AppColors.blue500),

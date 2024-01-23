@@ -12,7 +12,7 @@ import 'package:memorial/views/widgets/custom_app_bar.dart';
 import 'package:memorial/views/widgets/custom_text.dart';
 import 'package:memorial/views/widgets/custom_text_field.dart';
 
-import '../../widgets/custom_buttom.dart';
+import '../../../widgets/custom_buttom.dart';
 
 class ProfileContentScreen extends StatefulWidget {
   const ProfileContentScreen({super.key});

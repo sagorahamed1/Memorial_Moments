@@ -5,13 +5,17 @@ import 'package:get/get.dart';
 import 'package:memorial/utils/app_colors.dart';
 import 'package:memorial/utils/app_icons.dart';
 import 'package:memorial/utils/app_images.dart';
+import 'package:memorial/views/screens/story/controller/story_details_controller.dart';
 import 'package:memorial/views/widgets/custom_text.dart';
 import 'package:memorial/views/widgets/individual.dart';
 import '../../../utils/app_constants.dart';
 import '../../../utils/dimensions.dart';
+import '../my_story_details/inner_widgets/pop_up_menu.dart';
 
 class StoryDetailsScreen extends StatelessWidget {
-  const StoryDetailsScreen({super.key});
+  StoryDetailsScreen({super.key});
+
+  StoryDetailsController controller = Get.put(StoryDetailsController());
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +24,7 @@ class StoryDetailsScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.bgColors,
         leading: Container(
+          padding: EdgeInsets.only(top: 6, right: 6, bottom: 6),
           margin: const EdgeInsets.only(left: Dimensions.paddingSizeDefault),
           child: FittedBox(
             fit: BoxFit.contain,
@@ -44,6 +49,18 @@ class StoryDetailsScreen extends StatelessWidget {
           fontsize: Dimensions.fontSizeExtraLarge,
           color: AppColors.black500,
         ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 4),
+            child: PopupMenuButton(
+                surfaceTintColor: Colors.green,
+                clipBehavior: Clip.none,
+                elevation: 0.0,
+                color: AppColors.white,
+                offset: Offset(0.0, 40),
+                itemBuilder: (context) => [PopUpMenu()]),
+          )
+        ],
       ),
 
       ///-----------------------body section-------------------------->
@@ -70,14 +87,28 @@ class StoryDetailsScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Individual(),
-                  Container(
-                      height: 40.h,
-                      width: 40.w,
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: AppColors.blue500),
-                      child: SvgPicture.asset(AppIcons.volume))
+                  GestureDetector(
+                      onTap: () {
+                        controller.isValumToggle();
+                      },
+                      child: Obx(
+                        () => Container(
+                            height: 40.h,
+                            width: 40.w,
+                            padding: const EdgeInsets.all(8),
+                            decoration: controller.isVolum == true
+                                ? BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    color: AppColors.blue500)
+                                : BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    color: AppColors.black200),
+
+                            ///<--------------volum icon mute on or of------------------>
+                            child: controller.isVolum == true
+                                ? SvgPicture.asset(AppIcons.volume)
+                                : SvgPicture.asset(AppIcons.volum_of)),
+                      ))
                 ],
               ),
               const SizedBox(

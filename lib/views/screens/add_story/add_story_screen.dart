@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -11,9 +10,8 @@ import 'package:memorial/views/screens/add_story/controller/add_story_controller
 import 'package:memorial/views/widgets/custom_buttom.dart';
 import 'package:memorial/views/widgets/custom_text.dart';
 
+import 'inner_widgets/image_picker_container.dart';
 import 'inner_widgets/text_field_custom.dart';
-
-
 
 class AddStoryScreen extends StatelessWidget {
   AddStoryScreen({super.key});
@@ -21,13 +19,14 @@ class AddStoryScreen extends StatelessWidget {
   AddStoryController controller = Get.put(AddStoryController());
   TextEditingController selectedCategory = TextEditingController();
   TextEditingController selectedBackgroundMusic = TextEditingController();
-  int? selectedIndex;
+  TextEditingController writeStroyController = TextEditingController();
+
+  int maxLength = 500;
 
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
 
-    print("--------------------------------$selectedIndex");
     return Scaffold(
       appBar: AppBar(
         leading: null,
@@ -68,7 +67,7 @@ class AddStoryScreen extends StatelessWidget {
                   child: TextField(
                     controller: selectedCategory,
                     decoration: InputDecoration(
-                        contentPadding: EdgeInsets.only(left: 15, top: 3),
+                        contentPadding: EdgeInsets.only(left: 15, top: 1),
                         fillColor: AppColors.white,
                         filled: true,
                         suffixIcon: TextButton(
@@ -93,13 +92,11 @@ class AddStoryScreen extends StatelessWidget {
                   ),
                 ),
 
-
-
                 ///----------------------select Category dropdown menu------------------------
                 controller.dropDownShowCategory == true
                     ? Container(
-                        margin: EdgeInsets.only(left: 16),
-                        height: 168.h,
+                        margin: EdgeInsets.only(left: 10,right: 10),
+                        height: 200.h,
                         width: 326,
                         decoration: const BoxDecoration(
                             borderRadius: BorderRadius.only(
@@ -112,34 +109,35 @@ class AddStoryScreen extends StatelessWidget {
                               left: BorderSide(color: AppColors.blue500),
                             )),
                         child: ListView.builder(
+                          physics: NeverScrollableScrollPhysics(),
                           itemCount: controller.categoryList.length,
                           itemBuilder: (context, index) {
                             var category = controller.categoryList[index];
                             return ListTile(
-                                onTap: () {
-                                  selectedIndex = category[index];
-                                  selectedCategory.text =
-                                      category["categoryTitle"];
-                                },
-                                title: Text("${category["categoryTitle"]}"),
-
+                              onTap: () {
+                                controller.selectedIndex.value = index;
+                                selectedCategory.text = category["categoryTitle"];
+                                print("========================${controller.selectedIndex} and $index");
+                                controller.update();
+                              },
+                              title: Text("${category["categoryTitle"]}", style: TextStyle(fontSize: Dimensions.fontSizeDefault),),
                               ///<-----------------check box check or uncheck------------------->
-                                leading: category[index] == selectedIndex ? SvgPicture.asset(
-                                    AppIcons.radio_button_check)
-                                 : SvgPicture.asset(AppIcons.radio_button_uncheck),
-                                );
+                              leading: controller.selectedIndex.value == index
+                                  ? SvgPicture.asset(
+                                      AppIcons.radio_button_check)
+                                  : SvgPicture.asset(
+                                      AppIcons.radio_button_uncheck),
+                            );
                           },
                         ),
                       )
-                    : SizedBox(
+                    : const SizedBox(
                         height: 0,
                       ),
 
                 SizedBox(
                   height: 16.h,
                 ),
-
-
 
                 ///-----------select backgound text field------------->
                 Container(
@@ -151,7 +149,7 @@ class AddStoryScreen extends StatelessWidget {
                   child: TextFormField(
                     controller: selectedBackgroundMusic,
                     decoration: InputDecoration(
-                        contentPadding: EdgeInsets.only(top: 4, left: 15),
+                        contentPadding: EdgeInsets.only(top: 1, left: 15),
                         fillColor: AppColors.white,
                         filled: true,
                         suffixIcon: Container(
@@ -160,7 +158,8 @@ class AddStoryScreen extends StatelessWidget {
                               onPressed: () {
                                 controller.toggleDropDwonShowBackGrounMusic();
                               },
-                              child: controller.dropDownShowBackGroundMusic == false
+                              child: controller.dropDownShowBackGroundMusic ==
+                                      false
                                   ? SvgPicture.asset(
                                       AppIcons.music_on,
                                     )
@@ -177,14 +176,11 @@ class AddStoryScreen extends StatelessWidget {
                   ),
                 ),
 
-
-
-
                 ///------------------------- dropdown menu for back ground music------------------->
                 controller.dropDownShowBackGroundMusic == false
                     ? Container(
-                        margin: EdgeInsets.only(left: 16),
-                        height: 200.h,
+                        margin: EdgeInsets.only(left: 10,right: 10),
+                        height: 220.h,
                         width: 326,
                         decoration: const BoxDecoration(
                             borderRadius: BorderRadius.only(
@@ -235,20 +231,21 @@ class AddStoryScreen extends StatelessWidget {
                             Container(
                               height: 100,
                               child: ListView.builder(
+                                physics: NeverScrollableScrollPhysics(),
                                 itemCount: controller.BackGrounMusicList.length,
                                 itemBuilder: (context, index) {
                                   var backGrounMusic =
                                       controller.BackGrounMusicList[index];
                                   return ListTile(
                                       onTap: () {
-                                        selectedBackgroundMusic.text =
-                                            backGrounMusic["categoryTitle"];
+                                        controller.selectedIndexBackMusic = index;
+                                        selectedBackgroundMusic.text = backGrounMusic["backGroundMusic"];
                                       },
                                       title: Text(
-                                          "${backGrounMusic["categoryTitle"]}"),
-                                      trailing: SvgPicture.asset(
+                                          "${backGrounMusic["backGroundMusic"]}"),
+                                      trailing: controller.selectedIndexBackMusic == index ? SvgPicture.asset(
                                           AppIcons.radio_button_check)
-                                      // : SvgPicture.asset(AppIcons.radio_button_uncheck),
+                                       : SvgPicture.asset(AppIcons.radio_button_uncheck),
                                       );
                                 },
                               ),
@@ -268,21 +265,11 @@ class AddStoryScreen extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                   fontsize: Dimensions.fontSizeDefault,
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: 10, bottom: 10),
-                  height: 200.h,
-                  width: 342.w,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: AppColors.white),
-                  child: Center(
-                    child: Container(
-                      height: 44.h,
-                      width: 44.w,
-                      child: SvgPicture.asset(AppIcons.photograph),
-                    ),
-                  ),
-                ),
+
+                ///<---------------------update image container for image picker--------------------------->
+                ImagePickerContainer(),
+
+
                 CustomText(
                   text: AppConstants.youStory,
                   fontWeight: FontWeight.w500,
@@ -298,19 +285,55 @@ class AddStoryScreen extends StatelessWidget {
                       maxHeight: height,
                       maxWidth: 342.w,
                     ),
-                    child: const TextField(
-                      keyboardType: TextInputType.multiline,
-                      maxLines: null,
-                      minLines: 1,
-                      decoration: InputDecoration(
-                        fillColor: AppColors.white,
-                        filled: true,
-                        hintText: "\n\n\n\n\n\n\n\n\n\n\n",
-                        border: InputBorder.none,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: TextFormField(
+                        controller: writeStroyController,
+                        keyboardType: TextInputType.multiline,
+                        maxLines: null,
+                        minLines: 1,
+                        maxLength: maxLength,
+                        decoration: InputDecoration(
+                          fillColor: AppColors.white,
+                          filled: true,
+                          hintText: "\n\n\n\n\n\n\n\n\n\n\n",
+                          border: InputBorder.none,
+                        ),
+                        // validator: (text) => text!.length < 5 ? "You have reached your word limit" : null,
                       ),
                     ),
                   ),
                 ),
+
+                maxLength == writeStroyController.text.length
+                    ? Container(
+                  padding: EdgeInsets.only(left: 16,right: 16),
+                     height: 40.h,
+                      width: 342.w,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: AppColors.red50
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(right: 1),
+                              child: SvgPicture.asset(AppIcons.unValidIcon),
+                            ),
+                            FittedBox(
+                              fit: BoxFit.cover,
+                              child: CustomText(
+                                text: AppConstants.unValidationMessege,
+                                fontsize: Dimensions.fontSizeDefault,
+                                fontWeight: FontWeight.w400,
+                                color: AppColors.red500,
+                              ),
+                            )
+                          ],
+                        ),
+                    )
+                    : SizedBox(height: 0,),
                 SizedBox(
                   height: 24.h,
                 ),
@@ -326,3 +349,4 @@ class AddStoryScreen extends StatelessWidget {
     );
   }
 }
+

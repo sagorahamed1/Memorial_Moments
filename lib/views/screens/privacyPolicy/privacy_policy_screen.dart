@@ -16,47 +16,49 @@ class PrivacyPolicyScreen extends StatelessWidget {
           onprass: () {
             Get.back();
           }),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
-        child: Column(
-          children: [
-            CustomText(
-              text: AppConstants.loremIpsum,
-              fontsize: 18,
-              fontWeight: FontWeight.w400,
-            ),
-            const SizedBox(height: 8),
-            CustomText(
-              text: AppConstants.loremIpsum,
-              fontsize: 18,
-              fontWeight: FontWeight.w400,
-            ),
-            const SizedBox(height: 8),
-            CustomText(
-              text: AppConstants.loremIpsum,
-              fontsize: 18,
-              fontWeight: FontWeight.w400,
-            ),
-            const SizedBox(height: 8),
-            CustomText(
-              text: AppConstants.loremIpsum,
-              fontsize: 18,
-              fontWeight: FontWeight.w400,
-            ),
-            const SizedBox(height: 8),
-            CustomText(
-              text: AppConstants.loremIpsum,
-              fontsize: 18,
-              fontWeight: FontWeight.w400,
-            ),
-            const SizedBox(height: 8),
-            CustomText(
-              text: AppConstants.loremIpsum,
-              fontsize: 18,
-              fontWeight: FontWeight.w400,
-            ),
-            const SizedBox(height: 8),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Column(
+            children: [
+              CustomText(
+                text: AppConstants.loremIpsum,
+                fontsize: 18,
+                fontWeight: FontWeight.w400,
+              ),
+              const SizedBox(height: 8),
+              CustomText(
+                text: AppConstants.loremIpsum,
+                fontsize: 18,
+                fontWeight: FontWeight.w400,
+              ),
+              const SizedBox(height: 8),
+              CustomText(
+                text: AppConstants.loremIpsum,
+                fontsize: 18,
+                fontWeight: FontWeight.w400,
+              ),
+              const SizedBox(height: 8),
+              CustomText(
+                text: AppConstants.loremIpsum,
+                fontsize: 18,
+                fontWeight: FontWeight.w400,
+              ),
+              const SizedBox(height: 8),
+              CustomText(
+                text: AppConstants.loremIpsum,
+                fontsize: 18,
+                fontWeight: FontWeight.w400,
+              ),
+              const SizedBox(height: 8),
+              CustomText(
+                text: AppConstants.loremIpsum,
+                fontsize: 18,
+                fontWeight: FontWeight.w400,
+              ),
+              const SizedBox(height: 8),
+            ],
+          ),
         ),
       ),
     );

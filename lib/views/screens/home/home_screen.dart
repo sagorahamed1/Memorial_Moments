@@ -70,7 +70,7 @@ class HomeScreen extends StatelessWidget {
               ),
               _publishPostSection(),
 
-              SizedBox(height: 80.h,)
+              SizedBox(height: 125.h,)
             ],
           ),
         ),

@@ -38,7 +38,7 @@ class SearchScreen extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 43.h,
+                height: 50.h,
                 width: 342.w,
                 clipBehavior: Clip.antiAlias,
                 decoration:
@@ -46,7 +46,7 @@ class SearchScreen extends StatelessWidget {
                 child: TextFormField(
                   controller: searchTextCotroller,
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(top: 5),
+                    contentPadding: EdgeInsets.only(top: 8),
                       fillColor: AppColors.white,
                       filled: true,
                       prefixIcon: TextButton(
@@ -65,7 +65,7 @@ class SearchScreen extends StatelessWidget {
                       hintText: AppConstants.searchs,
                       hintStyle: const TextStyle(
                           color: AppColors.black100,
-                          fontSize: Dimensions.fontSizeSmall,
+                          fontSize: Dimensions.fontSizeExtraLarge,
                           fontWeight: FontWeight.w500),
                       border: InputBorder.none),
                 ),

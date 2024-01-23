@@ -19,6 +19,7 @@ class MyStoryArchiveScreen extends StatelessWidget {
 
       ///----------------------------this is app bar section--------------------->
         appBar: AppBar(
+
             elevation: 0.0,
             backgroundColor: AppColors.bgColors,
             centerTitle: true,
@@ -67,6 +68,7 @@ class MyStoryArchiveScreen extends StatelessWidget {
                           Expanded(
                             flex: 2,
                             child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
@@ -99,6 +101,7 @@ class MyStoryArchiveScreen extends StatelessWidget {
               );
             },
           )),
-        ));
+        )
+    );
   }
 }

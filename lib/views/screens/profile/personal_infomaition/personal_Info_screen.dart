@@ -5,12 +5,12 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:memorial/utils/app_images.dart';
 import 'package:memorial/views/widgets/custom_button.dart';
-import '../../../routes/app_routes.dart';
-import '../../../utils/app_colors.dart';
-import '../../../utils/app_constants.dart';
-import '../../../utils/app_icons.dart';
-import '../../../utils/dimensions.dart';
-import '../../widgets/custom_text.dart';
+import '../../../../routes/app_routes.dart';
+import '../../../../utils/app_colors.dart';
+import '../../../../utils/app_constants.dart';
+import '../../../../utils/app_icons.dart';
+import '../../../../utils/dimensions.dart';
+import '../../../widgets/custom_text.dart';
 
 
 class PersonalInfoScreen extends StatelessWidget {
@@ -23,6 +23,7 @@ class PersonalInfoScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.bgColors,
         leading: Container(
+          padding: EdgeInsets.only(top: 7,bottom: 7,right: 6),
           margin: const EdgeInsets.only(left: Dimensions.paddingSizeDefault),
           child: FittedBox(
             fit: BoxFit.contain,

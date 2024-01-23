@@ -17,8 +17,8 @@ class CustomContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onprass,
       child: Container(
-        width: 342,
-        height: 51,
+        width: 341.w,
+        height: 51.h,
         padding: const EdgeInsets.all(12),
         decoration: ShapeDecoration(
           color: Colors.white,
@@ -44,8 +44,8 @@ class CustomContainer extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    width: 24,
-                    height: 23,
+                    width: 24.w,
+                    height: 23.h,
                     clipBehavior: Clip.antiAlias,
                     decoration: const BoxDecoration(),
                     child: prifixicon,
@@ -67,8 +67,8 @@ class CustomContainer extends StatelessWidget {
             ),
             const SizedBox(width: 36),
             Container(
-                width: 24,
-                height: 23,
+                width: 24.w,
+                height: 23.h,
                 clipBehavior: Clip.antiAlias,
                 decoration: const BoxDecoration(),
                 child: const Icon(Icons.arrow_forward_ios)),

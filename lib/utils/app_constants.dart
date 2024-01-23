@@ -145,6 +145,7 @@ class AppConstants {
   static const String musicType = "Music Type";
   static const String repeatMusic = "Repeat Music";
   static const String onetime_playMusic = "One time play Music";
+  static const String unValidationMessege = "You have reached your word limit";
 
 
   /// ------------------------search Screen-------------------------------->
@@ -161,6 +162,7 @@ class AppConstants {
   static const String myCurrentStory = "My Current Story";
 
   ///------------------personal infomaition edid-----------
+
   static const String setting = "Settings";
   static const String profileEmail = "jenny@gmail.com";
   static const String edit = "Edit";
@@ -173,6 +175,9 @@ class AppConstants {
   static const String date = "1/11/24";
   static const String renew = "Renew";
   static const String upgrade = "Upgrade";
-  static const String doYouWantToDelete = "Do you want to cancel your \n subscription?";
+  static const String doYouWantToDelete = "Do you want to cancel your subscription?";
 
+
+///------------------My Current Story-----------
+  static const String yourCurrentStorywill = "Your current story will go automatically\n into the archive 1 month after publishing.";
 }
