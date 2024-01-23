@@ -54,15 +54,20 @@ class ProfileScreen extends StatelessWidget {
                         // mainAxisAlignment: MainAxisAlignment.,
                         children: [
                           CircleAvatar(
-                            child: Image.asset(appImages.profileImage),
+                            child: Image.network("https://sagor-ahammed2.imgbb.com/?sort=views_desc"),
                           ),
-                          Container(
-                            margin: EdgeInsets.only(left: 16),
-                            child: CustomText(
-                              text: AppConstants.jennyWilson,
-                              fontsize: Dimensions.fontSizeOverLarge,
-                              fontWeight: FontWeight.w500,
-                              color: AppColors.white,
+
+                          Expanded(
+                            child: Container(
+                              margin: const EdgeInsets.only(left: 16),
+                              child: CustomText(
+                                text:"Palash Chandra Barman",
+                                overflow: TextOverflow.ellipsis,
+                                maxline: 1,
+                                fontsize: Dimensions.fontSizeOverLarge,
+                                fontWeight: FontWeight.w500,
+                                color: AppColors.white,
+                              ),
                             ),
                           )
                         ],
