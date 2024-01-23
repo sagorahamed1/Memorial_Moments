@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:memorial/routes/app_routes.dart';
 import 'package:memorial/utils/app_constants.dart';
@@ -31,9 +32,9 @@ class ChangePasswordScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 19),
+              SizedBox(height: 19.h),
               CustomTextField(
-                validator: (value) {
+                validator: (value){
                   if (value!.isEmpty) {
                     return "Please enter your current password";
                   }
@@ -42,7 +43,7 @@ class ChangePasswordScreen extends StatelessWidget {
                 prifixicon: const Icon(Icons.lock_outline),
                 sufixicons: const Icon(Icons.remove_red_eye_outlined),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
               CustomTextField(
                 validator: (value) {
                   if (value!.isEmpty) {
@@ -53,7 +54,7 @@ class ChangePasswordScreen extends StatelessWidget {
                 prifixicon: const Icon(Icons.lock_outline),
                 sufixicons: const Icon(Icons.remove_red_eye_outlined),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
               CustomTextField(
                 validator: (value) {
                   if (value!.isEmpty) {
@@ -64,10 +65,10 @@ class ChangePasswordScreen extends StatelessWidget {
                 prifixicon: const Icon(Icons.lock_outline),
                 sufixicons: const Icon(Icons.remove_red_eye_outlined),
               ),
-              const SizedBox(height: 24),
+              SizedBox(height: 24.h),
               CustomText(
                 text: AppConstants.forgetPass,
-                fontsize: 18,
+                fontsize: 18.sp,
                 fontWeight: FontWeight.w600,
                 color: const Color(0xFF0071E3),
               ),
@@ -79,7 +80,7 @@ class ChangePasswordScreen extends StatelessWidget {
                       Get.toNamed(AppRoutes.forgetPassword);
                     }
                   }),
-              const SizedBox(height: 54),
+              SizedBox(height: 54.h),
             ],
           ),
         ),

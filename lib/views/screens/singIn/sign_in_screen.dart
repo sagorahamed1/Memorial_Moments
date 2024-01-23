@@ -36,13 +36,13 @@ class _SignInScreenState extends State<SignInScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 115),
-                Container(
+                SizedBox(height: 115.h),
+                SizedBox(
                   width: 69.w,
                   height: 92.h,
                   child: Image.asset(appImages.appLogo),
                 ),
-                const SizedBox(height: 16),
+                SizedBox(height: 16.h),
                 Text(
                   AppConstants.memorialMoments,
                   style: GoogleFonts.parisienne(
@@ -57,13 +57,13 @@ class _SignInScreenState extends State<SignInScreen> {
                   fontWeight: FontWeight.w400,
                   fontsize: 18.sp,
                 ),
-                const SizedBox(height: 30),
+                SizedBox(height: 30.h),
                 CustomText(
                     text: AppConstants.unlockMemories,
                     color: const Color(0xFF2B2A2A),
                     fontWeight: FontWeight.w400,
                     fontsize: 14.sp),
-                const SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 CustomTextField(
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -73,7 +73,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   title: AppConstants.email,
                   prifixicon: const Icon(Icons.email_outlined),
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 CustomTextField(
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -84,14 +84,14 @@ class _SignInScreenState extends State<SignInScreen> {
                   prifixicon: const Icon(Icons.lock_outline),
                   sufixicons: const Icon(Icons.remove_red_eye_outlined),
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 CustomText(
                   text: AppConstants.forgetPass,
                   color: const Color(0xFF0071E3),
                   fontWeight: FontWeight.w600,
                   fontsize: 18.sp,
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 CustomButton(
                     onpress: () {
                       if (_formKey.currentState!.validate()) {
@@ -99,10 +99,9 @@ class _SignInScreenState extends State<SignInScreen> {
                       }
                     },
                     title: AppConstants.signIn),
-                const SizedBox(height: 20),
+                SizedBox(height: 20.h),
 
 //===================================================> Sign in with another platform <==============================
-
 
                 Center(
                   child: CustomText(
@@ -112,7 +111,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     fontsize: 14.sp,
                   ),
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 Container(
                   width: 342.w,
                   height: 56.h,
@@ -140,7 +139,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               decoration: const BoxDecoration(),
                               child: SvgPicture.asset(AppIcons.google),
                             ),
-                            const SizedBox(width: 10),
+                            SizedBox(width: 10.w),
                             CustomText(
                               text: AppConstants.continueGoogle,
                               color: const Color(0xFF2B2A2A),
@@ -153,7 +152,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -163,7 +162,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       fontWeight: FontWeight.w400,
                       fontsize: 18.sp,
                     ),
-                    const SizedBox(width: 5),
+                    SizedBox(width: 5.w),
                     TextButton(
                       onPressed: () {
                         Get.toNamed(AppRoutes.signUpScreen);
@@ -177,7 +176,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 54),
+                SizedBox(height: 54.h),
               ],
             ),
           ),

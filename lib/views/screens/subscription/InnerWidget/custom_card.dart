@@ -22,7 +22,7 @@ class CustomCard extends StatelessWidget {
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
-          side: const BorderSide(width: 1, color: Color(0xFF8ABEF2)),
+          side: BorderSide(width: 1.w, color: const Color(0xFF8ABEF2)),
           borderRadius: BorderRadius.circular(8),
         ),
         shadows: const [
@@ -57,7 +57,7 @@ class CustomCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SvgPicture.asset(AppIcons.crown),
-                    const SizedBox(width: 8),
+                    SizedBox(width: 8.w),
                     Text(
                       title,
                       style: TextStyle(
@@ -83,7 +83,7 @@ class CustomCard extends StatelessWidget {
                 fontSize: 18.sp,
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.w500,
-                height: 0,
+                height: 0.h,
               ),
             ),
           ),

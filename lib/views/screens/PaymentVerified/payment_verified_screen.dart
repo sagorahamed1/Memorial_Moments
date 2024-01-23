@@ -27,9 +27,9 @@ class PaymentVerifiedScreen extends StatelessWidget {
                   height: 96.h,
                 ),
               ),
-              const SizedBox(height: 24),
+              SizedBox(height: 24.h),
               CustomText(text: AppConstants.paymentSuccess),
-              const SizedBox(height: 44),
+              SizedBox(height: 44.h),
               SizedBox(
                 width: 200.w,
                 height: 50.h,

@@ -17,8 +17,8 @@ class SubscriptionScreen extends StatefulWidget {
 }
 
 class _SubscriptionScreenState extends State<SubscriptionScreen> {
-  //========================================> Slider Faction <===================================
 
+  //========================================> Slider Faction <===================================
   int pageIndex = 0;
   late final PageController pageController;
 
@@ -65,14 +65,14 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                   text: AppConstants.selectPlan,
                   fontsize: 18.sp,
                   fontWeight: FontWeight.w400),
-              const SizedBox(height: 24),
+              SizedBox(height: 24.h),
 
               //========================================> Slider Section <===================================
 
               Column(
                 children: [
                   Center(
-                    child: Container(
+                    child: SizedBox(
                       width: 360.w,
                       height: 180.h,
                       child: PageView(
@@ -86,7 +86,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
                   CarouselIndicator(
                     count: _demo.length,
                     index: pageIndex,
@@ -98,8 +98,8 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
 
               //========================================> Slider Section <===================================
 
-              const SizedBox(
-                height: 24,
+              SizedBox(
+                height: 24.h,
               ),
               Column(
                 children: [
@@ -116,29 +116,29 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
 
                     //========================================> Elements Section <===================================
 
-                    child: const Column(
+                    child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        CustomEliment(title: AppConstants.peopleStories),
-                        SizedBox(height: 16),
-                        CustomEliment(title: AppConstants.veteranStories),
-                        SizedBox(height: 16),
-                        CustomEliment(title: AppConstants.petsStories),
-                        SizedBox(height: 16),
-                        CustomEliment(title: AppConstants.uploadPhotos),
-                        SizedBox(height: 16),
-                        CustomEliment(title: AppConstants.postStory),
-                        SizedBox(height: 16),
-                        CustomEliment(title: AppConstants.postStory1),
+                        const CustomEliment(title: AppConstants.peopleStories),
+                        SizedBox(height: 16.h),
+                        const CustomEliment(title: AppConstants.veteranStories),
+                        SizedBox(height: 16.h),
+                        const CustomEliment(title: AppConstants.petsStories),
+                        SizedBox(height: 16.h),
+                        const CustomEliment(title: AppConstants.uploadPhotos),
+                        SizedBox(height: 16.h),
+                        const CustomEliment(title: AppConstants.postStory),
+                        SizedBox(height: 16.h),
+                        const CustomEliment(title: AppConstants.postStory1),
                       ],
                     ),
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 24,
+              SizedBox(
+                height: 24.h,
               ),
               const ButtomSection(),
             ],

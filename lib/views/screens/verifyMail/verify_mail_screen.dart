@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:memorial/routes/app_routes.dart';
@@ -26,40 +27,42 @@ class VerifyMailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 44),
+            SizedBox(height: 44.h),
             Text(
               AppConstants.verifyEmail,
               style: GoogleFonts.poppins(
-                fontSize: 24,
+                fontSize: 24.sp,
                 fontWeight: FontWeight.w500,
                 color: const Color(0xFF0071E3),
               ),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.w),
             Text(
               AppConstants.weHaveSent,
               style: GoogleFonts.poppins(
-                fontSize: 16,
+                fontSize: 16.sp,
                 fontWeight: FontWeight.w400,
                 color: const Color(0xFF2B2A2A),
               ),
             ),
-            const SizedBox(height: 44),
+            SizedBox(height: 44.h),
             const CustomPinCode(),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
             Text(
               AppConstants.didntCode,
               style: GoogleFonts.poppins(
-                fontSize: 18,
+                fontSize: 18.sp,
                 fontWeight: FontWeight.w600,
                 color: const Color(0xFF0071E3),
               ),
             ),
             const Spacer(),
-            CustomButton(title: AppConstants.getStarted, onpress: () {
-              Get.toNamed(AppRoutes.forgetPassword);
-            }),
-      const SizedBox(height: 54),
+            CustomButton(
+                title: AppConstants.getStarted,
+                onpress: () {
+                  Get.toNamed(AppRoutes.forgetPassword);
+                }),
+            SizedBox(height: 54.h),
           ],
         ),
       ),

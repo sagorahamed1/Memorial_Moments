@@ -28,37 +28,37 @@ class ButtomSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(
-            width: 342,
+          SizedBox(
+            width: 342.w,
             child: Text.rich(
               TextSpan(
                 children: [
                   TextSpan(
                     text: AppConstants.byTapping,
                     style: TextStyle(
-                      color: Color(0xFF2B2A2A),
-                      fontSize: 14,
+                      color: const Color(0xFF2B2A2A),
+                      fontSize: 14.sp,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w400,
-                      height: 0,
+                      height: 0.h,
                     ),
                   ),
                   TextSpan(
                     text: AppConstants.terms,
                     style: TextStyle(
-                      color: Color(0xFF0071E3),
-                      fontSize: 14,
+                      color: const Color(0xFF0071E3),
+                      fontSize: 14.sp,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w400,
-                      height: 0,
+                      height: 0.h,
                     ),
                   ),
                 ],
               ),
             ),
           ),
-          const SizedBox(
-            height: 22,
+          SizedBox(
+            height: 22.h,
           ),
           CustomButton(title: AppConstants.continu, onpress: () {
             Get.toNamed(AppRoutes.paymentVerifiedScreen);
