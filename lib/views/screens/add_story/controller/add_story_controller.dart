@@ -6,7 +6,8 @@ class AddStoryController extends GetxController {
   RxBool dropDownShowBackGroundMusic = true.obs;
 
   var selectedIndex = (-1).obs;
-  int selectedIndexBackMusic = -1.obs;
+  RxInt selectedIndexBackMusic = (-1).obs;
+
 
   toggleDropDwonShow() {
     dropDownShowCategory.value = !dropDownShowCategory.value;

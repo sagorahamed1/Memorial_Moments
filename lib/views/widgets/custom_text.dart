@@ -7,18 +7,23 @@ class CustomText extends StatelessWidget {
   final FontWeight? fontWeight;
   final Color? color;
   final double? wordSpacing;
+  final TextOverflow? overflow;
+  final int? maxline;
   CustomText(
       {@required
         this.text,
       this.fontsize,
       this.fontWeight,
       this.color,
+        this.overflow,this.maxline,
       this.wordSpacing});
   @override
   Widget build(BuildContext context) {
     return
       Text(
       "$text",
+      maxLines: maxline,
+      overflow:overflow,
       style: GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
