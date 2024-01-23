@@ -10,8 +10,6 @@ import 'package:memorial/utils/app_images.dart';
 import 'package:memorial/utils/dimensions.dart';
 import 'package:memorial/views/widgets/custom_app_bar.dart';
 import 'package:memorial/views/widgets/custom_text.dart';
-import 'package:memorial/views/widgets/custom_text_field.dart';
-
 import '../../../widgets/custom_buttom.dart';
 
 class ProfileContentScreen extends StatefulWidget {
@@ -140,24 +138,24 @@ class _ProfileContentScreenState extends State<ProfileContentScreen> {
                     width: 60.w,
                     height: 60.h,
                   ),
-                  const SizedBox(
-                    height: 16,
+                  SizedBox(
+                    height: 16.h,
                   ),
                   CustomText(
                     text: AppConstants.upGrade,
-                    fontsize: 16,
+                    fontsize: 16.sp,
                     fontWeight: FontWeight.w400,
                   ),
-                  const SizedBox(
-                    height: 24,
+                  SizedBox(
+                    height: 24.h,
                   ),
                   CustomButton(
                       title: AppConstants.goTo,
                       onpress: () {
                         Get.toNamed(AppRoutes.subscriptionScreen);
                       }),
-                  const SizedBox(
-                    height: 16,
+                  SizedBox(
+                    height: 16.h,
                   ),
                   TextButton(
                     onPressed: () {
@@ -166,7 +164,7 @@ class _ProfileContentScreenState extends State<ProfileContentScreen> {
                     child: CustomText(
                       text: AppConstants.skipNow,
                       color: Colors.red,
-                      fontsize: 18,
+                      fontsize: 18.sp,
                       fontWeight: FontWeight.w500,
                     ),
                   ),

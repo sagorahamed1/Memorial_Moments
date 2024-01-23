@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:memorial/views/screens/my_current_story/controller/my_current_story_controller.dart';
-
 import '../../../utils/app_colors.dart';
 import '../../../utils/app_constants.dart';
 import '../../../utils/app_icons.dart';
@@ -22,7 +21,7 @@ class MyCurrentStory extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: AppColors.bgColors,
           leading: Container(
-            padding: EdgeInsets.all(5),
+            padding: const EdgeInsets.all(5),
             margin: const EdgeInsets.only(left: Dimensions.paddingSizeDefault),
             child: FittedBox(
               fit: BoxFit.contain,
@@ -57,7 +56,7 @@ class MyCurrentStory extends StatelessWidget {
                   Container(
                     height: 260.h,
                     child: ListView.builder(
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: controller.archiveList.length,
                       itemBuilder: (context, index) {
                         var storyInfo = controller.archiveList[index];
@@ -155,7 +154,7 @@ class MyCurrentStory extends StatelessWidget {
                         FittedBox(
                           fit: BoxFit.cover,
                           child: Container(
-                            padding: EdgeInsets.only(left: 7),
+                            padding: const EdgeInsets.only(left: 7),
                             height: 90.h,
                             width: 300.w,
                             child: const Center(
