@@ -5,6 +5,9 @@ class AddStoryController extends GetxController {
   RxBool dropDownShowCategory = true.obs;
   RxBool dropDownShowBackGroundMusic = true.obs;
 
+  var selectedIndex = (-1).obs;
+  int selectedIndexBackMusic = -1.obs;
+
   toggleDropDwonShow() {
     dropDownShowCategory.value = !dropDownShowCategory.value;
   }
@@ -18,6 +21,7 @@ class AddStoryController extends GetxController {
     // TODO: implement onInit
     super.onInit();
     toggleDropDwonShow();
+    selectedIndex;
   }
 
   List categoryList = [
@@ -26,10 +30,8 @@ class AddStoryController extends GetxController {
     {"categoryTitle": "${AppConstants.vPet_Memorial_Moments}"},
   ].obs;
 
-
-
   List BackGrounMusicList = [
-    {"categoryTitle": "${AppConstants.repeatMusic}"},
-    {"categoryTitle": "${AppConstants.onetime_playMusic}"},
+    {"backGroundMusic": "${AppConstants.repeatMusic}"},
+    {"backGroundMusic": "${AppConstants.onetime_playMusic}"},
   ].obs;
 }

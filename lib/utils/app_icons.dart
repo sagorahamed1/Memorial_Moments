@@ -18,6 +18,8 @@ class AppIcons {
   static const volume = "$basePath/volume_up.svg";
   static const dots_vertical = "$basePath/dots-vertical.svg";
   static const delete = "$basePath/delete.svg";
+  static const volum_of = "$basePath/volume-off.svg";
+  static const information_circle = "$basePath/information-circle.svg";
 
 
   ///-----------------add story screen----------------------->
@@ -29,6 +31,7 @@ class AppIcons {
   static const radio_button_check = "$basePath/Radio_button_check.svg";
   static const radio_button_uncheck = "$basePath/radio_button_uncheck.svg";
   static const add_Icon = "$basePath/add_Icon.svg";
+  static const unValidIcon = "$basePath/unValidIcon.svg";
 
 
   /// --------------search screen------------>
@@ -43,4 +46,5 @@ class AppIcons {
   static const bookPpen = "$basePath/book-open.svg";
   static const setting = "$basePath/cog.svg";
   static const mailIcon = "$basePath/mail.svg";
+  static const profile_user_circle = "$basePath/user-circle.svg";
 }

@@ -14,7 +14,7 @@ class ButtomSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 390.w,
-      height: 240.h,
+      height: 270.h,
       padding: const EdgeInsets.only(
         top: 24,
         left: 24,

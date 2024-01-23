@@ -11,11 +11,11 @@ import 'package:memorial/views/screens/my_story_details/my_story_details_screen.
 import 'package:memorial/views/screens/notification/notification_screen.dart';
 import 'package:memorial/views/screens/paymentScreen/payment_screen.dart';
 import 'package:memorial/views/screens/privacyPolicy/privacy_policy_screen.dart';
-import 'package:memorial/views/screens/profile/edit_personal_informaiton_screen.dart';
-import 'package:memorial/views/screens/profile/my_subscription_screen.dart';
-import 'package:memorial/views/screens/profile/personal_Info_screen.dart';
-import 'package:memorial/views/screens/profile/profile_content_screen.dart';
-import 'package:memorial/views/screens/profile/profile_screen.dart';
+import 'package:memorial/views/screens/profile/edit_profile_informaintion/edit_personal_informaiton_screen.dart';
+import 'package:memorial/views/screens/profile/my_subscription/my_subscription_screen.dart';
+import 'package:memorial/views/screens/profile/personal_infomaition/personal_Info_screen.dart';
+import 'package:memorial/views/screens/profile/profile_content/profile_content_screen.dart';
+import 'package:memorial/views/screens/profile/profile_screen/profile_screen.dart';
 import 'package:memorial/views/screens/resetPassword/reset_rassword_screen.dart';
 import 'package:memorial/views/screens/search/search_screen.dart';
 import 'package:memorial/views/screens/settings/settings_screen.dart';
@@ -28,6 +28,7 @@ import 'package:memorial/views/screens/termsOfServices/termsof_services_screen.d
 import 'package:memorial/views/screens/verifyMail/verify_mail_screen.dart';
 
 import '../views/screens/add_story/add_story_screen.dart';
+import '../views/screens/my_current_story/my_current_story.dart';
 import '../views/screens/paymentScreen/payment_screen.dart';
 import '../views/screens/privacyPolicy/privacy_policy_screen.dart';
 import '../views/screens/resetPassword/reset_rassword_screen.dart';
@@ -64,6 +65,7 @@ class AppRoutes{
   static const String profileScreen = "/ProfileScreen";
   static const String profileContentScreen = "/ProfileContentScreen";
   static const String bottomNavBar = "/BottomNavBar";
+  static const String myCurrentStory = "/MyCurrentStory";
 
 
   static List <GetPage> Routes ()=>[
@@ -94,7 +96,8 @@ class AppRoutes{
     GetPage(name: AppRoutes.myStoryArchiveScreen, page: ()=>MyStoryArchiveScreen()),
     GetPage(name: AppRoutes.profileScreen, page: ()=>ProfileScreen()),
     GetPage(name: AppRoutes.profileContentScreen, page: ()=>ProfileContentScreen()),
-    GetPage(name: AppRoutes.bottomNavBar, page: ()=>BottomNavBar())
+    GetPage(name: AppRoutes.bottomNavBar, page: ()=>BottomNavBar()),
+    GetPage(name: AppRoutes.myCurrentStory, page: ()=>MyCurrentStory())
 
   ];
 }
