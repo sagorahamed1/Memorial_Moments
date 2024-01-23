@@ -10,7 +10,7 @@ import 'package:memorial/utils/app_images.dart';
 import 'package:memorial/utils/dimensions.dart';
 import 'package:memorial/views/widgets/custom_app_bar.dart';
 import 'package:memorial/views/widgets/custom_text.dart';
-import '../../widgets/custom_buttom.dart';
+import '../../../widgets/custom_buttom.dart';
 
 class ProfileContentScreen extends StatefulWidget {
   const ProfileContentScreen({super.key});

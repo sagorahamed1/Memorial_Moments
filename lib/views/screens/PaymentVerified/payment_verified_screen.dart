@@ -36,7 +36,7 @@ class PaymentVerifiedScreen extends StatelessWidget {
                 child: CustomButton(
                   title: AppConstants.gotoProfile,
                   onpress: () {
-                    Get.toNamed(AppRoutes.homeScreen);
+                    Get.toNamed(AppRoutes.bottomNavBar);
                   },
                 ),
               ),

@@ -10,7 +10,7 @@ import 'package:memorial/utils/app_images.dart';
 import 'package:memorial/utils/dimensions.dart';
 import 'package:memorial/views/widgets/custom_text.dart';
 
-import 'my_subscription_screen.dart';
+import '../my_subscription/my_subscription_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -73,7 +73,7 @@ class ProfileScreen extends StatelessWidget {
                   Expanded(
                       flex: 1,
                       child: Container(
-                        margin: EdgeInsets.only(left: 50, right: 16),
+                        margin: EdgeInsets.only(left: 20, right: 16),
                         child: Row(
                           children: [
                             SvgPicture.asset(AppIcons.crown),
@@ -86,6 +86,7 @@ class ProfileScreen extends StatelessWidget {
                                 color: AppColors.white,
                               ),
                             ),
+                            SizedBox(height: 5.h,)
                           ],
                         ),
                       ))
@@ -137,7 +138,7 @@ class ProfileScreen extends StatelessWidget {
 
                   ListTile(
                     onTap: (){
-
+                      Get.toNamed(AppRoutes.myCurrentStory);
                     },
                     leading: SvgPicture.asset(AppIcons.bookPpen),
                     title: CustomText(

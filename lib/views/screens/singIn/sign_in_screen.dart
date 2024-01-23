@@ -95,7 +95,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 CustomButton(
                     onpress: () {
                       if (_formKey.currentState!.validate()) {
-                        Get.toNamed(AppRoutes.homeScreen);
+                        Get.toNamed(AppRoutes.bottomNavBar);
                       }
                     },
                     title: AppConstants.signIn),
@@ -126,7 +126,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Container(
+                      SizedBox(
                         width: 300.w,
                         height: 65.h,
                         child: Row(
