@@ -305,6 +305,7 @@ class AddStoryScreen extends StatelessWidget {
                   ),
                 ),
 
+
                 maxLength == writeStroyController.text.length
                     ? Container(
                   padding: EdgeInsets.only(left: 16,right: 16),
@@ -350,3 +351,5 @@ class AddStoryScreen extends StatelessWidget {
   }
 }
 
+
+///================================================================================
