@@ -8,7 +8,8 @@ import '../../widgets/custom_button.dart';
 import '../../widgets/custom_text_field.dart';
 
 class ChangePasswordScreen extends StatelessWidget {
-  const ChangePasswordScreen({super.key});
+  ChangePasswordScreen({super.key});
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -20,44 +21,67 @@ class ChangePasswordScreen extends StatelessWidget {
           onprass: () {
             Get.back();
           }),
+
+      //=============================================> Body Section <======================================
+
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 19),
-            const CustomTextField(
-              title: AppConstants.currentPassword,
-              prifixicon: Icon(Icons.lock_outline),
-              sufixicons: Icon(Icons.remove_red_eye_outlined),
-            ),
-            const SizedBox(height: 16),
-            const CustomTextField(
-              title: AppConstants.newPassword,
-              prifixicon: Icon(Icons.lock_outline),
-              sufixicons: Icon(Icons.remove_red_eye_outlined),
-            ),
-            const SizedBox(height: 16),
-            const CustomTextField(
-              title: AppConstants.reNewPassword,
-              prifixicon: Icon(Icons.lock_outline),
-              sufixicons: Icon(Icons.remove_red_eye_outlined),
-            ),
-            const SizedBox(height: 24),
-            CustomText(
-              text: AppConstants.forgetPass,
-              fontsize: 18,
-              fontWeight: FontWeight.w600,
-              color: const Color(0xFF0071E3),
-            ),
-            const Spacer(),
-            CustomButton(
-                title: AppConstants.changePassword,
-                onpress: () {
-                   Get.toNamed(AppRoutes.forgetPassword);
-                }),
-            const SizedBox(height: 54),
-          ],
+        child: Form(
+          key: _formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 19),
+              CustomTextField(
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Please enter your current password";
+                  }
+                },
+                title: AppConstants.currentPassword,
+                prifixicon: const Icon(Icons.lock_outline),
+                sufixicons: const Icon(Icons.remove_red_eye_outlined),
+              ),
+              const SizedBox(height: 16),
+              CustomTextField(
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Please enter your new password";
+                  }
+                },
+                title: AppConstants.newPassword,
+                prifixicon: const Icon(Icons.lock_outline),
+                sufixicons: const Icon(Icons.remove_red_eye_outlined),
+              ),
+              const SizedBox(height: 16),
+              CustomTextField(
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Please enter your Re-password";
+                  }
+                },
+                title: AppConstants.reNewPassword,
+                prifixicon: const Icon(Icons.lock_outline),
+                sufixicons: const Icon(Icons.remove_red_eye_outlined),
+              ),
+              const SizedBox(height: 24),
+              CustomText(
+                text: AppConstants.forgetPass,
+                fontsize: 18,
+                fontWeight: FontWeight.w600,
+                color: const Color(0xFF0071E3),
+              ),
+              const Spacer(),
+              CustomButton(
+                  title: AppConstants.changePassword,
+                  onpress: () {
+                    if (_formKey.currentState!.validate()) {
+                      Get.toNamed(AppRoutes.forgetPassword);
+                    }
+                  }),
+              const SizedBox(height: 54),
+            ],
+          ),
         ),
       ),
     );
