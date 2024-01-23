@@ -30,14 +30,16 @@ class _SignInScreenState extends State<SignInScreen> {
 
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
+          padding:  EdgeInsets.symmetric(horizontal: 24.h),
           child: Form(
             key: _formKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+
                 SizedBox(height: 115.h),
                 SizedBox(
+
                   width: 69.w,
                   height: 92.h,
                   child: Image.asset(appImages.appLogo),
@@ -57,6 +59,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   fontWeight: FontWeight.w400,
                   fontsize: 18.sp,
                 ),
+
                 SizedBox(height: 30.h),
                 CustomText(
                     text: AppConstants.unlockMemories,
@@ -64,6 +67,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     fontWeight: FontWeight.w400,
                     fontsize: 14.sp),
                 SizedBox(height: 20.h),
+
                 CustomTextField(
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -115,7 +119,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 Container(
                   width: 342.w,
                   height: 56.h,
-                  padding: const EdgeInsets.all(10),
+                  padding:  EdgeInsets.all(10.h),
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -140,6 +144,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               child: SvgPicture.asset(AppIcons.google),
                             ),
                             SizedBox(width: 10.w),
+
                             CustomText(
                               text: AppConstants.continueGoogle,
                               color: const Color(0xFF2B2A2A),
