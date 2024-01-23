@@ -37,23 +37,23 @@ class SignUpScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 7),
+                SizedBox(height: 7.h),
                 SizedBox(
                   width: 69.w,
                   height: 92.h,
                   child: Image.asset(appImages.appLogo),
                 ),
-                const SizedBox(height: 24),
-                const Text(
+                SizedBox(height: 24.h),
+                Text(
                   AppConstants.honorForever,
                   style: TextStyle(
-                    color: Color(0xFF2B2A2A),
-                    fontSize: 18,
+                    color: const Color(0xFF2B2A2A),
+                    fontSize: 18.sp,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                const SizedBox(height: 44),
+                SizedBox(height: 44.h),
 
                 //=============================================> CustomTextField Section <======================================
 
@@ -65,7 +65,7 @@ class SignUpScreen extends StatelessWidget {
                     },
                     title: AppConstants.fullName,
                     prifixicon: const Icon(Icons.person_outline_rounded)),
-                const SizedBox(height: 16),
+                SizedBox(height: 16.h),
                 CustomTextField(
                     validator: (value) {
                       if (value!.isEmpty) {
@@ -74,7 +74,7 @@ class SignUpScreen extends StatelessWidget {
                     },
                     title: AppConstants.email,
                     prifixicon: const Icon(Icons.email_outlined)),
-                const SizedBox(height: 16),
+                SizedBox(height: 16.h),
                 CustomTextField(
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -85,7 +85,7 @@ class SignUpScreen extends StatelessWidget {
                   prifixicon: const Icon(Icons.lock_outline),
                   sufixicons: const Icon(Icons.remove_red_eye_outlined),
                 ),
-                const SizedBox(height: 16),
+                SizedBox(height: 16.h),
                 CustomTextField(
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -96,7 +96,7 @@ class SignUpScreen extends StatelessWidget {
                   prifixicon: const Icon(Icons.lock_outline),
                   sufixicons: const Icon(Icons.remove_red_eye_outlined),
                 ),
-                const SizedBox(height: 24),
+                SizedBox(height: 24.h),
 
                 //=============================================> CustomTextField Section <======================================
 
@@ -108,11 +108,11 @@ class SignUpScreen extends StatelessWidget {
                     }
                   },
                 ),
-                const SizedBox(height: 24),
+                SizedBox(height: 24.h),
                 Row(
                   children: [
                     SvgPicture.asset(AppIcons.checkbox),
-                    const SizedBox(width: 10),
+                    SizedBox(width: 10.h),
 
                     //=============================================> Text.rich bottom Section <======================================
 
@@ -126,7 +126,7 @@ class SignUpScreen extends StatelessWidget {
                               fontSize: 14.sp,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w400,
-                              height: 0,
+                              height: 0.h,
                             ),
                           ),
                           TextSpan(
@@ -136,7 +136,7 @@ class SignUpScreen extends StatelessWidget {
                               fontSize: 14.sp,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w500,
-                              height: 0,
+                              height: 0.h,
                             ),
                           ),
                           TextSpan(
@@ -146,7 +146,7 @@ class SignUpScreen extends StatelessWidget {
                               fontSize: 14.sp,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w400,
-                              height: 0,
+                              height: 0.h,
                             ),
                           ),
                           TextSpan(
@@ -156,7 +156,7 @@ class SignUpScreen extends StatelessWidget {
                               fontSize: 14.sp,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w500,
-                              height: 0,
+                              height: 0.h,
                             ),
                           ),
                         ],
@@ -164,7 +164,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 24),
+                SizedBox(height: 24.h),
               ],
             ),
           ),

@@ -24,18 +24,18 @@ class CustomEliment extends StatelessWidget {
           decoration: const BoxDecoration(),
           child: Stack(children: [SvgPicture.asset(AppIcons.checkcircle)]),
         ),
-        const SizedBox(width: 8),
+        SizedBox(width: 8.w),
         SizedBox(
           width: 221.w,
           height: 20.h,
           child: Text(
             title,
-            style: const TextStyle(
-              color: Color(0xFF2B2A2A),
-              fontSize: 14,
+            style: TextStyle(
+              color: const Color(0xFF2B2A2A),
+              fontSize: 14.sp,
               fontFamily: 'Poppins',
               fontWeight: FontWeight.w500,
-              height: 0,
+              height: 0.h,
             ),
           ),
         ),

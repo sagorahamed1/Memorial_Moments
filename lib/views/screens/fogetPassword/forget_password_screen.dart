@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:memorial/routes/app_routes.dart';
@@ -7,7 +8,6 @@ import 'package:memorial/views/widgets/custom_app_bar.dart';
 import 'package:memorial/views/widgets/custom_button.dart';
 import 'package:memorial/views/widgets/custom_text_field.dart';
 
-import '../getOtp/get_otp_srceen.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
   ForgetPasswordScreen({super.key});
@@ -33,25 +33,25 @@ class ForgetPasswordScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 24),
+              SizedBox(height: 24.h),
               Text(
                 AppConstants.forgetPassword,
                 style: GoogleFonts.poppins(
-                    fontSize: 24,
+                    fontSize: 24.sp,
                     fontWeight: FontWeight.w600,
                     color: const Color(0xFF0071E3)),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
               Text(
                 AppConstants.pleaseEnter,
                 style: GoogleFonts.poppins(
-                    fontSize: 16,
+                    fontSize: 16.sp,
                     fontWeight: FontWeight.w400,
                     color: const Color(0xFF2B2A2A)),
               ),
-              const SizedBox(height: 26),
+              SizedBox(height: 26.h),
               CustomTextField(
-                  validator: (value) {
+                  validator: (value){
                     if (value!.isEmpty) {
                       return "Please enter your email";
                     }
@@ -67,7 +67,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                   }
                 },
               ),
-              const SizedBox(height: 54),
+               SizedBox(height: 54.h),
             ],
           ),
         ),

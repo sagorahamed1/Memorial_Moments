@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:memorial/utils/app_constants.dart';
 import 'package:memorial/views/widgets/custom_app_bar.dart';
@@ -16,49 +17,47 @@ class PrivacyPolicyScreen extends StatelessWidget {
           onprass: () {
             Get.back();
           }),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Column(
-            children: [
-              CustomText(
-                text: AppConstants.loremIpsum,
-                fontsize: 18,
-                fontWeight: FontWeight.w400,
-              ),
-              const SizedBox(height: 8),
-              CustomText(
-                text: AppConstants.loremIpsum,
-                fontsize: 18,
-                fontWeight: FontWeight.w400,
-              ),
-              const SizedBox(height: 8),
-              CustomText(
-                text: AppConstants.loremIpsum,
-                fontsize: 18,
-                fontWeight: FontWeight.w400,
-              ),
-              const SizedBox(height: 8),
-              CustomText(
-                text: AppConstants.loremIpsum,
-                fontsize: 18,
-                fontWeight: FontWeight.w400,
-              ),
-              const SizedBox(height: 8),
-              CustomText(
-                text: AppConstants.loremIpsum,
-                fontsize: 18,
-                fontWeight: FontWeight.w400,
-              ),
-              const SizedBox(height: 8),
-              CustomText(
-                text: AppConstants.loremIpsum,
-                fontsize: 18,
-                fontWeight: FontWeight.w400,
-              ),
-              const SizedBox(height: 8),
-            ],
-          ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: Column(
+          children: [
+            CustomText(
+              text: AppConstants.loremIpsum,
+              fontsize: 18.sp,
+              fontWeight: FontWeight.w400,
+            ),
+            SizedBox(height: 8.h),
+            CustomText(
+              text: AppConstants.loremIpsum,
+              fontsize: 18.sp,
+              fontWeight: FontWeight.w400,
+            ),
+            SizedBox(height: 8.h),
+            CustomText(
+              text: AppConstants.loremIpsum,
+              fontsize: 18.sp,
+              fontWeight: FontWeight.w400,
+            ),
+            SizedBox(height: 8.h),
+            CustomText(
+              text: AppConstants.loremIpsum,
+              fontsize: 18.sp,
+              fontWeight: FontWeight.w400,
+            ),
+            SizedBox(height: 8.h),
+            CustomText(
+              text: AppConstants.loremIpsum,
+              fontsize: 18.sp,
+              fontWeight: FontWeight.w400,
+            ),
+            SizedBox(height: 8.h),
+            CustomText(
+              text: AppConstants.loremIpsum,
+              fontsize: 18.sp,
+              fontWeight: FontWeight.w400,
+            ),
+            SizedBox(height: 8.h),
+          ],
         ),
       ),
     );
