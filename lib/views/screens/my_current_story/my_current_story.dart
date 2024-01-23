@@ -1,5 +1,4 @@
-
-import 'package:flutter/material(1).dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -51,7 +50,8 @@ class MyCurrentStory extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(
-              horizontal: Dimensions.paddingSizeExtraLarge,vertical: Dimensions.paddingSizeLarge),
+              horizontal: Dimensions.paddingSizeExtraLarge,
+              vertical: Dimensions.paddingSizeLarge),
           child: Obx(() => Column(
                 children: [
                   Container(
@@ -93,8 +93,10 @@ class MyCurrentStory extends StatelessWidget {
                                     Expanded(
                                       flex: 2,
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             "${storyInfo["storyTitle"]}",
@@ -126,7 +128,9 @@ class MyCurrentStory extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10.h,)
+                            SizedBox(
+                              height: 10.h,
+                            )
                           ],
                         );
                       },
@@ -145,9 +149,9 @@ class MyCurrentStory extends StatelessWidget {
                     child: Row(
                       children: [
                         SvgPicture.asset(
-                          AppIcons.information_circle,height: 30.h,
+                          AppIcons.information_circle,
+                          height: 30.h,
                         ),
-
                         FittedBox(
                           fit: BoxFit.cover,
                           child: Container(
@@ -157,15 +161,18 @@ class MyCurrentStory extends StatelessWidget {
                             child: const Center(
                               child: FittedBox(
                                 fit: BoxFit.cover,
-                                child: Text(AppConstants.yourCurrentStorywill,overflow: TextOverflow.ellipsis, style: TextStyle(
-                                  fontSize: Dimensions.fontSizeDefault,
-                                  fontWeight: FontWeight.w400,
-                                ),),
+                                child: Text(
+                                  AppConstants.yourCurrentStorywill,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontSize: Dimensions.fontSizeDefault,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
                         ),
-
                       ],
                     ),
                   )
